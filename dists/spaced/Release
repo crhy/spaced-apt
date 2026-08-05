@@ -1,0 +1,23 @@
+Architectures: amd64
+Codename: spaced
+Components: main
+Date: Wed, 05 Aug 2026 09:46:27 +0000
+Label: Spaced Linux apt repository
+Origin: Spaced Linux
+Suite: spaced
+MD5Sum:
+ 4fb82090bf6b8c74b82d39da4ef68d47              163 Release
+ 9c2a67516801943249fdee1aa84d9b94             1972 main/binary-amd64/Packages
+ 2454f89cc7adc5eb4c69b972aca7dac6              948 main/binary-amd64/Packages.gz
+SHA1:
+ 46ced87afbda9fceffe397011224ace2e2f62393              163 Release
+ e8118e6c4b40fa188c74d5be4def63c418356153             1972 main/binary-amd64/Packages
+ 10467b522544f2382aadfd1d4b38b454dcd10118              948 main/binary-amd64/Packages.gz
+SHA256:
+ dfdaa8c60be1e0a0a33993d56758e3bed2e443515e313947500b41471b3062ba              163 Release
+ 8fe979d596cdc3015237f4765abf4340e3f6e9a1d2585ce880b9a9392c3d1e37             1972 main/binary-amd64/Packages
+ c40cef260b32e2d1fd495b590fda25ebabcbebcbef369bce85d9fe7c97ed0ec9              948 main/binary-amd64/Packages.gz
+SHA512:
+ b11abd3be4bdceb7089a0a33438cf9e94527b30d3422f8f7f0a950cf7ab02788f7088d2cb30e88797fbc0436d0443e7f49ab12a1cfa752457ea461af972031cb              163 Release
+ 3c4fcf24a373cef0d1ab86b5a5490ac1b79f919ba97edf1396569a158414520020912f33e2102fa24451e185365805992d4443cfeacd679f1984a607bb53685c             1972 main/binary-amd64/Packages
+ bbe9b3ad4ab6ff65a7f3d1cce6523fcd22275d66cf2e1a74ed47f93335319b085a3dd90c1dec7ee3ba5a184fad486dc0c9598b38fbc613b62032323a3b4b8df2              948 main/binary-amd64/Packages.gz
