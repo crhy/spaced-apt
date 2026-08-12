@@ -9,11 +9,11 @@ Depends: accountsservice, caja-admin, dconf-gsettings-backend, gigolo, gnome-key
 Conflicts: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
 Replaces: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
 Filename: dists/spaced/main/binary-amd64/spaced-mate-default-settings_8.26.4_all.deb
-Size: 49724676
-MD5sum: e4005789b6bd0f8aae0bbcdc8d6469a5
-SHA1: 9c9b728289adc902c38c7fc0b1ee170a468e83bf
-SHA256: 020732d5026c17172fb194e1488eaf488a84ed657e9a2765e8c42cbde65ee9eb
-SHA512: f63b6ffee15edfee3262f509c8253f0da80b7d0272165b3f024d2db146483068a3659827133be3c5099540774003e1b097305d84dd3f48e91fbf27a8bd1708cc
+Size: 49724772
+MD5sum: bcbba808afcfc4e145efc454c7926ca3
+SHA1: 5fe7c90f10a7c5bab0798659244381b02c6020ad
+SHA256: 136a6e8cce3f214d248e2b3079ccb07aa37213f7fb5f05569a6af6424b4928b4
+SHA512: fd97897370e7b7efc082ffc7e97d84518fce2f0ecdd19ca4e7253fc6d2c63ae4c9429ddcb0f92a58e237d1e5a5d55b7b7d369ccdf40212394ec18506bb34ced1
 Description: Spaced Linux desktop settings and integration
  Supplies the MATE defaults capability required by mate-session-manager and
  the maintained Spaced desktop themes, icons, utilities, panel layouts, and
@@ -32,10 +32,10 @@ Breaks: base-files (<< 13)
 Replaces: base-files (<< 13)
 Filename: dists/spaced/main/binary-amd64/spaced-meta_8.26.4_all.deb
 Size: 1164
-MD5sum: db95dd730ab1d19527ef647c55d11bfc
-SHA1: ae8df1d1a234fd7a99dff95a7f309cdbd7a8838f
-SHA256: 8886019a72abc1d82867e393c311c3bc90b5328ba0ea687a673c76e419fe3e6a
-SHA512: e6444539f1ebe7eae0eb507f7b04b07a756d3a5c88dfee3bab33aa02623f110edf6d6348e15c333a4480e61365e94e978e192d124f80336c64f7b55247fdb299
+MD5sum: 3f3c6a976ec8ea4ba24327b170110459
+SHA1: aaec1cc1e25cfe8b90bcd2ebd1dd1fd31d88ba17
+SHA256: 1c2e0d39f95d00a2195bcbfd72326fc954616e97779f66ae880ab93c80cf0279
+SHA512: 80e94f95ebb65ad957fa72da33d372a8fcadbf288f2dd578cfac31e994c826022fdd471e041ddf163a629767b094e98d9d3c6c129b9713aab465fe9eacc52640
 Description: Spaced Linux release version tracking
  Tracks the Spaced Linux release version so that in-place OS updates
  are delivered through the package repository. The installed version is
