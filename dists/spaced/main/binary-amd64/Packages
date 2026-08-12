@@ -1,18 +1,19 @@
 Package: spaced-mate-default-settings
-Version: 8.26.3
 Architecture: all
+Version: 8.26.4
+Priority: optional
+Section: x11
 Maintainer: Spaced Linux Team
-Depends: accountsservice, caja-admin, dconf-gsettings-backend, gigolo, gnome-keyring, libcanberra-gtk3-module, timeshift, xdg-desktop-portal, xdg-desktop-portal-gtk
+Provides: debian-mate-default-settings (= 1.26.1-3), mint-mate-default-settings, ubuntu-mate-default-settings
+Depends: accountsservice, caja-admin, dconf-gsettings-backend, gigolo, gnome-keyring, libcanberra-gtk3-module, timeshift, wmctrl, xdg-desktop-portal, xdg-desktop-portal-gtk
 Conflicts: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
 Replaces: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
-Provides: debian-mate-default-settings (= 1.26.1-3), mint-mate-default-settings, ubuntu-mate-default-settings
-Filename: ./spaced-mate-default-settings_8.26.3_all.deb
-Size: 49665796
-MD5sum: 6f829bf2aabf1118fc62e1b7b1904fb1
-SHA1: a2774aaacf1b17807f2341fd2c821fae068a8e16
-SHA256: b3be8dc35417abdf0ca55c694d0bd8f7fe40c19695ecfd8be43a7a75d4c70936
-Section: x11
-Priority: optional
+Filename: ./spaced-mate-default-settings_8.26.4_all.deb
+Size: 49724480
+MD5sum: cde003967134716227c5c4f18495270d
+SHA1: c88bb19876a98a535e9a0218a3b854e86930612b
+SHA256: e91e2a20b0f7f5410ba74aca72c9e7bd1e0414fa186d1ea31d983f735564ddbe
+SHA512: 06d283972fa899d4fcf3785f8b9507805be278aae9966658b39fa311b43ea0011838a55b6418917cc1e0d08db6e4a953f9d8a446cb572cb6afe16219463182e6
 Description: Spaced Linux desktop settings and integration
  Supplies the MATE defaults capability required by mate-session-manager and
  the maintained Spaced desktop themes, icons, utilities, panel layouts, and
@@ -20,20 +21,21 @@ Description: Spaced Linux desktop settings and integration
  to an installed system without requiring a new ISO.
 
 Package: spaced-meta
-Version: 8.26.3
 Architecture: all
+Version: 8.26.4
+Priority: optional
+Section: metapackages
 Maintainer: Spaced Linux Team
+Provides: spaced-release
 Depends: base-files
 Breaks: base-files (<< 13)
 Replaces: base-files (<< 13)
-Provides: spaced-release
-Filename: ./spaced-meta_8.26.3_all.deb
-Size: 1172
-MD5sum: 3c35925292f44f947834804ea78eafc8
-SHA1: 269a0e74201d86eb09b8c6c9652edc1be0413c74
-SHA256: 395746127286945ca48fd2dd9e8cc3b0a8d60f4fbe518adfa6b7574f116be20d
-Section: metapackages
-Priority: optional
+Filename: ./spaced-meta_8.26.4_all.deb
+Size: 1164
+MD5sum: d824be6c6ed3afa9c2fd61ae5dffa878
+SHA1: 5ecad528a3da49ad784fad2ef44857ed335ccca3
+SHA256: 092b446a451307bc563235662cf9ff1d1af710b8f337c9062074cf7742728ff8
+SHA512: 8adddf8284a639f10edb0e9484eea876c58785b2ee038c0d92466c2c392eedaa2ac0a0b04b4db7d5d5a86d3c6fccbd98f8f8a9c2394c68484d78f56dd347bff0
 Description: Spaced Linux release version tracking
  Tracks the Spaced Linux release version so that in-place OS updates
  are delivered through the package repository. The installed version is
