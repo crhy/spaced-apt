@@ -1,6 +1,6 @@
 Package: spaced-mate-default-settings
 Architecture: all
-Version: 8.26.7
+Version: 8.26.8
 Priority: optional
 Section: x11
 Maintainer: Spaced Linux Team
@@ -8,12 +8,12 @@ Provides: debian-mate-default-settings (= 1.26.1-3), mint-mate-default-settings,
 Depends: accountsservice, caja-admin, dconf-gsettings-backend, gigolo, gnome-keyring, libcanberra-gtk3-module, pulseaudio-utils, timeshift, tzdata, wmctrl, x11-xserver-utils, xdg-desktop-portal, xdg-desktop-portal-gtk
 Conflicts: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
 Replaces: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
-Filename: dists/spaced/main/binary-amd64/spaced-mate-default-settings_8.26.7_all.deb
-Size: 49734300
-MD5sum: abb1c4554e458c9930c0a5af7958d4c8
-SHA1: cb8e939ed40a54932ae12f952a51207e38b4d5ea
-SHA256: 70a79ce121af8c9d002c249ccb2f0f9a02f18e1e69be86834857efc563fd0d92
-SHA512: f4446a9231c79685c6c84e524c9d329c30c039e2ab780bcf67d7070f4dce1414aa1db50894cadae3fff8121baa2f1a31cbdc03da4809ee9ec128bbf1c66eceff
+Filename: dists/spaced/main/binary-amd64/spaced-mate-default-settings_8.26.8_all.deb
+Size: 49739808
+MD5sum: c7abb51b805fa7b60b00ddc953196e8c
+SHA1: a0eb87d4eb89f64d3be5e18bd3300087af45cfe0
+SHA256: c972b0164c818f43dc1cfa292a75f4b67941f9c7c691bac2d7f0aec086614a2e
+SHA512: 0ef87b6bca2f0b4b63627c8308eac5eb624ff52ad6fc92c5943b3dfbb5f6418471be9d5c57b6cc597a1b25b277d8634188b69f4ee4317b63efa4d6c7ec4c25c5
 Description: Spaced Linux desktop settings and integration
  Supplies the MATE defaults capability required by mate-session-manager and
  the maintained Spaced desktop themes, icons, utilities, panel layouts, and
@@ -22,23 +22,43 @@ Description: Spaced Linux desktop settings and integration
 
 Package: spaced-meta
 Architecture: all
-Version: 8.26.7
+Version: 8.26.8
 Priority: optional
 Section: metapackages
 Maintainer: Spaced Linux Team
 Provides: spaced-release
-Depends: base-files
+Depends: base-files, flatpak, libfuse2t64, spaced-mate-default-settings (= 8.26.8), spaced-welcome (>= 0.1.6)
 Breaks: base-files (<< 13)
 Replaces: base-files (<< 13)
-Filename: dists/spaced/main/binary-amd64/spaced-meta_8.26.7_all.deb
-Size: 1168
-MD5sum: 75b54739199f5e7c1ab3d2abd5878554
-SHA1: 042077adfef2791a67bfd55ecc165958ff9ce13a
-SHA256: 22f0b10187824120b7cb4527e1243bf512d8c8e2fe47990ca02789cbfdef14c9
-SHA512: 08c08f1f7eb4700b827d724dd798726338e03f7ab2cc0a022d6748c6d93743a0992e994864aa59be30ccac2b868ec841e101f5b9916a28735f3f413758440b3e
+Filename: dists/spaced/main/binary-amd64/spaced-meta_8.26.8_all.deb
+Size: 1236
+MD5sum: fca6134b54c0eee06bb4bd1fe9de5976
+SHA1: e58f4e4818a9b21e3dcfe756843d5875abebcb1c
+SHA256: aa64a89b93c5f37cf268301bb061158725409c683abcb8710cac7964bff6b5ef
+SHA512: cdf893b8c0a9dd92626c1287457f0a536f78ccc42d7ed5a3b7d1c41f7cf16a6af63e1913a6f6c420328c86b92f09f460ad33b55baa41c298c8ac9dabc90f075a
 Description: Spaced Linux release version tracking
- Tracks the Spaced Linux release version so that in-place OS updates
- are delivered through the package repository. The installed version is
- written to /etc/os-release, and upgrading this package upgrades the
- reported Spaced Linux version to match the release.
+ Tracks the Spaced Linux release version and independently maintained Welcome
+ package so that in-place OS updates deliver the complete desktop. The
+ installed version is written to /etc/os-release, and upgrading this package
+ upgrades the reported Spaced Linux version to match the release.
+
+Package: spaced-welcome
+Architecture: all
+Version: 0.1.6
+Priority: optional
+Section: x11
+Maintainer: Spaced Linux Team <noreply@spacedlinux.com>
+Depends: ca-certificates, flatpak, gir1.2-gtk-3.0, python3 (>= 3.11), python3-gi, xdg-utils
+Recommends: spaced-meta
+Filename: dists/spaced/main/binary-amd64/spaced-welcome_0.1.6_all.deb
+Size: 15524
+MD5sum: 37ad9a442b6941712107f9b4bc0d0ec0
+SHA1: f75964b4f9242c8b11a3b2047540371daf82acc8
+SHA256: adbc1bd317552964f93553f729f40b23e62573579812766aeca2f93a399d2b6d
+SHA512: 50500d7787b31f0aa630e0ddf68cf30bc0b52e1bc70aa93375bb8c4e7c914d66e93bbf5f9ddaac312e76e441ad8d60230024978898311fbb4cd9dbddb007eb61
+Homepage: https://github.com/crhy/spacedwelcome
+Description: first-run application installer for Spaced Linux
+ Shows a source-aware application list on first login, opens the preinstalled
+ SpacedBazaar, and installs curated Flatpaks from Flathub and the signed
+ Spaced GitHub Flatpak repository.
 
