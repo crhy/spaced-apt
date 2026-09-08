@@ -1,3 +1,446 @@
+Package: amdgpu-top
+Architecture: amd64
+Version: 0.11.5-1
+Priority: optional
+Section: utils
+Maintainer: Umio Yasuno <coelacanth_dream@protonmail.com>
+Installed-Size: 1801
+Depends: libc6, libdrm-amdgpu1, libdrm2, libgcc-s1
+Filename: dists/spaced/main/binary-amd64/amdgpu-top_0.11.5-1_amd64.deb
+Size: 600224
+MD5sum: 41e4e4124480b95d98a3bd18a967b6c6
+SHA1: ac5856b47eacf073ac2c8c685b13a142b67ef403
+SHA256: 4c35d39d6ce6e60cdd453a84d2c494b23bae6a2bd4d1ca99f33b82f778e46d82
+SHA512: d6d9e141ed38c59a117331f3f23468743efff064401819e1d31a3ffcadefb809b65b7c6666367da98646d3c6e7d91a063bfe36643a239093fd3f3ef7497e6f47
+Homepage: https://github.com/Umio-Yasuno/amdgpu_top
+Description: Tool to displays AMDGPU usage.
+ The tool displays information gathered from performance counters (GRBM, GRBM2),
+ sensors, fdinfo, gpu_metrics and AMDGPU driver.
+ # AMDGPU\_TOP
+ `amdgpu_top` is tool that display AMD GPU utilization, like
+ [umr](https://gitlab.freedesktop.org/tomstdenis/umr/) or
+ [clbr/radeontop](https://github.com/clbr/radeontop) or
+ [intel_gpu_top](https://gitlab.freedesktop.org/drm/igt-gpu-tools/-/blob/master/man/intel_gpu_top.rst).
+ .
+ The tool displays information gathered from performance counters (GRBM, GRBM2),
+ sensors, fdinfo, and AMDGPU driver.
+ .
+ | Simple TUI<br>(like nvidia-smi, rocm-smi) | TUI (light) | TUI (dark) | GUI |
+ | :-: | :-: | :-: | :--: |
+ | ![amdgpu_top Simple
+ TUI](https://github.com/Umio-Yasuno/amdgpu_top/assets/53935716/66c3fb7e-cb23-4a19-ab10-2bb9919a1a8a)
+ | ![amdgpu_top TUI
+ light](https://github.com/user-attachments/assets/006769be-cfdf-493e-bb0e-5e4389058a0a)
+ | ![amdgpu_top TUI
+ dark](https://github.com/user-attachments/assets/2e9afa33-12cc-48fd-981e-8c3c40af541b)
+ | ![amdgpu_top GUI
+ mode](https://github.com/Umio-Yasuno/amdgpu_top/assets/53935716/e3ff372e-86f9-4b82-b3c9-910b638a3c90)
+ |
+ .
+ ## Quick links
+  * [Usage](#usage)
+    * [Options](#options)
+    * [Commands for TUI](#commands-for-tui)
+    * [Example of using JSON mode](#example-of-using-json-mode)
+    * [fdinfo description](#fdinfo-description)
+  * [Installation](#installation)
+    * [Packages](#packages)
+    * [Build from source](#build-from-source)
+      * [Distribution specific
+ instructions](#distribution-specific-instructions)
+  * [Binary Size](#binary-size)
+  * [References](#references)
+  * [Translations](#translations)
+  * [Alternatives](#alternatives)
+ .
+ ## Dependent dynamic libraries
+  * libdrm
+  * libdrm_amdgpu
+ .
+ ## Usage
+ ```
+ cargo run -- [options ..]
+ # or
+ amdgpu_top [options ..]
+ ```
+ .
+ ```
+ # Run TUI mode
+ amdgpu_top
+ .
+ # Run GUI mode
+ amdgpu_top --gui
+ .
+ # Run SMI mode
+ amdgpu_top --smi
+ .
+ # Dump AMDGPU info
+ amdgpu_top -d
+ .
+ # Dump AMDGPU info and gpu_metrics
+ amdgpu_top -d -gm
+ .
+ # Dump AMDGPU info and pp_table
+ amdgpu_top -d --pp-table
+ .
+ # Dump AMDGPU info in JSON format
+ amdgpu_top -d --json
+ .
+ # Dump DRM info
+ amdgpu_top --drm-info
+ .
+ # Decode gpu_metrics file
+ amdgpu_top --decode-gm <path>
+ .
+ # Decode gpu_metrics file and output in JSON format
+ amdgpu_top --json --decode-gm <path>
+ ```
+ .
+ ### Options
+ ```
+ FLAGS:
+    -d, --dump
+        Dump AMDGPU info. (Specifications, VRAM, PCI, ResizableBAR, VBIOS, Video
+ caps)
+        This option can be combined with the "-J" option.
+    --list
+        Display a list of AMDGPU devices.
+    -J, --json
+        Output JSON formatted data.
+        This option can be combined with the "-d" option.
+    --gui
+        Launch GUI mode.
+    --smi
+        Launch Simple TUI mode. (like nvidia-smi, rocm-smi)
+    -p, --process
+        Dump All GPU processes and memory usage per process.
+    --apu, --select-apu
+        Select APU instance.
+    --single, --single-gpu
+        Display only the selected APU/GPU
+    --no-pc
+        The application does not read the performance counter (GRBM, GRBM2)
+        if this flag is set.
+        Reading the performance counter may deactivate the power saving feature
+ of APU/GPU.
+    -gm, --gpu_metrics, --gpu-metrics
+        Dump gpu_metrics for all AMD GPUs.
+        https://www.kernel.org/doc/html/latest/gpu/amdgpu/thermal.html#gpu-metrics
+    --pp_table, --pp-table
+        Dump pp_table from sysfs and VBIOS for all AMD GPUs.
+        (only support Navi1x and Navi2x, Navi3x)
+    --drm_info, --drm-info
+        Dump DRM info.
+        Inspired by https://gitlab.freedesktop.org/emersion/drm_info
+     --xdna
+        Dump XDNA NPU info.
+    --dark, --dark-mode
+        Set to the dark mode. (TUI/GUI)
+    --light, --light-mode
+        Set to the light mode. (TUI/GUI)
+    --gl, --opengl
+        Use OpenGL API to the GUI backend.
+    --vk, --vulkan
+        Use Vulkan API to the GUI backend,
+        and use APU/iGPU for GUI rendering if it is available.
+    -V, --version
+        Print version information.
+    -h, --help
+        Print help information.
+ .
+ OPTIONS:
+    -i <usize>
+        Select GPU instance.
+    --pci <String>
+        Specifying PCI path. (domain:bus:dev.func)
+    -s <u64>, -s <u64>ms
+        Refresh period (interval) in milliseconds for JSON mode. (default:
+ 1000ms)
+    -n <u32>
+        Specifies the maximum number of iteration for JSON mode.
+        If 0 is specified, it will be an infinite loop. (default: 0)
+    -u <u64>, --update-process-index <u64>
+        Update interval in seconds of the process index for fdinfo. (default:
+ 5s)
+    --json_fifo, --json-fifo <String>
+        Output JSON formatted data to FIFO (named pipe) for other application
+ and scripts.
+    --decode-gm <Path>, --decode-gpu-metrics <Path>
+        Decode the specified gpu_metrics file.
+ ```
+ .
+ ### Commands for TUI
+ | key |                                     |
+ | :-- | :---------------------------------: |
+ | g   | toggle GRBM                         |
+ | r   | toggle GRBM2                        |
+ | v   | toggle VRAM/GTT Usage               |
+ | f   | toggle fdinfo                       |
+ | n   | toggle Sensors                      |
+ | m   | toggle GPU Metrics                  |
+ | h   | change update interval (high = 100ms, low = 1000ms) |
+ | q   | Quit                                |
+ | P   | sort fdinfo by pid                  |
+ | M   | sort fdinfo by VRAM usage           |
+ | G   | sort fdinfo by GFX usage            |
+ | M   | sort fdinfo by MediaEngine usage    |
+ | R   | reverse sort                        |
+ .
+ ### Example of using JSON mode
+ ```
+ $ amdgpu_top --json | jq -c -r '(.devices[] |
+   (.Info | .DeviceName + " (" + .PCI + "): ") +
+   ([.gpu_activity | to_entries[] | .key + ": " + (.value.value|tostring) +
+ .value.unit] |
+   join(", ")))'
+ ```
+ .
+ #### Output
+ ```
+ AMD Radeon RX 6600 (0000:03:00.0): GFX: 13%, MediaEngine: 0%, Memory: 4%
+ AMD Radeon Graphics (0000:08:00.0): GFX: 0%, MediaEngine: 0%, Memory: null%
+ AMD Radeon RX 6600 (0000:03:00.0): GFX: 15%, MediaEngine: 0%, Memory: 5%
+ AMD Radeon Graphics (0000:08:00.0): GFX: 0%, MediaEngine: 0%, Memory: null%
+ AMD Radeon RX 6600 (0000:03:00.0): GFX: 3%, MediaEngine: 0%, Memory: 2%
+ AMD Radeon Graphics (0000:08:00.0): GFX: 0%, MediaEngine: 0%, Memory: null%
+ ...
+ ```
+ .
+ ### fdinfo description
+ fdinfo for the AMDGPU driver shows hardware IP usage per process.
+ .
+ ### VRAM
+ GPU Memory.
+ .
+ ### GTT
+ Graphics Translation Tables.
+ .
+ ### KFD
+ The process of using the AMDKFD driver.
+ .
+ #### GFX
+ GFX engine.
+ .
+ #### Compute/COMP
+ Compute engine.  
+ The AMDKFD driver does not track queues and does not show them in fdinfo.
+ .
+ #### DMA
+ DMA/SDMA (System DMA) engine.
+ .
+ #### Decode/DEC
+ Media decoder.  
+ This is not show on VCN4 or later.
+ .
+ #### Encode/ENC
+ Media encoder.  
+ This is not show on VCN4 or later.
+ .
+ #### VCN, Media
+ Media engine.  
+ From VCN4, the encoding queue and decoding queue have been unified.
+ The AMDGPU driver handles both decoding and encoding as contexts for the
+ encoding engine.
+ .
+ This is the average of the video decoder/encoder and the JPEG decoder usage.
+ .
+ #### JPEG
+ JPEG decoder.
+ .
+ #### VPE
+ Video Processor Engine.  
+ ref:
+ <https://gitlab.freedesktop.org/mesa/mesa/-/blob/main/src/amd/vpelib/README.md?ref_type=heads>
+ .
+ #### VCN_Unified, VCNU
+ The video decoder/encoder usage for VCN4.
+ .
+ ## Installation
+ ### Packages
+  * [Releases](https://github.com/Umio-Yasuno/amdgpu_top/releases/latest)
+    * .deb (generated by [cargo-deb](https://github.com/kornelski/cargo-deb))
+    * .rpm (generated by
+ [cargo-generate-rpm](https://github.com/cat-in-136/cargo-generate-rpm))
+    * .AppImage (generated by [xbuild](https://github.com/rust-mobile/xbuild))
+  * [Arch Linux](https://archlinux.org/packages/extra/x86_64/amdgpu_top/)
+    * To install run: `sudo pacman -S amdgpu_top`
+    * Alternatively, install from the
+ [AUR](https://aur.archlinux.org/packages/amdgpu_top-git)
+  * [OpenMandriva](https://github.com/OpenMandrivaAssociation/amdgpu_top)
+    * To install run: `sudo dnf install amdgpu_top`
+  *
+ [Nix](https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/am/amdgpu_top/package.nix)
+  *
+ [Solus](https://github.com/getsolus/packages/tree/main/packages/a/amdgpu_top)
+    * To install run: `sudo eopkg it amdgpu_top`
+ .
+ ### Build from source
+ ```
+ cargo install amdgpu_top
+ .
+ # or
+ .
+ git clone https://github.com/Umio-Yasuno/amdgpu_top
+ cd amdgpu_top
+ cargo install --locked --path .
+ ```
+ .
+ #### without GUI
+ ```
+ cargo install --locked --path . --no-default-features --features="tui"
+ ```
+ .
+ #### Distribution specific instructions
+ ##### Debian/Ubuntu
+ ```
+ sudo apt install libdrm-dev
+ ```
+ .
+ ##### Fedora
+ ```
+ sudo dnf install libdrm-devel
+ ```
+ .
+ ## Binary Size
+ .
+ | Features       | Size (stripped) |
+ | :------------- | :-------------: |
+ | json           | ~1.1M |
+ | tui            | ~1.5M |
+ | json, tui      | ~1.7M |
+ | json, tui, gui | ~18M  |
+ .
+ ## References
+  * [Tom St Denis / umr ·
+ GitLab](https://gitlab.freedesktop.org/tomstdenis/umr/)
+  * Mesa3D
+     * [src/gallium/drivers/radeonsi/si_gpu_load.c · main · Mesa / mesa ·
+ GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/main/src/gallium/drivers/radeonsi/si_gpu_load.c)
+  * AMD Documentation
+     *
+ [R6xx_R7xx_3D.pdf](https://developer.amd.com/wordpress/media/2013/10/R6xx_R7xx_3D.pdf)
+     *
+ [CIK_3D_registers_v2.pdf](http://developer.amd.com/wordpress/media/2013/10/CIK_3D_registers_v2.pdf)
+     * [MI200 performance counters and metrics — ROCm
+ Documentation](https://rocm.docs.amd.com/en/docs-6.0.0/conceptual/gpu-arch/mi200-performance-counters.html)
+  * <https://github.com/AMDResearch/omniperf/tree/v1.0.4/src/perfmon_pub>
+  * <https://github.com/freedesktop/mesa-r600_demo>
+  * [radeonhd:r6xxErrata](https://www.x.org/wiki/radeonhd:r6xxErrata/)
+  * Linux Kernel AMDGPU Driver
+     * libdrm_amdgpu API
+         * `/drivers/gpu/drm/amd/amdgpu/amdgpu_kms.c`
+     * `amdgpu_allowed_register_entry`
+         * `/drivers/gpu/drm/amd/amdgpu/{cik,nv,vi,si,soc15,soc21}.c`
+ .
+ ## Translations
+ `amdgpu_top` is using [cargo-i18n](https://github.com/kellpossible/cargo-i18n/)
+ with [Project Fluent](https://projectfluent.org/) for translation.
+ Please refer to
+ [pop-os/popsicle](https://github.com/pop-os/popsicle#translators) for
+ additional supported languages.
+ .
+ ### Supported Languages
+  * [en](./crates/amdgpu_top_gui/i18n/en/amdgpu_top_gui.ftl)
+  * [ja (partial)](./crates/amdgpu_top_gui/i18n/ja/amdgpu_top_gui.ftl)
+  * [ka](./crates/amdgpu_top_gui/i18n/ka/amdgpu_top_gui.ftl)
+ .
+ ## Alternatives
+ If `amdgpu_top` is not enough for you or you don't like it, try the following
+ applications.
+ .
+  * `AMD_DEBUG=info <opengl application>` or `RADV_DEBUG=info <vulkan
+ application>`
+     * Print AMDGPU-related information
+     * <https://docs.mesa3d.org/envvars.html#envvar-AMD_DEBUG>
+     * <https://docs.mesa3d.org/envvars.html#envvar-RADV_DEBUG>
+  * [clbr/radeontop](https://github.com/clbr/radeontop)
+     * View your GPU utilization, both for the total activity percent and
+ individual blocks.
+  * [Syllo/nvtop](https://github.com/Syllo/nvtop)
+     * GPUs process monitoring for AMD, Intel and NVIDIA
+  * [Tom St Denis / umr ·
+ GitLab](https://gitlab.freedesktop.org/tomstdenis/umr/)
+     * User Mode Register Debugger for AMDGPU Hardware
+  *
+ [GPUOpen-Tools/radeon_gpu_profiler](https://github.com/GPUOpen-Tools/radeon_gpu_profiler)
+     * for developer
+     * Radeon GPU Profiler (RGP) is a tool from AMD that allows for deep
+ inspection of GPU workloads.
+  * [ROCm/amdsmi](https://github.com/ROCm/amdsmi)
+     * [Getting to Know Your GPU: A Deep Dive into AMD SMI — ROCm
+ Blogs](https://rocm.blogs.amd.com/software-tools-optimization/amd-smi-overview/README.html)
+
+Package: libmarco-private2
+Architecture: amd64
+Version: 1.26.2-6+spaced9.26.1
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: marco
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Installed-Size: 794
+Depends: libatk1.0-0t64 (>= 1.12.4), libc6 (>= 2.38), libcairo2 (>= 1.10.0), libcanberra-gtk3-0 (>= 0.25), libcanberra0 (>= 0.2), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.80.0), libgtk-3-0t64 (>= 3.21.4), libgtop-2.0-11 (>= 2.22.3), libice6 (>= 1:1.0.0), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libsm6 (>= 2:1.2.6), libstartup-notification0 (>= 0.7), libx11-6 (>= 2:1.4.99.1), libxcomposite1 (>= 1:0.4.6), libxcursor1 (>> 1.1.2), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxinerama1 (>= 2:1.1.4), libxpresent1 (>= 1.0.1), libxrandr2, libxrender1 (>= 1:0.9.12), libxres1 (>= 2:1.2.1)
+Breaks: libmarco, libmarco-private0, libmarco-private1, mate-window-manager (<= 1.0.0-2)
+Replaces: libmarco, libmarco-private0, libmarco-private1
+Filename: dists/spaced/main/binary-amd64/libmarco-private2_1.26.2-6+spaced9.26.1_amd64.deb
+Size: 286404
+MD5sum: 26b3070d45e4c34657fc92b8184aeba0
+SHA1: fce1c535b4b7f4305ae5a5ec42e980d6b8e81a6f
+SHA256: 3e91a13b365666887c7578af2721b663fe98701034dd1d5bb9bb4b41933e2b38
+SHA512: a40459a676f55e52255f8be4d807e3f615efa7c4dae7bbcac2ab2fb49f39e601750f4896629441458d011992e47a4e1b1e52a842b912968a28554c8fc32b89ee
+Homepage: http://www.mate-desktop.org/
+Description: library for Marco window manager
+ Marco is a small window manager, using GTK+ to do everything. It is
+ developed mainly for the MATE Desktop.
+ .
+ This package contains the library.
+
+Package: marco-common
+Architecture: all
+Version: 1.26.2-6+spaced9.26.1
+Priority: optional
+Section: x11
+Source: marco
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Installed-Size: 6120
+Depends: dconf-gsettings-backend | gsettings-backend
+Breaks: mate-window-manager (<= 1.0.0-2)
+Filename: dists/spaced/main/binary-amd64/marco-common_1.26.2-6+spaced9.26.1_all.deb
+Size: 743640
+MD5sum: dacf20bdf5ce7f1d6bb4c43b57731519
+SHA1: ddbeffb43faf36c034e61b294bcd4f54a1a94104
+SHA256: a818d38971fa2a69d6867036e4cf12316227b2ee277c2d2d7be72a266153801e
+SHA512: cb709c2bfe9a3e45fa6799e26254135ef8b13a920d12eaee116dd9ca3d49d9ca25bae95e3081596d251552ba329790f53a64289b43c72b0fddea8bd5815931be
+Homepage: http://www.mate-desktop.org/
+Description: lightweight GTK+ window manager for MATE (common files)
+ Marco is a small window manager, using GTK+ to do everything. It is
+ developed mainly for the MATE Desktop.
+ .
+ This package contains the architecture independent files.
+
+Package: marco
+Architecture: amd64
+Version: 1.26.2-6+spaced9.26.1
+Priority: optional
+Section: x11
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Installed-Size: 145
+Provides: x-window-manager
+Depends: libmarco-private2 (= 1.26.2-6+spaced9.26.1), marco-common (= 1.26.2-6+spaced9.26.1), mate-desktop-common (>= 1.24), mate-settings-daemon-common (>= 1.24), zenity, libc6 (>= 2.34), libcairo2 (>= 1.2.4), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.36.0), libgtk-3-0t64 (>= 3.9.10), libpango-1.0-0 (>= 1.14.0), libx11-6
+Breaks: mate-window-manager (<= 1.0.0-2)
+Filename: dists/spaced/main/binary-amd64/marco_1.26.2-6+spaced9.26.1_amd64.deb
+Size: 38344
+MD5sum: 6473a62e6cc3ce0e28f9e91cfb9a095f
+SHA1: 4cf72dfd35f69de8e459f08ead567e9a4d675f1d
+SHA256: c0ac4656fb34ea5a39d0520104759cc269395343016d3195706e5b8dde803681
+SHA512: a4093eb94a4db65dd985fdbe7b9d720c8e7b3b2ae6ea7f2c5a5a1877ddd5d3e880a5c40188b90072490bed1bf4a938745f2cf6b55c99a1c61011e4e719a66a9f
+Homepage: http://www.mate-desktop.org/
+Description: lightweight GTK+ window manager for MATE
+ Marco is a small window manager, using GTK+ to do everything. It is
+ developed mainly for the MATE Desktop.
+ .
+ This package contains the marco window manager itself.
+
 Package: spaced-mate-default-settings
 Architecture: all
 Version: 8.26.9
@@ -14,6 +457,28 @@ MD5sum: 8d2f3f828e588f8179076d26424b7a1a
 SHA1: 8a6f5efbf62ecaefc4c4e397afdfc692b0e8e4b7
 SHA256: b2e85da38ac3ea652e3cff62695ad273bcd20bbd2785427babed426730ee8624
 SHA512: e2f8df9afa629e758bd9ca049ba97df5b96b56dac5bf216f5008f18ed1471e1b1cb715ef1f515a4b264bba38c694ff4bde2e8a27ee45b125123c3d422d655c15
+Description: Spaced Linux desktop settings and integration
+ Supplies the MATE defaults capability required by mate-session-manager and
+ the maintained Spaced desktop themes, icons, utilities, panel layouts, and
+ integration defaults. Upgrading this package delivers Spaced desktop fixes
+ to an installed system without requiring a new ISO.
+
+Package: spaced-mate-default-settings
+Architecture: all
+Version: 9.26-1
+Priority: optional
+Section: x11
+Maintainer: Spaced Linux Team
+Provides: debian-mate-default-settings (= 1.26.1-3), mint-mate-default-settings, ubuntu-mate-default-settings
+Depends: accountsservice, caja-admin, dconf-gsettings-backend, gigolo, gnome-keyring, libcanberra-gtk3-module, pulseaudio-utils, timeshift, tzdata, wmctrl, x11-xserver-utils, xdg-desktop-portal, xdg-desktop-portal-gtk
+Conflicts: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
+Replaces: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
+Filename: dists/spaced/main/binary-amd64/spaced-mate-default-settings_9.26-1_all.deb
+Size: 59499308
+MD5sum: 700d094930d86879c33824086761736c
+SHA1: 4c007073992fcfb59efc2513e9bebdf450bf0230
+SHA256: e56c55693bc9f15d6f3a6bb1a9539c24bb79e715c91a89210d959dae9052f864
+SHA512: 628728201a26984b751f546fb3be16bfe262614cc1443058c6a21c9388794766bbfcbbb75af10b9317874eae6546d17075aadc08785fdabfde4f45bd9ef04c3e
 Description: Spaced Linux desktop settings and integration
  Supplies the MATE defaults capability required by mate-session-manager and
  the maintained Spaced desktop themes, icons, utilities, panel layouts, and
@@ -41,6 +506,48 @@ Description: Spaced Linux release version tracking
  package so that in-place OS updates deliver the complete desktop. The
  installed version is written to /etc/os-release, and upgrading this package
  upgrades the reported Spaced Linux version to match the release.
+
+Package: spaced-meta
+Architecture: all
+Version: 9.26-1
+Priority: optional
+Section: metapackages
+Maintainer: Spaced Linux Team
+Provides: spaced-release
+Depends: base-files, flatpak, libfuse2t64, libmarco-private2 (>= 1.26.2-6+spaced9.26.1), spaced-mate-default-settings (= 9.26-1), spaced-welcome (>= 0.1.12), accountsservice, alacarte, amdgpu-top, atril, bluez, bluez-firmware, bluez-tools, btop, ca-certificates, cairo-dock-core, caja, caja-admin, caja-open-terminal, chrony, compiz, compiz-mate, compiz-plugins-extra, compiz-plugins-main, compizconfig-settings-manager, console-setup, cups, cups-client, cups-filters, cups-ipp-utils, curl, dbus-x11, dconf-gsettings-backend, devuan-keyring, dkms, dosfstools, efibootmgr, elogind, engrampa, eom, fastfetch, firmware-amd-graphics, firmware-atheros, firmware-brcm80211, firmware-intel-graphics, firmware-intel-misc, firmware-intel-sound, firmware-iwlwifi, firmware-mediatek, firmware-misc-nonfree, firmware-nvidia-graphics, firmware-realtek, firmware-sof-signed, fonts-dejavu-core, gdebi-core, gigolo, gir1.2-gtk-3.0, git, gnome-keyring, gparted, grub-efi-amd64-bin, grub-pc-bin, gvfs-backends, htop, iw, libcanberra-gtk3-module, libelogind-compat, libgl1-mesa-dri, libglib2.0-bin, libpam-elogind, lightdm, lightdm-gtk-greeter, linux-headers-amd64, linux-image-amd64, locales, mate-applet-brisk-menu, mate-calc, mate-control-center, mate-desktop, mate-media, mate-menus, mate-notification-daemon, mate-panel, mate-polkit, mate-power-manager, mate-screensaver, mate-session-manager, mate-settings-daemon, mate-terminal, mate-utils, mesa-utils, mesa-vulkan-drivers, mintstick, network-manager, network-manager-applet, nm-connection-editor, nvtop, openssh-client, os-prober, papirus-icon-theme, pciutils, pkexec, pluma, polkitd, pulseaudio, pulseaudio-utils, python3, python3-gi, rfkill, rsync, sudo, system-config-printer, sysvinit-core, timeshift, tzdata, usbmuxd, usbutils, util-linux, util-linux-extra, wget, wireless-regdb, wmctrl, wpasupplicant, x11-utils, x11-xkb-utils, x11-xserver-utils, xdg-desktop-portal, xdg-desktop-portal-gtk, xdg-utils, xdotool, xserver-xorg-input-libinput, xserver-xorg-video-all, xserver-xorg-video-amdgpu, xserver-xorg-video-fbdev, xserver-xorg-video-intel, xserver-xorg-video-nouveau, xserver-xorg-video-vesa, zstd
+Breaks: base-files (<< 13)
+Replaces: base-files (<< 13)
+Filename: dists/spaced/main/binary-amd64/spaced-meta_9.26-1_all.deb
+Size: 2504
+MD5sum: 943b93b453b58f6d0e951917a6a3dda6
+SHA1: 692019e0bf6fce724c2d87a32e3c9ada537c3bcf
+SHA256: cc4d8948cbbe5a5200a6d705f0a16f3e989f9fd7430949c39a9412b3d674f5df
+SHA512: 1c4a214d7ba67ff047a751f72cbdd37c11950707eb677025c32075a6fe0d3bdf28e1ca5173e7f1d1ee68923e8085324585f2a380daeadd3c5ca86d082770b521
+Description: Spaced Linux release version tracking
+ Tracks the Spaced Linux release version and independently maintained Welcome
+ package so that in-place OS updates deliver the complete desktop. The
+ installed version is written to /etc/os-release, and upgrading this package
+ upgrades the reported Spaced Linux version to match the release.
+
+Package: spaced-welcome
+Architecture: all
+Version: 0.1.12
+Priority: optional
+Section: x11
+Maintainer: Spaced Linux Team <noreply@spacedlinux.com>
+Depends: ca-certificates, flatpak, gir1.2-gtk-3.0, python3 (>= 3.11), python3-gi, xdg-utils
+Recommends: spaced-meta
+Filename: dists/spaced/main/binary-amd64/spaced-welcome_0.1.12_all.deb
+Size: 480126
+MD5sum: d0337d9a1b16489f45153ef8217732e1
+SHA1: a5e2b6581b05338ebaff8a6160005beed65ec28f
+SHA256: d327dcdc77072e3520ecb2fb7f4d972f77c4246c80e3fcf746c5ca035c5291ac
+SHA512: d99c9eedd0c80731bcae1b38484f4b9fd915d91e0133bacae96731862d4b049367afebaf10917fddce6ea94898c8c6ba4888dfe1a8cad8534101e341b4622773
+Homepage: https://github.com/crhy/spacedwelcome
+Description: first-run application installer for Spaced Linux
+ Shows a source-aware application list on first login, installs SpacedBazaar,
+ and installs curated Flatpaks from Flathub and the signed
+ Spaced GitHub Flatpak repository.
 
 Package: spaced-welcome
 Architecture: all

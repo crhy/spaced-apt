@@ -1,0 +1,34 @@
+Package: marco
+Format: 3.0 (quilt)
+Binary: marco, marco-common, libmarco-private2, libmarco-dev
+Architecture: any all
+Version: 1.26.2-6+spaced9.26.1
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Uploaders: John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>, Stefano Karapetsas <stefano@karapetsas.com>, Mike Gabriel <sunweaver@debian.org>, Vangelis Mouhtsis <vangelis@gnugr.org>
+Standards-Version: 4.7.4
+Build-Depends: autoconf-archive, debhelper-compat (= 13), dpkg-dev (>= 1.16.1.1), gettext, libcanberra-gtk3-dev, libglib2.0-dev, libgtk-3-dev, libgtop2-dev, libice-dev, libpango1.0-dev, libsm-dev, libstartup-notification0-dev, libx11-dev, libxcomposite-dev, libxcursor-dev, libxdamage-dev, libxext-dev, libxfixes-dev, libxinerama-dev, libxpresent-dev, libxrandr-dev, libxrender-dev, libxres-dev, libxt-dev, mate-common (>= 1.18), x11proto-present-dev, yelp-tools, zenity
+Homepage: http://www.mate-desktop.org/
+Vcs-Browser: https://salsa.debian.org/debian-mate-team/marco
+Vcs-Git: https://salsa.debian.org/debian-mate-team/marco.git
+Package-List:
+ libmarco-dev deb libdevel optional arch=any
+ libmarco-private2 deb libs optional arch=any
+ marco deb x11 optional arch=any
+ marco-common deb x11 optional arch=all
+Files:
+ f427b6167fb2ea8b43bc8a4452df24e2 1818 marco_1.26.2-6+spaced9.26.1.dsc
+ 14062158dbfdb13b81264430524606fa 1193520 marco_1.26.2.orig.tar.xz
+ 823ca5d3cab1517a29c73ae5abeaa73c 20852 marco_1.26.2-6+spaced9.26.1.debian.tar.xz
+Checksums-Sha1:
+ 083b5ee91f541511404d2c4e1b167ec20970b1c9 1818 marco_1.26.2-6+spaced9.26.1.dsc
+ b7a8b2acd5f3f460ff1e4cf816c9bebc14abd3f5 1193520 marco_1.26.2.orig.tar.xz
+ 07cd8141e8b4093d394a0b7716aafc5d0630b6f8 20852 marco_1.26.2-6+spaced9.26.1.debian.tar.xz
+Checksums-Sha256:
+ 1efb9601dd87783decfd427ce4b95b44302cc376a6600ce97a8205d199ca06b7 1818 marco_1.26.2-6+spaced9.26.1.dsc
+ 5c730b1c5976ffdb2a6145eeb57ccd1bb99728b45fea61fbf55b818c85e0ac62 1193520 marco_1.26.2.orig.tar.xz
+ c4d08e55ec92733ff8f503e5e192b994a0358ff58c2b277ff6b0dac26fb11b1d 20852 marco_1.26.2-6+spaced9.26.1.debian.tar.xz
+Checksums-Sha512:
+ bf69803d776cd860245fc43791840a0678770a1ad72000a9a7bd525fbb20d49b572399789dd60540523e40ca1494ac6728696f413de21eb5cc53ae8e62c438a3 1818 marco_1.26.2-6+spaced9.26.1.dsc
+ 81c7419bf76450bbc44e09d179e1a8f839d463f199d74ff4ee65f84feee41a09090603c122345ec1901a9b5a2752281346ad2501fbe608fd1f56d19263ec94d5 1193520 marco_1.26.2.orig.tar.xz
+ df023272e9237f64cb4bd3b80216b08cb2f80420b55a14d354da9b4a2ab01516d6884be0753c656fd3548cdac98bba4707886b5fee99bc2030fbcb2467d96f45 20852 marco_1.26.2-6+spaced9.26.1.debian.tar.xz
+
