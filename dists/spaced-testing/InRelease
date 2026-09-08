@@ -1,0 +1,38 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Architectures: amd64
+Codename: spaced-testing
+Components: main
+Date: Tue, 08 Sep 2026 04:27:10 +0000
+Label: Spaced Linux apt repository
+Origin: Spaced Linux
+Suite: spaced-testing
+MD5Sum:
+ 5f5b60770148920f21c5ffda04a44723            21798 main/binary-amd64/Packages
+ 4d14d9562aca9ace33d41c0bb939c576             8072 main/binary-amd64/Packages.gz
+SHA1:
+ 1f881f9f23e9413c5955c9ab7ac7c9cbf89e431e            21798 main/binary-amd64/Packages
+ 4c2f64be062833e503fe78dcb9ace88c8a779fb0             8072 main/binary-amd64/Packages.gz
+SHA256:
+ d503c9aa7fd3e6e3024535c5ea4dbf6c1dc419def90c39b178464ba1c42a0722            21798 main/binary-amd64/Packages
+ 33ce6197d250d2f73f522b54e329eb137793f8caed21e1371627dbfe86861760             8072 main/binary-amd64/Packages.gz
+SHA512:
+ cf1bc0703f110ba64d8177f617f6d30912d396c629a66ed220df1ecb3640b81355139f16ebc69b03bad3bbbd5f7a02045e3e3e6ac0da0528bade2ed1e3f6e31d            21798 main/binary-amd64/Packages
+ f159bd99624f3bc1fa7799b97b5f1afc4726f5acfc6eb054d222e96cce41e7d07f22c298157ce34f2387e4b0929b069c43ca4f5daa1d61822d8fe1532ca8904b             8072 main/binary-amd64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEbBb3fC2uGdJiz9nwzAX4hVduuwUFAmqfjp4ACgkQzAX4hVdu
+uwXLWQ//Ry9OvWOM0VIGswnAP9uT6uIRtKBKZckF3qVi8XQpT1SswrL/KfVTVbWq
+VOXZh5NpHQFThZ9dWpvoukSYViSiBU3YJhuwGyWKzirqxb/11p+LJ2l08OzAEs/j
+DvuJzY1KM7KvsWQviuJe2P7Hp0AT5wTnueBxeXJU1X8sOkv15QxqLiCruqMDoYzM
+gpmVtUaAjVqfjuhWYdAZvHT5eknbKKlczLnn/KjjKmv2aj4dH9iwh9/AD3einM1R
+usOHdYBfciq2GVvEf7AKZubTBwPaB1ptw+IX5loMWJaViMofbvtlPkdFkoTNweJy
+JV17xwagk6K6txyEtPJaq3f7SRZLm4jWit2EhvlEhNFaOEbXVfq26EwXo9tbmszQ
+Qtr1KU0ttnAXfH2obiqkeXqp9MvQ2r7V1/xpEiGuzozrt05jRkUNeCWUHoCgtcfm
+4X2TwJ7jPLxJGMYjJsPv5sw75jMYwH2p8iLoHL/ZOaQTzqlHOPotUkd/DZKJHIJx
+gTk4pRC/LlMbezD2VpYq2dOkewnCWxx3JbaRlCFbsQ8bgXbt1YF+pmPWiGyrijDk
+SnkiEq+AIcVQIwDmDLVc4/yJoTubbvEBY4RrWzr0DNyl5nsVf3sd7EeThVhLHMVp
+vBmqqt/Va/ByvXfzOCnPfj+LFCjRnsAlmGDn/qf/Zq8aCO0Eolw=
+=44L2
+-----END PGP SIGNATURE-----

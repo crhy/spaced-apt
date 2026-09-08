@@ -1,0 +1,19 @@
+Architectures: amd64
+Codename: spaced-testing
+Components: main
+Date: Tue, 08 Sep 2026 04:27:10 +0000
+Label: Spaced Linux apt repository
+Origin: Spaced Linux
+Suite: spaced-testing
+MD5Sum:
+ 5f5b60770148920f21c5ffda04a44723            21798 main/binary-amd64/Packages
+ 4d14d9562aca9ace33d41c0bb939c576             8072 main/binary-amd64/Packages.gz
+SHA1:
+ 1f881f9f23e9413c5955c9ab7ac7c9cbf89e431e            21798 main/binary-amd64/Packages
+ 4c2f64be062833e503fe78dcb9ace88c8a779fb0             8072 main/binary-amd64/Packages.gz
+SHA256:
+ d503c9aa7fd3e6e3024535c5ea4dbf6c1dc419def90c39b178464ba1c42a0722            21798 main/binary-amd64/Packages
+ 33ce6197d250d2f73f522b54e329eb137793f8caed21e1371627dbfe86861760             8072 main/binary-amd64/Packages.gz
+SHA512:
+ cf1bc0703f110ba64d8177f617f6d30912d396c629a66ed220df1ecb3640b81355139f16ebc69b03bad3bbbd5f7a02045e3e3e6ac0da0528bade2ed1e3f6e31d            21798 main/binary-amd64/Packages
+ f159bd99624f3bc1fa7799b97b5f1afc4726f5acfc6eb054d222e96cce41e7d07f22c298157ce34f2387e4b0929b069c43ca4f5daa1d61822d8fe1532ca8904b             8072 main/binary-amd64/Packages.gz
