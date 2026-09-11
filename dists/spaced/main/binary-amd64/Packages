@@ -573,6 +573,28 @@ Description: Spaced Linux desktop settings and integration
  integration defaults. Upgrading this package delivers Spaced desktop fixes
  to an installed system without requiring a new ISO.
 
+Package: spaced-mate-default-settings
+Architecture: all
+Version: 9.26.1-5
+Priority: optional
+Section: x11
+Maintainer: Spaced Linux Team
+Provides: debian-mate-default-settings (= 1.26.1-3), mint-mate-default-settings, ubuntu-mate-default-settings
+Depends: accountsservice, caja-admin, dconf-gsettings-backend, gigolo, gnome-keyring, libcanberra-gtk3-module, pulseaudio-utils, timeshift, tzdata, wmctrl, x11-xserver-utils, xdg-desktop-portal, xdg-desktop-portal-gtk
+Conflicts: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
+Replaces: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
+Filename: dists/spaced/main/binary-amd64/spaced-mate-default-settings_9.26.1-5_all.deb
+Size: 59506708
+MD5sum: 6d61592d45941c4a284c3b64e05fd10e
+SHA1: 662154cec34004d7a3d6b482ccc6e0f4b1c04915
+SHA256: 5a3ce35555b282f48bd61d4bb9fdca477ea51601d65cd3f29169512a7a457899
+SHA512: bfe34561286943b3ddebd615654c5f7cfc52b5abe63167a6f1dce460ecc92f4826f40b249e8a755c455f17ea6664a860e441630c066f986f6375332a77f2b4e7
+Description: Spaced Linux desktop settings and integration
+ Supplies the MATE defaults capability required by mate-session-manager and
+ the maintained Spaced desktop themes, icons, utilities, panel layouts, and
+ integration defaults. Upgrading this package delivers Spaced desktop fixes
+ to an installed system without requiring a new ISO.
+
 Package: spaced-meta
 Architecture: all
 Version: 8.26.9
@@ -699,6 +721,28 @@ MD5sum: a4aad9843856ce64abadae00681ff248
 SHA1: b5181266e4bb76c6672d77b6f15868bedd11bec8
 SHA256: 7a100ee62292bedf831293790438c966cd933c471499cbc96ea29828f7295efb
 SHA512: a7b20b37bbda13e8babeba8effeff784a354210d97b69971c55b03733bb9f9e050df685c67a8f2ff1084fd2dabaa1585130928dd2141bb52bc799829b076fa0d
+Description: Spaced Linux release version tracking
+ Tracks the Spaced Linux release version and independently maintained Welcome
+ package so that in-place OS updates deliver the complete desktop. The
+ installed version is written to /etc/os-release, and upgrading this package
+ upgrades the reported Spaced Linux version to match the release.
+
+Package: spaced-meta
+Architecture: all
+Version: 9.26.1-5
+Priority: optional
+Section: metapackages
+Maintainer: Spaced Linux Team
+Provides: spaced-release
+Depends: base-files, flatpak, libfuse2t64, libmarco-private2 (>= 1.26.2-6+spaced9.26.1), spaced-mate-default-settings (= 9.26.1-5), spaced-welcome (>= 0.1.13), accountsservice, alacarte, amdgpu-top, atril, bluez, bluez-firmware, bluez-tools, btop, ca-certificates, cairo-dock-core, caja, caja-admin, caja-open-terminal, chrony, compiz, compiz-mate, compiz-plugins-extra, compiz-plugins-main, compizconfig-settings-manager, console-setup, cups, cups-client, cups-filters, cups-ipp-utils, curl, dbus-x11, dconf-gsettings-backend, devuan-keyring, dkms, dosfstools, efibootmgr, elogind, engrampa, eom, fastfetch, firmware-amd-graphics, firmware-atheros, firmware-brcm80211, firmware-intel-graphics, firmware-intel-misc, firmware-intel-sound, firmware-iwlwifi, firmware-mediatek, firmware-misc-nonfree, firmware-nvidia-graphics, firmware-realtek, firmware-sof-signed, fonts-dejavu-core, gdebi-core, gigolo, gir1.2-gtk-3.0, git, gnome-keyring, gparted, grub-efi-amd64-bin, grub-pc-bin, gvfs-backends, htop, iw, libcanberra-gtk3-module, libelogind-compat, libgl1-mesa-dri, libglib2.0-bin, libpam-elogind, lightdm, lightdm-gtk-greeter, linux-headers-amd64, linux-image-amd64, locales, mate-applet-brisk-menu, mate-calc, mate-control-center, mate-desktop, mate-media, mate-menus, mate-notification-daemon, mate-panel, mate-polkit, mate-power-manager, mate-screensaver, mate-session-manager, mate-settings-daemon, mate-terminal, mate-utils, mesa-utils, mesa-vulkan-drivers, mintstick, network-manager, network-manager-applet, nm-connection-editor, nvtop, openssh-client, os-prober, papirus-icon-theme, pciutils, pkexec, pluma, polkitd, pulseaudio, pulseaudio-utils, python3, python3-gi, rfkill, rsync, sudo, system-config-printer, sysvinit-core, timeshift, tzdata, usbmuxd, usbutils, util-linux, util-linux-extra, wget, wireless-regdb, wmctrl, wpasupplicant, x11-utils, x11-xkb-utils, x11-xserver-utils, xdg-desktop-portal, xdg-desktop-portal-gtk, xdg-utils, xdotool, xserver-xorg-input-libinput, xserver-xorg-video-all, xserver-xorg-video-amdgpu, xserver-xorg-video-fbdev, xserver-xorg-video-intel, xserver-xorg-video-nouveau, xserver-xorg-video-vesa, zstd
+Breaks: base-files (<< 13)
+Replaces: base-files (<< 13)
+Filename: dists/spaced/main/binary-amd64/spaced-meta_9.26.1-5_all.deb
+Size: 2508
+MD5sum: 1a53785586cd9110c1e6692f7836914b
+SHA1: 956ffa1035d76eb0d6ab0f5c0db6bce2a8dcc4aa
+SHA256: 3e63ad5e42bde0925d790b5b7542373f973c077ea5a89604094cf6c5780f11dd
+SHA512: 5cbcd35496323277906fd09dbf78a47a5d21ae62a3e1974c430ec316f61c546c69f2d7db5c5bb4ab2347f107e2f5130cbd46d8ba818c7ec0e79b5131e08d1698
 Description: Spaced Linux release version tracking
  Tracks the Spaced Linux release version and independently maintained Welcome
  package so that in-place OS updates deliver the complete desktop. The
