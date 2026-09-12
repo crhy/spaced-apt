@@ -617,6 +617,28 @@ Description: Spaced Linux desktop settings and integration
  integration defaults. Upgrading this package delivers Spaced desktop fixes
  to an installed system without requiring a new ISO.
 
+Package: spaced-mate-default-settings
+Architecture: all
+Version: 9.26.2-2
+Priority: optional
+Section: x11
+Maintainer: Spaced Linux Team
+Provides: debian-mate-default-settings (= 1.26.1-3), mint-mate-default-settings, ubuntu-mate-default-settings
+Depends: accountsservice, caja-admin, dconf-gsettings-backend, gigolo, gnome-keyring, libcanberra-gtk3-module, pulseaudio-utils, timeshift, tzdata, wmctrl, x11-xserver-utils, xdg-desktop-portal, xdg-desktop-portal-gtk
+Conflicts: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
+Replaces: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
+Filename: dists/spaced/main/binary-amd64/spaced-mate-default-settings_9.26.2-2_all.deb
+Size: 59518484
+MD5sum: bb83af114e866c219d2962657641a7e1
+SHA1: 00766e6c347ad5f8996b36ad272361e3582f0c1b
+SHA256: 7bb31d28f7f0159ad2112020120ccb478401cc07723ae52b9ee907eaa1e4f3c7
+SHA512: fd2220a69c6f11e209b4cbe4a95605107fbef3987624e090db43548d70d51d828e41cc43013e6c9adaf00c4934d3b0b9f6f6af346a3d9847a7975f4767cef8c3
+Description: Spaced Linux desktop settings and integration
+ Supplies the MATE defaults capability required by mate-session-manager and
+ the maintained Spaced desktop themes, icons, utilities, panel layouts, and
+ integration defaults. Upgrading this package delivers Spaced desktop fixes
+ to an installed system without requiring a new ISO.
+
 Package: spaced-meta
 Architecture: all
 Version: 8.26.9
@@ -793,6 +815,28 @@ Description: Spaced Linux release version tracking
  installed version is written to /etc/os-release, and upgrading this package
  upgrades the reported Spaced Linux version to match the release.
 
+Package: spaced-meta
+Architecture: all
+Version: 9.26.2-2
+Priority: optional
+Section: metapackages
+Maintainer: Spaced Linux Team
+Provides: spaced-release
+Depends: base-files, flatpak, libfuse2t64, libmarco-private2 (>= 1.26.2-6+spaced9.26.1), spaced-mate-default-settings (= 9.26.2-2), spaced-welcome (>= 0.1.15), accountsservice, alacarte, amdgpu-top, atril, bluez, bluez-firmware, bluez-tools, btop, ca-certificates, cairo-dock-core, caja, caja-admin, caja-open-terminal, chrony, compiz, compiz-mate, compiz-plugins-extra, compiz-plugins-main, compizconfig-settings-manager, console-setup, cups, cups-client, cups-filters, cups-ipp-utils, curl, dbus-x11, dconf-gsettings-backend, devuan-keyring, dkms, dosfstools, efibootmgr, elogind, engrampa, eom, fastfetch, firmware-amd-graphics, firmware-atheros, firmware-brcm80211, firmware-intel-graphics, firmware-intel-misc, firmware-intel-sound, firmware-iwlwifi, firmware-mediatek, firmware-misc-nonfree, firmware-nvidia-graphics, firmware-realtek, firmware-sof-signed, fonts-dejavu-core, gdebi-core, gigolo, gir1.2-gtk-3.0, git, gnome-keyring, gparted, grub-efi-amd64-bin, grub-pc-bin, gvfs-backends, htop, iw, libcanberra-gtk3-module, libelogind-compat, libgl1-mesa-dri, libglib2.0-bin, libpam-elogind, lightdm, lightdm-gtk-greeter, linux-headers-amd64, linux-image-amd64, locales, mate-applet-brisk-menu, mate-calc, mate-control-center, mate-desktop, mate-media, mate-menus, mate-notification-daemon, mate-panel, mate-polkit, mate-power-manager, mate-screensaver, mate-session-manager, mate-settings-daemon, mate-terminal, mate-utils, mesa-utils, mesa-vulkan-drivers, mintstick, network-manager, network-manager-applet, nm-connection-editor, nvtop, openssh-client, os-prober, papirus-icon-theme, pciutils, pkexec, pluma, polkitd, pulseaudio, pulseaudio-utils, python3, python3-gi, rfkill, rsync, sudo, system-config-printer, sysvinit-core, timeshift, tzdata, usbmuxd, usbutils, util-linux, util-linux-extra, wget, wireless-regdb, wmctrl, wpasupplicant, x11-utils, x11-xkb-utils, x11-xserver-utils, xdg-desktop-portal, xdg-desktop-portal-gtk, xdg-utils, xdotool, xserver-xorg-input-libinput, xserver-xorg-video-all, xserver-xorg-video-amdgpu, xserver-xorg-video-fbdev, xserver-xorg-video-intel, xserver-xorg-video-nouveau, xserver-xorg-video-vesa, zenity, zstd
+Breaks: base-files (<< 13)
+Replaces: base-files (<< 13)
+Filename: dists/spaced/main/binary-amd64/spaced-meta_9.26.2-2_all.deb
+Size: 2520
+MD5sum: 47b99f0a1b0fa1f97c017ea9b52d32b8
+SHA1: 4e0ec60e0df846a79f3e7eb7b4ba3d99454bd879
+SHA256: 89a86362529c390995db7febdbe6dd1aae4aee4047815818d1a27ef0aa4ff485
+SHA512: f37698b8546c1f92e552140481073fbe651be429067a5bc0d30b0a273644bb9dcdd5d98b00d4e7896c3749b13c599e8aaab13de3fd1305e380caaad04ff6f216
+Description: Spaced Linux release version tracking
+ Tracks the Spaced Linux release version and independently maintained Welcome
+ package so that in-place OS updates deliver the complete desktop. The
+ installed version is written to /etc/os-release, and upgrading this package
+ upgrades the reported Spaced Linux version to match the release.
+
 Package: spaced-welcome
 Architecture: all
 Version: 0.1.12
@@ -827,6 +871,26 @@ MD5sum: 8297ec8138ffa5e074295caec4a15f03
 SHA1: 2c7faa2ee360714daf57f70ae15abb678dce975d
 SHA256: 591d7d3fdb2f42ca93d1161c62a4592d40b0b7a721db643b545977070fbc5aac
 SHA512: f44ef9c5537bd472ec760557d1b96faf32b48fb06cddde1693f14d689ada20e5009322841625d3e9a1cf10d954d288d0c25f02bea6a312e2a46f94a9ae04d97f
+Homepage: https://github.com/crhy/spacedwelcome
+Description: first-run application installer for Spaced Linux
+ Shows a source-aware application list on first login, installs SpacedBazaar,
+ and installs curated Flatpaks from Flathub and the signed
+ Spaced GitHub Flatpak repository.
+
+Package: spaced-welcome
+Architecture: all
+Version: 0.1.15
+Priority: optional
+Section: x11
+Maintainer: Spaced Linux Team <noreply@spacedlinux.com>
+Depends: ca-certificates, flatpak, gir1.2-gtk-3.0, python3 (>= 3.11), python3-gi, xdg-utils
+Recommends: spaced-meta
+Filename: dists/spaced/main/binary-amd64/spaced-welcome_0.1.15_all.deb
+Size: 480388
+MD5sum: a2bf1e2d711a127b3a1b301edc22d3b9
+SHA1: b5399743ebb9bf2b48e00fc0cff85dc72618d86e
+SHA256: 392b992a6bc20420c1d769d04ad8f91ab498af5a4e9c21243418a9c6f28e3dc0
+SHA512: 536d7604d5066da854fb7de214fb9216f499908e10e42bd4a5f026e880b881e9d3dd379b7634f15acb9014afa7a9d5561d79bd98288b7ec94332b975b1cf1822
 Homepage: https://github.com/crhy/spacedwelcome
 Description: first-run application installer for Spaced Linux
  Shows a source-aware application list on first login, installs SpacedBazaar,
