@@ -603,28 +603,6 @@ Description: lightweight GTK+ window manager for MATE
 
 Package: spaced-mate-default-settings
 Architecture: all
-Version: 10.26-1
-Priority: optional
-Section: x11
-Maintainer: Spaced Linux Team
-Provides: debian-mate-default-settings (= 1.26.1-3), mint-mate-default-settings, ubuntu-mate-default-settings
-Depends: accountsservice, caja-admin, dconf-gsettings-backend, gigolo, gnome-keyring, libcanberra-gtk3-module, pulseaudio-utils, timeshift, tzdata, wmctrl, x11-xserver-utils, xdg-desktop-portal, xdg-desktop-portal-gtk, spaced-themes (= 10.26-1), spaced-wallpapers (>= 2026.09-2)
-Conflicts: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
-Replaces: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
-Filename: dists/spaced/main/binary-amd64/spaced-mate-default-settings_10.26-1_all.deb
-Size: 1438972
-MD5sum: 9d5d05314c2c84eec68b07a4f88a88bf
-SHA1: ca106005f269a5f8ff68f5acd674732963af6f72
-SHA256: 604e7d4dc97f6a89b8bc046c90446077b9a298709a20ec39772b8ceb0f101b2d
-SHA512: 6f7be318e33d094b16a919dff1568f0400c1e115517ce2f9b6cf7c00b68216db0e9b34c207a48a842cf60fe8342524a5f96c3558820fd1a853b33b1f3fdb25a1
-Description: Spaced Linux desktop settings and integration
- Supplies the MATE defaults capability required by mate-session-manager and
- the maintained Spaced desktop themes, icons, utilities, panel layouts, and
- integration defaults. Upgrading this package delivers Spaced desktop fixes
- to an installed system without requiring a new ISO.
-
-Package: spaced-mate-default-settings
-Architecture: all
 Version: 10.26.1-1
 Priority: optional
 Section: x11
@@ -667,27 +645,27 @@ Description: Spaced Linux desktop settings and integration
  integration defaults. Upgrading this package delivers Spaced desktop fixes
  to an installed system without requiring a new ISO.
 
-Package: spaced-meta
+Package: spaced-mate-default-settings
 Architecture: all
-Version: 10.26-1
+Version: 10.26.3-1
 Priority: optional
-Section: metapackages
+Section: x11
 Maintainer: Spaced Linux Team
-Provides: spaced-release
-Depends: base-files, flatpak, libfuse2t64, libmarco-private2 (>= 1.26.2-6+spaced9.26.1), spaced-mate-default-settings (= 10.26-1), spaced-nm-focus (= 10.26-1), spaced-themes (= 10.26-1), spaced-wallpapers (>= 2026.09-2), spaced-welcome (>= 0.1.18), accountsservice, alacarte, amdgpu-top, atril, avahi-daemon, bluez, bluez-firmware, bluez-tools, btop, ca-certificates, cairo-dock-core, caja, caja-admin, caja-open-terminal, caja-share, chrony, compiz, compiz-mate, compiz-plugins-extra, compiz-plugins-main, compizconfig-settings-manager, console-setup, cups, cups-client, cups-filters, cups-ipp-utils, curl, dbus-x11, dconf-gsettings-backend, devuan-keyring, dkms, dosfstools, efibootmgr, elogind, engrampa, eom, fastfetch, firmware-amd-graphics, firmware-atheros, firmware-brcm80211, firmware-intel-graphics, firmware-intel-misc, firmware-intel-sound, firmware-iwlwifi, firmware-mediatek, firmware-misc-nonfree, firmware-nvidia-graphics, firmware-realtek, firmware-sof-signed, fonts-dejavu-core, gdebi-core, gigolo, gir1.2-gtk-3.0, git, gnome-keyring, gparted, grub-efi-amd64-bin, grub-pc-bin, gvfs-backends, htop, iw, libcanberra-gtk3-module, libelogind-compat, libgl1-mesa-dri, libglib2.0-bin, libnss-mdns, libpam-elogind, lightdm, lightdm-gtk-greeter, linux-headers-amd64, linux-image-amd64, locales, mate-applet-brisk-menu, mate-calc, mate-control-center, mate-desktop, mate-media, mate-menus, mate-notification-daemon, mate-panel, mate-polkit, mate-power-manager, mate-screensaver, mate-session-manager, mate-settings-daemon, mate-terminal, mate-utils, mesa-utils, mesa-vulkan-drivers, mintstick, network-manager, network-manager-applet, nm-connection-editor, nvtop, openssh-client, os-prober, papirus-icon-theme, pciutils, pkexec, pluma, polkitd, pulseaudio, pulseaudio-utils, python3, python3-gi, python3-packaging, python3-psutil, python3-xdg, rfkill, rsync, samba, smbclient, sudo, system-config-printer, sysvinit-core, timeshift, tzdata, usbmuxd, usbutils, util-linux, util-linux-extra, wget, wireless-regdb, wmctrl, wpasupplicant, wsdd, x11-utils, x11-xkb-utils, x11-xserver-utils, xbase-clients, xdg-desktop-portal, xdg-desktop-portal-gtk, xdg-utils, xdotool, xserver-xorg-input-libinput, xserver-xorg-video-all, xserver-xorg-video-amdgpu, xserver-xorg-video-fbdev, xserver-xorg-video-intel, xserver-xorg-video-nouveau, xserver-xorg-video-vesa, xvfb, zenity, zstd
-Breaks: base-files (<< 13)
-Replaces: base-files (<< 13)
-Filename: dists/spaced/main/binary-amd64/spaced-meta_10.26-1_all.deb
-Size: 3096
-MD5sum: bb6542bca2a64e81ca15f20386ce71a4
-SHA1: 609ed42a9ab56b84bb0f7f8104a431186f827778
-SHA256: e004ae9d8a63c8d4270369e502242e75f242ab9d31854d6f7887d363f5a1ffd6
-SHA512: 65156018db1ed3ca74558a4022d9751da2896bad572066dc72140acefa3fe250ac5e01aaa50c67d1e28641ed55e36566954159bec18daf22ae31344947096ab3
-Description: Spaced Linux release version tracking
- Tracks the Spaced Linux release version and independently maintained Welcome
- package so that in-place OS updates deliver the complete desktop. The
- installed version is written to /etc/os-release, and upgrading this package
- upgrades the reported Spaced Linux version to match the release.
+Provides: debian-mate-default-settings (= 1.26.1-3), mint-mate-default-settings, ubuntu-mate-default-settings
+Depends: accountsservice, caja-admin, dconf-gsettings-backend, fonts-roboto-unhinted, gigolo, gnome-keyring, libcanberra-gtk3-module, pulseaudio-utils, timeshift, tzdata, wmctrl, x11-xserver-utils, xdg-user-dirs, xdg-desktop-portal, xdg-desktop-portal-gtk, spaced-themes (= 10.26.3-1), spaced-wallpapers (>= 2026.09-3)
+Conflicts: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
+Replaces: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
+Filename: dists/spaced/main/binary-amd64/spaced-mate-default-settings_10.26.3-1_all.deb
+Size: 1445124
+MD5sum: 8826f366d526dfebfa0475fa580f8dca
+SHA1: 8bba3bfadbf749c7ffcddf624a997f7512a3a158
+SHA256: 6e6bdc9c14ca3f8999bb13c57e561878336150d7d0acfef1af4e4f5ed7a36547
+SHA512: 48baebae73eaf1b9caa88528c52b5051b107693273091139e4d2e7416df95d5ea690b5439f1883ec96cba1c9772ca034776ddaca01f09a361547ef5c3eaffe5f
+Description: Spaced Linux desktop settings and integration
+ Supplies the MATE defaults capability required by mate-session-manager and
+ the maintained Spaced desktop themes, icons, utilities, panel layouts, and
+ integration defaults. Upgrading this package delivers Spaced desktop fixes
+ to an installed system without requiring a new ISO.
 
 Package: spaced-meta
 Architecture: all
@@ -733,23 +711,27 @@ Description: Spaced Linux release version tracking
  installed version is written to /etc/os-release, and upgrading this package
  upgrades the reported Spaced Linux version to match the release.
 
-Package: spaced-nm-focus
-Architecture: amd64
-Version: 10.26-1
+Package: spaced-meta
+Architecture: all
+Version: 10.26.3-1
 Priority: optional
-Section: x11
+Section: metapackages
 Maintainer: Spaced Linux Team
-Depends: libc6, libgtk-3-0t64, network-manager-applet
-Filename: dists/spaced/main/binary-amd64/spaced-nm-focus_10.26-1_amd64.deb
-Size: 2948
-MD5sum: 470897db8b5bbea0e5719aca7128f79b
-SHA1: ff37c74501487c42603b57dacd11e542d4255785
-SHA256: 18c5a754f68b6358167187df03acdf1afd97780e96f53466d5f3ceee1395111b
-SHA512: eeebd0646bc501d04f0f328bc23466a7b2fbee40d18846fa413ef6e7ca0ecd09e5f7057c770fb828a188bdabdfc010ce4323a8153b893af33d0cb646dfa6ce40
-Description: Focus the password field in nm-applet's Wi-Fi dialogs
- A GTK 3 module, loaded only into nm-applet, that puts the cursor in the
- password field when a Wi-Fi network asks for one. libnma 1.10 no longer
- focuses that field itself.
+Provides: spaced-release
+Depends: base-files, flatpak, libpam-gnome-keyring, libfuse2t64, libmarco-private2 (>= 1.26.2-6+spaced9.26.1), spaced-mate-default-settings (= 10.26.3-1), spaced-nm-focus (= 10.26.3-1), spaced-themes (= 10.26.3-1), spaced-wallpapers (>= 2026.09-3), spaced-welcome (>= 0.1.19), accountsservice, alacarte, amdgpu-top, atril, avahi-daemon, bluez, bluez-firmware, bluez-tools, btop, ca-certificates, cairo-dock-core, caja, caja-admin, caja-open-terminal, caja-share, chrony, compiz, compiz-mate, compiz-plugins-extra, compiz-plugins-main, compizconfig-settings-manager, console-setup, cups, cups-client, cups-filters, cups-ipp-utils, curl, dbus-x11, dconf-gsettings-backend, devuan-keyring, dkms, dosfstools, efibootmgr, elogind, engrampa, eom, fastfetch, firmware-amd-graphics, firmware-atheros, firmware-brcm80211, firmware-intel-graphics, firmware-intel-misc, firmware-intel-sound, firmware-iwlwifi, firmware-mediatek, firmware-misc-nonfree, firmware-nvidia-graphics, firmware-realtek, firmware-sof-signed, fonts-dejavu-core, fonts-roboto-unhinted, gdebi-core, gigolo, gir1.2-gtk-3.0, git, gnome-keyring, gparted, grub-efi-amd64-bin, grub-pc-bin, gvfs-backends, htop, iw, libcanberra-gtk3-module, libelogind-compat, libgl1-mesa-dri, libglib2.0-bin, libnss-mdns, libpam-elogind, lightdm, lightdm-gtk-greeter, linux-headers-amd64, linux-image-amd64, locales, mate-applet-brisk-menu, mate-calc, mate-control-center, mate-desktop, mate-media, mate-menus, mate-notification-daemon, mate-panel, mate-polkit, mate-power-manager, mate-screensaver, mate-session-manager, mate-settings-daemon, mate-terminal, mate-utils, mesa-utils, mesa-vulkan-drivers, mintstick, network-manager, network-manager-applet, nm-connection-editor, nvtop, openssh-client, os-prober, papirus-icon-theme, pciutils, pkexec, pluma, polkitd, pulseaudio, pulseaudio-utils, python3, python3-gi, python3-packaging, python3-psutil, python3-xdg, rfkill, rsync, samba, smbclient, sudo, system-config-printer, sysvinit-core, timeshift, tzdata, usbmuxd, usbutils, util-linux, util-linux-extra, wget, wireless-regdb, wmctrl, wpasupplicant, wsdd, x11-utils, x11-xkb-utils, x11-xserver-utils, xbase-clients, xdg-desktop-portal, xdg-desktop-portal-gtk, xdg-user-dirs, xdg-utils, xdotool, xserver-xorg-input-libinput, xserver-xorg-video-all, xserver-xorg-video-amdgpu, xserver-xorg-video-fbdev, xserver-xorg-video-intel, xserver-xorg-video-nouveau, xserver-xorg-video-vesa, xvfb, zenity, zstd
+Breaks: base-files (<< 13)
+Replaces: base-files (<< 13)
+Filename: dists/spaced/main/binary-amd64/spaced-meta_10.26.3-1_all.deb
+Size: 3596
+MD5sum: 2aa4d58e880a63598e94527c23e91333
+SHA1: f90fbbba6ef8ee0dacc94245f10c54fea2e108df
+SHA256: 8867216c0fc8b75279541c69a134f79949aa88a74c778eaf81542e4ed0dda2ce
+SHA512: 95935aaf1ca5c005b52bb36af089bad61027ac80f9b675c804adf39467876c2d9160b5b2b12a06f16b8b222d69da604cc5a20580760e2679d5838c7975df0172
+Description: Spaced Linux release version tracking
+ Tracks the Spaced Linux release version and independently maintained Welcome
+ package so that in-place OS updates deliver the complete desktop. The
+ installed version is written to /etc/os-release, and upgrading this package
+ upgrades the reported Spaced Linux version to match the release.
 
 Package: spaced-nm-focus
 Architecture: amd64
@@ -787,24 +769,23 @@ Description: Focus the password field in nm-applet's Wi-Fi dialogs
  password field when a Wi-Fi network asks for one. libnma 1.10 no longer
  focuses that field itself.
 
-Package: spaced-themes
-Architecture: all
-Version: 10.26-1
+Package: spaced-nm-focus
+Architecture: amd64
+Version: 10.26.3-1
 Priority: optional
 Section: x11
 Maintainer: Spaced Linux Team
-Breaks: spaced-mate-default-settings (<< 9.26.3-1)
-Replaces: spaced-mate-default-settings (<< 9.26.3-1)
-Filename: dists/spaced/main/binary-amd64/spaced-themes_10.26-1_all.deb
-Size: 3355384
-MD5sum: 08118236f0c1f5c1f636acb40fe260c1
-SHA1: d8a27a04cd90c135dd45bda3cd3ac46cdeb2c0bf
-SHA256: 2c9dba815065963cf95cf4627b9e5560fd272aef8c2c0d9e3a1263eac624200b
-SHA512: 73f0faefbee7345274d955b7755eaaa85d2856735b3443953e3d23da3454699d0ad5dd4e68e2ae0a98cc41918a59776ff6d990127597c2aa489ef819933671dd
-Description: Spaced Linux MATE themes, icons, and boot artwork
- Supplies the selectable Spaced GTK/Metacity themes, icon themes including
- the Brisk start-here mark, the theme registry, and the GRUB theme.
- Upgrading this package refreshes the compiled icon caches.
+Depends: libc6, libgtk-3-0t64, network-manager-applet
+Filename: dists/spaced/main/binary-amd64/spaced-nm-focus_10.26.3-1_amd64.deb
+Size: 2948
+MD5sum: e100748d2277f180a07f4a7e325abac7
+SHA1: ce5f6eb7fc52767adff7beaddb817a5fa340a755
+SHA256: d64217a6eedb27859032721f57f8e786ad46abdc00b0a2a13997e27bd5c140d1
+SHA512: 9b943849adc95c62326885cd69b53e43f5453c26b3308575300b0951267e147134d1e21eba3d5cb77e1bb696cb644b39673c1553a917cd9e66f8d4e777ebb9c0
+Description: Focus the password field in nm-applet's Wi-Fi dialogs
+ A GTK 3 module, loaded only into nm-applet, that puts the cursor in the
+ password field when a Wi-Fi network asks for one. libnma 1.10 no longer
+ focuses that field itself.
 
 Package: spaced-themes
 Architecture: all
@@ -839,6 +820,25 @@ MD5sum: 09dd8af619325c803f1b71439e76b103
 SHA1: 3b000c10b58cdeb8db06d743df64679d48239b5a
 SHA256: 77cfb3c860cf3f91e8b3c01552a0fedf4ddbac58ab61d0d3bd583357bb9e7a91
 SHA512: 6793dc528aa9947c1c39db69686a7489f11da930b446a2f8a38a0cbe1d4c1cbf5334c6890597badb33047e80eb6bf3826d6ff2a85299b61bdc0d27c2c06c618e
+Description: Spaced Linux MATE themes, icons, and boot artwork
+ Supplies the selectable Spaced GTK/Metacity themes, icon themes including
+ the Brisk start-here mark, the theme registry, and the GRUB theme.
+ Upgrading this package refreshes the compiled icon caches.
+
+Package: spaced-themes
+Architecture: all
+Version: 10.26.3-1
+Priority: optional
+Section: x11
+Maintainer: Spaced Linux Team
+Breaks: spaced-mate-default-settings (<< 9.26.3-1)
+Replaces: spaced-mate-default-settings (<< 9.26.3-1)
+Filename: dists/spaced/main/binary-amd64/spaced-themes_10.26.3-1_all.deb
+Size: 3355648
+MD5sum: 41bcf5a8c37e1b209b27ccd10ee3dcbb
+SHA1: f340769dd7a8cf7224c03918841079f46346f25f
+SHA256: f9bd0601c9e32458c16a026c48ae39eafe4b4216c27c527ccc26c8f18dfb63ad
+SHA512: a1923bddfe704d3bcd72a859934c7aa9cce90f10b08a2442c661c198ff5b0d878ae150f55da0161c3d53a891e6d1d22704731b0c5eee0faa856a3d761bd1ab91
 Description: Spaced Linux MATE themes, icons, and boot artwork
  Supplies the selectable Spaced GTK/Metacity themes, icon themes including
  the Brisk start-here mark, the theme registry, and the GRUB theme.
@@ -884,26 +884,6 @@ Description: Spaced Linux wallpapers and background catalog
 
 Package: spaced-welcome
 Architecture: all
-Version: 0.1.16
-Priority: optional
-Section: x11
-Maintainer: Spaced Linux Team <noreply@spacedlinux.com>
-Depends: ca-certificates, flatpak, gir1.2-gtk-3.0, python3 (>= 3.11), python3-gi, xdg-utils
-Recommends: spaced-meta
-Filename: dists/spaced/main/binary-amd64/spaced-welcome_0.1.16_all.deb
-Size: 480404
-MD5sum: 5957363f4e61c068b574c9e1104b2ced
-SHA1: 2c1e56116f805ce5392fde50ea68eb7a666a0b22
-SHA256: 61ee2b8462461b231b82f35c404b3a95a49553566b28ae71c09a7933d6f914ab
-SHA512: 61d99f37357b451eb25f949fed064115466b19952781d6b6fa75859219653a949394e1912cbbb33132eb931c4114c1cf8ca93d7d3ae79ce46a14d01597ffcdc4
-Homepage: https://github.com/crhy/spacedwelcome
-Description: first-run application installer for Spaced Linux
- Shows a source-aware application list on first login, installs SpacedBazaar,
- and installs curated Flatpaks from Flathub and the signed
- Spaced GitHub Flatpak repository.
-
-Package: spaced-welcome
-Architecture: all
 Version: 0.1.18
 Priority: optional
 Section: x11
@@ -941,4 +921,246 @@ Description: first-run application installer for Spaced Linux
  Shows a source-aware application list on first login, installs SpacedBazaar,
  and installs curated Flatpaks from Flathub and the signed
  Spaced GitHub Flatpak repository.
+
+Package: xnest
+Architecture: amd64
+Version: 2:21.1.25-1devuan1+spaced10.26.3
+Priority: optional
+Section: x11
+Source: xorg-server
+Origin: Devuan
+Maintainer: Devuan Developers <devuan-dev@lists.dyne.org>
+Installed-Size: 1750
+Provides: xserver
+Depends: xserver-common (>= 2:21.1.25-1devuan1+spaced10.26.3), libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libnettle8t64, libpixman-1-0 (>= 0.13.2), libselinux1 (>= 3.1~), libunwind8, libx11-6, libxau6 (>= 1:1.0.11), libxdmcp6 (>= 1:1.1.5), libxext6, libxfont2 (>= 1:2.0.1)
+Recommends: libgl1-mesa-dri (>= 7.1~rc1)
+Filename: dists/spaced/main/binary-amd64/xnest_21.1.25-1devuan1+spaced10.26.3_amd64.deb
+Size: 672768
+MD5sum: 9258e9c1e8c708c19b65a05f10f02a96
+SHA1: 69198d9bd66b4e95743a37d12b89b881bb78d960
+SHA256: d1da8b55b98bbe54954b094843fdeaa7e757317d3b80760a13485bd7083e5469
+SHA512: e08ae619be89b5c0ffb4f58bb048ad2bc446323a7b878a5cc7ee4ddfa91ef70c3d78d003028399de81d9de77d4d688d10a4c4b954ffb8d7034f3e0f9141005b1
+Homepage: https://www.x.org/
+Description: Nested X server
+ Xnest is a nested X server that simply relays all its requests to another
+ X server, where it runs as a client.  This means that it appears as another
+ window in your current X session.  Xnest relies upon its parent X server
+ for font services.
+ .
+ Use of the Xephyr X server instead of Xnest is recommended.
+ .
+ More information about X.Org can be found at:
+ <URL:https://www.x.org>
+ .
+ This package is built from the X.org xserver module.
+
+Package: xorg-server-source
+Architecture: all
+Version: 2:21.1.25-1devuan1+spaced10.26.3
+Priority: optional
+Section: x11
+Source: xorg-server
+Origin: Devuan
+Maintainer: Devuan Developers <devuan-dev@lists.dyne.org>
+Installed-Size: 3390
+Filename: dists/spaced/main/binary-amd64/xorg-server-source_21.1.25-1devuan1+spaced10.26.3_all.deb
+Size: 3378716
+MD5sum: fdc286e089d7379a00aa3e295455a955
+SHA1: 29a57321287debb063e643fd2c15c968951665d9
+SHA256: 13f61dc71d8cc7686c421c27734df21145882058dab934d249a3a257e2022592
+SHA512: b7ae0f5dadfe0b1dd90ca838185b83b474b7e270e9ed1e4da057366f2e46d1e54ba75748fab139788c4a0e666cf08cf272486ebbf984b1fd3f39206627d53d07
+Homepage: https://www.x.org/
+Description: Xorg X server - source files
+ This package provides original Debian (with Debian patches already
+ applied, and autotools files updated) sources for the X.Org ('Xorg')
+ X server shipped in a tarball.  This enables other projects re-using
+ X server codebase (e.g. VNC servers) to (re-)use officially
+ Debian-supported version of the X xserver for their builds.
+ .
+ Unless you are building a software product using X server sources,
+ you probably want xserver-xorg and/or xserver-xorg-core instead.
+
+Package: xserver-common
+Architecture: all
+Version: 2:21.1.25-1devuan1+spaced10.26.3
+Multi-Arch: foreign
+Priority: optional
+Section: x11
+Source: xorg-server
+Origin: Devuan
+Maintainer: Devuan Developers <devuan-dev@lists.dyne.org>
+Installed-Size: 147
+Depends: x11-common, xkb-data, x11-xkb-utils
+Recommends: xfonts-base, xauth
+Replaces: xserver-xorg-core (<< 2:1.5.2)
+Filename: dists/spaced/main/binary-amd64/xserver-common_21.1.25-1devuan1+spaced10.26.3_all.deb
+Size: 29500
+MD5sum: 9c89b436a4b1dce25392063c95911edc
+SHA1: 2f1d2e4aab4abdaf22ed591f9301fb89879111f7
+SHA256: 37b5476a36a598df6b6ccc410359e9703570d882779cdd2db29d8c5e007e2a81
+SHA512: fff779abd9f6dde3af64479d4bf9e3f841d3005bd0c4dbd306710abc9ee7249a1b062d4811abaf3cd5a978bc78045df99766b98ddd60fc1c36c9c09c4ad3aeee
+Homepage: https://www.x.org/
+Description: common files used by various X servers
+ This package provides files necessary for all X.Org based X servers.
+
+Package: xserver-xephyr
+Architecture: amd64
+Version: 2:21.1.25-1devuan1+spaced10.26.3
+Priority: optional
+Section: x11
+Source: xorg-server
+Origin: Devuan
+Maintainer: Devuan Developers <devuan-dev@lists.dyne.org>
+Installed-Size: 2589
+Provides: xserver
+Depends: xserver-common (>= 2:21.1.25-1devuan1+spaced10.26.3), libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libepoxy0 (>= 1.0), libeudev1 (>= 3.2.12), libgl1, libnettle8t64, libpixman-1-0 (>= 0.30.0), libselinux1 (>= 3.1~), libunwind8, libx11-6, libx11-xcb1, libxau6 (>= 1:1.0.11), libxcb-icccm4 (>= 0.4.2), libxcb-image0 (>= 0.2.1), libxcb-keysyms1 (>= 0.4.1), libxcb-randr0 (>= 1.1), libxcb-render-util0, libxcb-render0, libxcb-shape0, libxcb-shm0 (>= 1.10), libxcb-util1 (>= 0.4.0), libxcb-xkb1, libxcb-xv0 (>= 1.2), libxcb1 (>= 1.8), libxdmcp6 (>= 1:1.1.5), libxfont2 (>= 1:2.0.1), libxshmfence1
+Recommends: libgl1-mesa-dri (>= 7.1~rc1)
+Filename: dists/spaced/main/binary-amd64/xserver-xephyr_21.1.25-1devuan1+spaced10.26.3_amd64.deb
+Size: 963768
+MD5sum: 3ad654039ac2c288e513f42f5a523a35
+SHA1: 1e16b013fda550a940a3c7511005a6b8a0dba9bc
+SHA256: 8d717931cac2e1300be7b19db0e3e1c6e3fcea8b0fd08e305826919270730338
+SHA512: 5a34612a59346ee0a18c984d89ea08d42f1cb9fee3701d566fe0cc2651652d9919b13937e025645d7fbafbc09812f78dd2ac5ba4a1d287824a598d9c4bdd41c4
+Homepage: https://www.x.org/
+Description: nested X server
+ Xephyr is an X server that can be run inside another X server,
+ much like Xnest. It is based on the kdrive X server, and as a
+ result it supports newer extensions than Xnest, including render and
+ composite.
+ .
+ More information about X.Org can be found at:
+ <URL:https://www.x.org>
+ .
+ This package is built from the X.org xserver module.
+
+Package: xserver-xorg-core
+Architecture: amd64
+Version: 2:21.1.25-1devuan1+spaced10.26.3
+Priority: optional
+Section: x11
+Source: xorg-server
+Origin: Devuan
+Maintainer: Devuan Developers <devuan-dev@lists.dyne.org>
+Installed-Size: 3946
+Provides: xorg-input-abi-24, xorg-video-abi-25, xserver-xorg-video-modesetting
+Depends: xserver-common (>= 2:21.1.25-1devuan1+spaced10.26.3), keyboard-configuration, udev (>= 149), libegl1, libaudit1 (>= 1:2.2.1), libc6 (>= 2.42), libdrm2 (>= 2.4.107-5~), libepoxy0 (>= 1.5.4), libeudev1 (>= 3.2.12), libgbm1 (>= 17.1.0~rc2), libgl1, libnettle8t64, libpciaccess0 (>= 0.12.902), libpixman-1-0 (>= 0.30.0), libseat1 (>= 0.5.0), libselinux1 (>= 3.1~), libunwind8, libxau6 (>= 1:1.0.11), libxcvt0 (>= 0.1.0), libxdmcp6 (>= 1:1.1.5), libxfont2 (>= 1:2.0.1), libxshmfence1
+Recommends: libgl1-mesa-dri (>= 7.10.2-4), xcvt
+Suggests: xfonts-100dpi | xfonts-75dpi, xfonts-scalable
+Conflicts: xserver-xorg-input-evtouch, xserver-xorg-video-modesetting
+Breaks: libgl1-mesa-dri (<< 18.0.5), systemd (<< 226-4~), xserver-xorg (<< 1:7.7+10~)
+Replaces: xserver-xorg (<< 1:7.7+10~), xserver-xorg-video-modesetting
+Filename: dists/spaced/main/binary-amd64/xserver-xorg-core_21.1.25-1devuan1+spaced10.26.3_amd64.deb
+Size: 1398432
+MD5sum: 3373b3be0fdb34b8d12b92f12018affe
+SHA1: 9155daf36144c21bd8423b19e4887e447a3517fe
+SHA256: aec98787d09b2d1b3c8aa98ed5c3a902c95cde1d5cd611f3a41e3a69d191d354
+SHA512: e948afb1202d2ec3f01af9951da98b2b9d9dfc90b836a2959888c4823253e2d836d9f2ca05c105ba63c40b0c55facc231cc3c88956b2f4d1454e4c4dfb691ce6
+Homepage: https://www.x.org/
+Description: Xorg X server - core server
+ The Xorg X server is an X server for several architectures and operating
+ systems, which is derived from the XFree86 4.x series of X servers.
+ .
+ The Xorg server supports most modern graphics hardware from most vendors,
+ and supersedes all XFree86 X servers.
+ .
+ More information about X.Org can be found at:
+ <URL:https://www.x.org>
+ .
+ This package is built from the X.org xserver module.
+
+Package: xserver-xorg-dev
+Architecture: amd64
+Version: 2:21.1.25-1devuan1+spaced10.26.3
+Priority: optional
+Section: x11
+Source: xorg-server
+Origin: Devuan
+Maintainer: Devuan Developers <devuan-dev@lists.dyne.org>
+Installed-Size: 1333
+Depends: libpixman-1-dev (>= 0.27.2), x11proto-dev (>= 2021.5), libxcvt-dev, libxfont-dev, libxkbfile-dev, libpciaccess-dev, mesa-common-dev
+Filename: dists/spaced/main/binary-amd64/xserver-xorg-dev_21.1.25-1devuan1+spaced10.26.3_amd64.deb
+Size: 201188
+MD5sum: 268af512cdf3d00a487b99a0720c4035
+SHA1: 5c2973acbca3747bb4402f93ff7dff8314920e55
+SHA256: be3674f8ea3b04bc46353f7eadc26e5443561fba7606294c60ceefa9707b1fd4
+SHA512: fb514167f9cbc6cefea104e005e1e8599be9292d3e091682b74a5900be96caf04f2209af1f990d45f918540a2259180782b7b2b763fee766ab0604fdf7927127
+Homepage: https://www.x.org/
+Description: Xorg X server - development files
+ This package provides development files for the X.Org ('Xorg') X server.
+ This is not quite the same as the DDK (Driver Development Kit) from the
+ XFree86 4.x and X.Org 6.7, 6.8 and 6.9 series of servers; it provides
+ headers and a pkg-config file for drivers using autotools to build
+ against.
+ .
+ Unless you are developing or building a driver, you probably want
+ xserver-xorg and/or xserver-xorg-core instead.
+ .
+ More information about X.Org can be found at:
+ <URL:https://www.x.org>
+ .
+ This package is built from the X.org xserver module.
+
+Package: xserver-xorg-legacy
+Architecture: amd64
+Version: 2:21.1.25-1devuan1+spaced10.26.3
+Priority: optional
+Section: x11
+Source: xorg-server
+Origin: Devuan
+Maintainer: Devuan Developers <devuan-dev@lists.dyne.org>
+Installed-Size: 178
+Depends: xserver-common (>= 2:21.1.25-1devuan1+spaced10.26.3), libc6 (>= 2.34), debconf (>= 0.5) | debconf-2.0
+Breaks: x11-common (<< 1:7.7+10~), xserver-xorg-core (<< 2:1.17.2-3~)
+Replaces: x11-common (<< 1:7.7+10~), xserver-xorg-core (<< 2:1.17.2-3~)
+Filename: dists/spaced/main/binary-amd64/xserver-xorg-legacy_21.1.25-1devuan1+spaced10.26.3_amd64.deb
+Size: 35188
+MD5sum: b4a18f88828ef1da94da15aeb4e5d496
+SHA1: 8f7436f485f6f9e734cb0f20fa2645f5ecbd854f
+SHA256: 40b3b8f95f3e8364dfd6b36809a01af30eeabb9f7512361411d8333fb737de2c
+SHA512: 88da178d4c43567d748c546f81f711f08c79d82758ff23d5d0ff86965c23ee1cb56de033c2c50bb22e6d71f1efcb9258ccc870cca71b5dbb817a2211387636cd
+Homepage: https://www.x.org/
+Description: setuid root Xorg server wrapper
+ This package provides a wrapper for the Xorg X server, which is
+ necessary for legacy drivers and non-Linux kernels.
+
+Package: xvfb
+Architecture: amd64
+Version: 2:21.1.25-1devuan1+spaced10.26.3
+Multi-Arch: foreign
+Priority: optional
+Section: x11
+Source: xorg-server
+Origin: Devuan
+Maintainer: Devuan Developers <devuan-dev@lists.dyne.org>
+Installed-Size: 2202
+Provides: xserver
+Depends: xserver-common (>= 2:21.1.25-1devuan1+spaced10.26.3), libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libgl1, libnettle8t64, libpixman-1-0 (>= 0.30.0), libselinux1 (>= 3.1~), libunwind8, libxau6 (>= 1:1.0.11), libxdmcp6 (>= 1:1.1.5), libxfont2 (>= 1:2.0.1)
+Recommends: xauth
+Filename: dists/spaced/main/binary-amd64/xvfb_21.1.25-1devuan1+spaced10.26.3_amd64.deb
+Size: 817872
+MD5sum: 7b40c1314477d4ffe751b59a13634c53
+SHA1: aae35c6d213365b4aa0765de5fd02b1b63d71e10
+SHA256: c87b3232d4782fe61745cd8878b87d843919ec2f46ecdf86c9e02b9bd1741321
+SHA512: 461888e07738d1b2930b47b33201de0e613c0d807f231b46799fa327a0fc0e45a4509d053406021041d88059d2dd471d749f9b2c2385091f32c1fde2411e24e4
+Homepage: https://www.x.org/
+Description: Virtual Framebuffer 'fake' X server
+ Xvfb provides an X server that can run on machines with no display hardware
+ and no physical input devices. It emulates a dumb framebuffer using virtual
+ memory. The primary use of this server was intended to be server testing,
+ but other novel uses for it have been found, including testing clients
+ against unusual depths and screen configurations, doing batch processing with
+ Xvfb as a background rendering engine, load testing, as an aid to porting the
+ X server to a new platform, and providing an unobtrusive way to run
+ applications that don't really need an X server but insist on having one
+ anyway.
+ .
+ This package also contains a convenience script called xvfb-run which
+ simplifies the automated execution of X clients in a virtual server
+ environment. This convenience script requires the use of the xauth
+ program.
+ .
+ More information about X.Org can be found at:
+ <URL:https://www.x.org>
+ .
+ This package is built from the X.org xserver module.
 
