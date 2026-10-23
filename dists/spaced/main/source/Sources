@@ -1,3 +1,39 @@
+Package: caja
+Format: 3.0 (quilt)
+Binary: caja, caja-common, libcaja-extension1, libcaja-extension-dev, libcaja-extension-doc, gir1.2-caja-2.0
+Architecture: any all
+Version: 1.26.4-3+spaced10.26.6
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Uploaders: John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>, Stefano Karapetsas <stefano@karapetsas.com>, Mike Gabriel <sunweaver@debian.org>, Vangelis Mouhtsis <vangelis@gnugr.org>
+Standards-Version: 4.7.3
+Build-Depends: debhelper-compat (= 13), dpkg-dev (>= 1.16.1.1), gir1.2-gio-2.0-dev, gir1.2-gtk-3.0-dev, gobject-introspection, gtk-doc-tools, intltool, libdconf-dev, libexempi-dev, libexif-dev, libgail-3-dev, libglib2.0-dev, libgtk-3-dev, libmate-desktop-dev (>= 1.24), libnotify-dev, libpango1.0-dev, libselinux1-dev [linux-any], libstartup-notification0-dev, libx11-dev, libxml2-dev, mate-common (>= 1.18), mate-submodules-source (>= 0.0~git20210623.f3091f9), shared-mime-info
+Homepage: https://mate-desktop.org/
+Vcs-Browser: https://salsa.debian.org/debian-mate-team/caja
+Vcs-Git: https://salsa.debian.org/debian-mate-team/caja.git
+Package-List:
+ caja deb utils optional arch=any
+ caja-common deb utils optional arch=all
+ gir1.2-caja-2.0 deb introspection optional arch=any
+ libcaja-extension-dev deb libdevel optional arch=any
+ libcaja-extension-doc deb doc optional arch=all
+ libcaja-extension1 deb libs optional arch=any
+Files:
+ cc49295864d9b3b8d616c82d1ff5610d 1980 caja_1.26.4-3+spaced10.26.6.dsc
+ 7ddfcb6fdddf5bc852b8cb8d1cc92c55 3430436 caja_1.26.4.orig.tar.xz
+ 4f2722a701f9f621ab2f6adc646a5c06 13760 caja_1.26.4-3+spaced10.26.6.debian.tar.xz
+Checksums-Sha1:
+ 8b2371acd9dac3a4a04051c5400f0da5b90e9f56 1980 caja_1.26.4-3+spaced10.26.6.dsc
+ 8ea325af375a781535977eb2062c356f8ce66879 3430436 caja_1.26.4.orig.tar.xz
+ 0060bdfcfaa6ba1bc7d8fd9d24ee569f60e24166 13760 caja_1.26.4-3+spaced10.26.6.debian.tar.xz
+Checksums-Sha256:
+ 2027df98ac8be879a944dd607ab1f55c706a2295d870a89800e11de3cbbbcd63 1980 caja_1.26.4-3+spaced10.26.6.dsc
+ 6cbc1a416151871b4816f3fbe92e702d28ab97a4680bd4735919cb7f0d8faf21 3430436 caja_1.26.4.orig.tar.xz
+ b4d0a41b9b4ab9a8e4dad270465437c97f7b5c0576d4114e4c13226fc8c58006 13760 caja_1.26.4-3+spaced10.26.6.debian.tar.xz
+Checksums-Sha512:
+ 88f057f263b96d5daf05628e03887f5a4854172d693e4691b5b28434e8876d66ec7c937f75243b583910df817c7067bd800d375487a8522814846e39367d6571 1980 caja_1.26.4-3+spaced10.26.6.dsc
+ 2c1b99c37b8804cebe1d8154ad32a9246d982f558af59601384fae2c7bd738063c37efa83c5c1a4242a6ca326ffbb92c1e2f412a27e92879a84d048327565a18 3430436 caja_1.26.4.orig.tar.xz
+ a253f10c9681f13dfa54ba919af1e75e1d1ec76dda0ef13e27c6e83222d61d5c07837c5f3147d970e57baa0cb6ca197be554e5f4192f4bb72c8effedf99253cf 13760 caja_1.26.4-3+spaced10.26.6.debian.tar.xz
+
 Package: compiz
 Format: 3.0 (quilt)
 Binary: compiz, compiz-core, compiz-dev, compiz-gnome, compiz-mate, compiz-plugins, libdecoration0t64, libdecoration0-dev
@@ -35,6 +71,44 @@ Checksums-Sha512:
  853d15696acec85c7c27e989fe81985aeecc479853d778742ff77072e586ce7b9d08808c981d5e70eb8c1d3104420cee7dfe7d0ee74ab11149c09895ae89f8b1 1984 compiz_0.8.18-9+spaced10.26.2.dsc
  6b827e5ecaae5dd7ecccbe7e12f1efbbbbb448a8ed276a03a537e2b2883435e92baf10e598d758212f7bfc8c50e29c5c96723bc1fdbbae9d8584a0ae13f2bb09 1238908 compiz_0.8.18.orig.tar.xz
  f169b218bd63ef41a11205e558641610e6de8e42e7f4eabaad750b75483529c1789f50b72e372461e53b50e4228fe1b9838bf92dde3930a15c8f2303d6da0bb2 20972 compiz_0.8.18-9+spaced10.26.2.debian.tar.xz
+
+Package: compiz
+Format: 3.0 (quilt)
+Binary: compiz, compiz-core, compiz-dev, compiz-gnome, compiz-mate, compiz-plugins, libdecoration0t64, libdecoration0-dev
+Architecture: any all
+Version: 2:0.8.18-9+spaced10.26.6
+Maintainer: Hypra Team <bugs@hypra.fr>
+Uploaders: Samuel Thibault <sthibault@debian.org>
+Standards-Version: 4.6.2
+Build-Depends: dpkg-dev (>= 1.22.5), debhelper-compat (= 13), intltool, libcairo2-dev, libglib2.0-dev, libdbus-1-dev, libdbus-glib-1-dev, libfuse3-dev [linux-any kfreebsd-any], libgl-dev, libglu1-mesa-dev, libgtk-3-dev, libice-dev, libmarco-dev, libmate-desktop-dev, libpango1.0-dev, libpng-dev, libjpeg-dev, librsvg2-dev, libsm-dev, libstartup-notification0-dev, libwnck-3-dev, libxcomposite-dev, libxcursor-dev, libxdamage-dev, libxfixes-dev, libxinerama-dev, libxi-dev, libxml2-dev, libxrandr-dev, libxrender-dev, libxslt1-dev, x11proto-gl-dev, xsltproc
+Homepage: https://gitlab.com/compiz/compiz-core
+Vcs-Browser: https://salsa.debian.org/compiz-team/compiz-reloaded
+Vcs-Git: https://salsa.debian.org/compiz-team/compiz-reloaded.git
+Package-List:
+ compiz deb x11 optional arch=all
+ compiz-core deb x11 optional arch=any
+ compiz-dev deb x11 optional arch=any
+ compiz-gnome deb x11 optional arch=any
+ compiz-mate deb x11 optional arch=any
+ compiz-plugins deb x11 optional arch=any
+ libdecoration0-dev deb libdevel optional arch=any
+ libdecoration0t64 deb libs optional arch=any
+Files:
+ 254475501eac5bbe42702394afaee58b 1984 compiz_0.8.18-9+spaced10.26.6.dsc
+ 3b2ca47b08cefe2e5acc3242e350a8b8 1238908 compiz_0.8.18.orig.tar.xz
+ 932ecd9183983c9a46ceed5f3ef0271a 21524 compiz_0.8.18-9+spaced10.26.6.debian.tar.xz
+Checksums-Sha1:
+ 04d36db13153556121ebd9616c98e31166c05a45 1984 compiz_0.8.18-9+spaced10.26.6.dsc
+ 402bcea9cf525a1aef0c0e7c73798071d9080870 1238908 compiz_0.8.18.orig.tar.xz
+ 091570766acdcf2e7b44e134c891c522d6e3472f 21524 compiz_0.8.18-9+spaced10.26.6.debian.tar.xz
+Checksums-Sha256:
+ df77a1211ef5d52582486363ced414bb83227b15960c66566a2f056641d05b97 1984 compiz_0.8.18-9+spaced10.26.6.dsc
+ b72744cc1ecef8bfa55d5994c7409e5178e34250b0f9f48fe0218184529a147f 1238908 compiz_0.8.18.orig.tar.xz
+ 04060179b6949cb340adb1e0a34621a9ee2c3e88e782305baa6f16045b11e215 21524 compiz_0.8.18-9+spaced10.26.6.debian.tar.xz
+Checksums-Sha512:
+ c3fd0c40ad100ac7c6025b5ce3bac475ac80f2358259419a6febc7efbe48d55d6610a990960934d49849cad07001838b781941cb07aac6bcbf7f28f8b6277749 1984 compiz_0.8.18-9+spaced10.26.6.dsc
+ 6b827e5ecaae5dd7ecccbe7e12f1efbbbbb448a8ed276a03a537e2b2883435e92baf10e598d758212f7bfc8c50e29c5c96723bc1fdbbae9d8584a0ae13f2bb09 1238908 compiz_0.8.18.orig.tar.xz
+ 31c394f339d72a8f348acbf846e7265b5412a665338eb51a5b67585d9a38059d3c9cc176b0ec19c7aa3c1f90fcdd46716ae9222cebb3c700a478aa3455e3596b 21524 compiz_0.8.18-9+spaced10.26.6.debian.tar.xz
 
 Package: marco
 Format: 3.0 (quilt)

@@ -370,6 +370,55 @@ Description: Tool to displays AMDGPU usage.
      * [Getting to Know Your GPU: A Deep Dive into AMD SMI — ROCm
  Blogs](https://rocm.blogs.amd.com/software-tools-optimization/amd-smi-overview/README.html)
 
+Package: caja-common
+Architecture: all
+Version: 1.26.4-3+spaced10.26.6
+Multi-Arch: foreign
+Priority: optional
+Section: utils
+Source: caja
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Installed-Size: 14243
+Depends: dconf-gsettings-backend | gsettings-backend
+Filename: dists/spaced/main/binary-amd64/caja-common_1.26.4-3+spaced10.26.6_all.deb
+Size: 2346472
+MD5sum: a29be2dab674909691cdaf41f6fcaa7b
+SHA1: bdccb83ad679fa6878f971550dfc520ac3c2aad6
+SHA256: 596d344b3ac8418cb387e4a36469dd4d105fb0a296c1ec39a4b5228d03865748
+SHA512: 933696c7a82eda2d57663ade5cf431760febfaccbad852ca61faf7821ce64b230b072ec4ec26520340e1cc6109bac932688db88470a8803a11781d120fea3bba
+Homepage: https://mate-desktop.org/
+Description: file manager for the MATE desktop (common files)
+ Caja is the official file manager for the MATE desktop. It allows one
+ to browse directories, preview files and launch applications associated
+ with them. It is also responsible for handling the icons on the MATE
+ desktop. It works on local and remote filesystems.
+ .
+ This package contains the architecture independent files.
+
+Package: caja
+Architecture: amd64
+Version: 1.26.4-3+spaced10.26.6
+Multi-Arch: foreign
+Priority: optional
+Section: utils
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Installed-Size: 3373
+Depends: caja-common (= 1.26.4-3+spaced10.26.6), desktop-file-utils, gvfs, libcaja-extension1 (= 1.26.4-3+spaced10.26.6), libglib2.0-bin, libglib2.0-data, mate-desktop, shared-mime-info, libatk1.0-0t64 (>= 1.12.4), libc6 (>= 2.38), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.10.0), libexempi8 (>= 2.5.0), libexif12 (>= 0.6.21), libgail-3-0t64 (>= 3.0.0), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.83.0), libgtk-3-0t64 (>= 3.21.5), libice6 (>= 1:1.0.0), libmate-desktop-2-17t64 (>= 1.24), libnotify4 (>= 0.7.0), libpango-1.0-0 (>= 1.44.6), libpangocairo-1.0-0 (>= 1.14.0), libselinux1 (>= 3.1~), libsm6 (>= 2:1.2.6), libx11-6, libxml2-16 (>= 2.14.1)
+Recommends: gvfs-backends, gvfs-fuse
+Suggests: engrampa, gstreamer1.0-tools, meld
+Filename: dists/spaced/main/binary-amd64/caja_1.26.4-3+spaced10.26.6_amd64.deb
+Size: 875208
+MD5sum: 911269e53427f9e0073f497c6591b34e
+SHA1: 3c4d52c2463b9abd8cb5b9e91da99f96f490585a
+SHA256: d029eea2c01e007f567be0266c0a765bb278cdd401088233aa1532f9d75f704e
+SHA512: 2dd7023a65be02201c0a72f084e12f02ddc0d6bfeba0e7459d72f0acce495d4108e2ab4880d56f6e53cd10131cdda9d6ddcc1c8881927c22ffad158d7f5c2ce6
+Homepage: https://mate-desktop.org/
+Description: file manager for the MATE desktop
+ Caja is the official file manager for the MATE desktop. It allows one
+ to browse directories, preview files and launch applications associated
+ with them. It is also responsible for handling the icons on the MATE
+ desktop. It works on local and remote filesystems.
+
 Package: compiz-core
 Architecture: amd64
 Version: 2:0.8.18-9+spaced10.26.2
@@ -390,6 +439,39 @@ MD5sum: 966789ae21ce3decb851382c4cb76301
 SHA1: d02e3d217b7e662d3b8500b2190c659f012dc6e5
 SHA256: 12c093dce12aec6b379014b3290e4bb71a4a81c5d2862b1791ca3d93b83d98c8
 SHA512: f4ae8fccd0319886cec0c4301b29b87b10ad4952643b16da91edba6cce7834c461a9fc4f010f9132afc0d5d18c3d4e791893c8a761bdef3e4f76e038d1405e09
+Homepage: https://gitlab.com/compiz/compiz-core
+Description: OpenGL window and compositing manager
+ Compiz brings to life a variety of visual effects that make the Linux desktop
+ easier to use, more powerful and intuitive, and more accessible for users
+ with special needs.
+ .
+ Compiz combines together a window manager and a composite manager using
+ OpenGL for rendering. A "window manager" allows the manipulation of the
+ multiple applications and dialog windows that are presented on the screen. A
+ "composite manager" allows windows and other graphics to be combined together
+ to create composite images. Compiz achieves its stunning effects by doing
+ both of these functions.
+
+Package: compiz-core
+Architecture: amd64
+Version: 2:0.8.18-9+spaced10.26.6
+Multi-Arch: foreign
+Priority: optional
+Section: x11
+Source: compiz
+Maintainer: Hypra Team <bugs@hypra.fr>
+Installed-Size: 3239
+Provides: compiz-core-abiversion-20180927
+Depends: libc6 (>= 2.38), libgl1, libice6 (>= 1:1.0.0), libsm6 (>= 2:1.2.6), libstartup-notification0 (>= 0.7), libx11-6, libxcomposite1 (>= 1:0.4.6), libxcursor1 (>> 1.1.2), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxi6 (>= 2:1.2.99.4), libxinerama1 (>= 2:1.1.4), libxml2-16 (>= 2.14.1), libxrandr2 (>= 4.3), mesa-utils
+Recommends: compiz-plugins (= 2:0.8.18-9+spaced10.26.6), compiz-plugins-main
+Suggests: nvidia-driver
+Breaks: libcompizconfig0 (<< 2:0.8.16-3~)
+Filename: dists/spaced/main/binary-amd64/compiz-core_0.8.18-9+spaced10.26.6_amd64.deb
+Size: 778636
+MD5sum: 23232d2fc627961483952a816899ebbc
+SHA1: 9635f43d48166c1f1ed083c9f352dc67da469e67
+SHA256: 22a1190f1ea8ab86a2736efc302f13762952687bedf1bc0122ee5c4d98adf019
+SHA512: dac3469090ca928966199630584689088e32c57aedd4aaf6dea0d7e54b41e2e91a024b71cf5d9beadb5001c32b98a22f30c8a7f13d7244a95ca7f3e5818ed32f
 Homepage: https://gitlab.com/compiz/compiz-core
 Description: OpenGL window and compositing manager
  Compiz brings to life a variety of visual effects that make the Linux desktop
@@ -429,6 +511,32 @@ Description: OpenGL window and compositing manager - Gtk window decorator
  This package contains a window decorator that uses Gtk to provide a look and
  feel similar to that of the marco window manager.
 
+Package: compiz-gnome
+Architecture: amd64
+Version: 2:0.8.18-9+spaced10.26.6
+Priority: optional
+Section: x11
+Source: compiz
+Maintainer: Hypra Team <bugs@hypra.fr>
+Installed-Size: 498
+Depends: compiz-core (= 2:0.8.18-9+spaced10.26.6), libatk1.0-0t64 (>= 1.12.4), libc6 (>= 2.38), libcairo2 (>= 1.4.10), libdbus-1-3 (>= 1.10), libdbus-glib-1-2 (>= 0.78), libdecoration0t64 (>= 2:0.8.14-0~), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.32.0), libgtk-3-0t64 (>= 3.21.4), libmarco-private2 (>= 1.22.2), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libwnck-3-0 (>= 2.91.6), libx11-6, libxi6 (>= 2:1.2.99.4), libxrender1 (>= 1:0.9.12), libcompizconfig0
+Recommends: compizconfig-settings-manager
+Suggests: emerald
+Filename: dists/spaced/main/binary-amd64/compiz-gnome_0.8.18-9+spaced10.26.6_amd64.deb
+Size: 365348
+MD5sum: edb0e2b112671d47cb5af17058b0f9d9
+SHA1: 32d8c3172bdc1a38b041c0ed0ff9fd22d1f0eb90
+SHA256: e68b12c5891908892ba518c3ab26322a7b092f7865bc28425f30a6473dd67634
+SHA512: 6ce010374653501824952d709f20f11ccfc657d763a5202b85339c0034be02c224a9ccf6ac2c8c5abf0f5935a9a35f91527755fa4a1ffb2ad89e1a2e3ea6d95f
+Homepage: https://gitlab.com/compiz/compiz-core
+Description: OpenGL window and compositing manager - Gtk window decorator
+ Compiz brings to life a variety of visual effects that make the Linux desktop
+ easier to use, more powerful and intuitive, and more accessible for users
+ with special needs.
+ .
+ This package contains a window decorator that uses Gtk to provide a look and
+ feel similar to that of the marco window manager.
+
 Package: compiz-mate
 Architecture: amd64
 Version: 2:0.8.18-9+spaced10.26.2
@@ -454,6 +562,31 @@ Description: OpenGL window and compositing manager - MATE window decorator
  This package contains files needed to integrate compiz with the MATE desktop
  environment.
 
+Package: compiz-mate
+Architecture: amd64
+Version: 2:0.8.18-9+spaced10.26.6
+Priority: optional
+Section: x11
+Source: compiz
+Maintainer: Hypra Team <bugs@hypra.fr>
+Installed-Size: 402
+Depends: compiz-gnome (= 2:0.8.18-9+spaced10.26.6), libc6 (>= 2.4), dconf-gsettings-backend | gsettings-backend, marco
+Recommends: mate-themes
+Filename: dists/spaced/main/binary-amd64/compiz-mate_0.8.18-9+spaced10.26.6_amd64.deb
+Size: 318552
+MD5sum: 7b56788fb11c7fe515d0c2737e31b155
+SHA1: 0a88424f94bd297aecaceeeacdaa7ed075a300ec
+SHA256: 67270ab3c4044f1bb4dcdcba816717b1cc23aabfe50f5326c28b3daac95441be
+SHA512: 6b6b31cdd6686c0db3edf2cc91ec2a65bad2b740d29d9af52cf66bd07595cc3e49f2d88a14223a0b72c7d452f59077deb82fe84a2879fe9d7413ef46f9e9b627
+Homepage: https://gitlab.com/compiz/compiz-core
+Description: OpenGL window and compositing manager - MATE window decorator
+ Compiz brings to life a variety of visual effects that make the Linux desktop
+ easier to use, more powerful and intuitive, and more accessible for users
+ with special needs.
+ .
+ This package contains files needed to integrate compiz with the MATE desktop
+ environment.
+
 Package: compiz-plugins
 Architecture: amd64
 Version: 2:0.8.18-9+spaced10.26.2
@@ -469,6 +602,30 @@ MD5sum: c3767e1da02812dc00fc81e403a072c8
 SHA1: 1bee048826d4f858b06552df31af1a4b39f5d2fc
 SHA256: 6821771f7c623e9e451ddbe2b7697c413b8ab495c01a28c98e6f2617830defe8
 SHA512: 7fdaba50a00ccba0b74556194f1760373a0095af18e8ca6a71180cb7d18f4ff48a86fe392c5fd8a974f563d32212263b9b22cb92c815b065b2272d792e93d5c5
+Homepage: https://gitlab.com/compiz/compiz-core
+Description: OpenGL window and compositing manager - plugins
+ Compiz brings to life a variety of visual effects that make the Linux desktop
+ easier to use, more powerful and intuitive, and more accessible for users
+ with special needs.
+ .
+ This package contains the standard plugins that come with compiz. Compiz
+ without these plugins is not very useful.
+
+Package: compiz-plugins
+Architecture: amd64
+Version: 2:0.8.18-9+spaced10.26.6
+Priority: optional
+Section: x11
+Source: compiz
+Maintainer: Hypra Team <bugs@hypra.fr>
+Installed-Size: 4503
+Depends: compiz-core (= 2:0.8.18-9+spaced10.26.6), libc6 (>= 2.38), libcairo2 (>= 1.2.4), libdbus-1-3 (>= 1.10), libdecoration0t64 (>= 2:0.8.14-0~), libglib2.0-0t64 (>= 2.12.0), libglu1-mesa | libglu1, libpng16-16t64 (>= 1.6.46), librsvg2-2 (>= 2.14.4), libx11-6, libxml2-16 (>= 2.14.1), libxrender1 (>= 1:0.9.12)
+Filename: dists/spaced/main/binary-amd64/compiz-plugins_0.8.18-9+spaced10.26.6_amd64.deb
+Size: 781520
+MD5sum: 78ee080cbc5f4f3fd4a7841208ec22c1
+SHA1: a11fcc5d2d717123ec83c916296307dc355d1386
+SHA256: cf74fd9cef4ef7c9e0f7a4f4ac9109a55151483c70409c9aa4657df16e8acb83
+SHA512: de9875248964883f972755001afa53544c1f4f991c4acdece7845668aa2fdff5f542236957fc748185157955571152c76ae0d231dd43a338aaa0f6768c47cab8
 Homepage: https://gitlab.com/compiz/compiz-core
 Description: OpenGL window and compositing manager - plugins
  Compiz brings to life a variety of visual effects that make the Linux desktop
@@ -505,6 +662,88 @@ Description: OpenGL window and compositing manager
  provides the compiz core, a set of standard plugins, a window decorator using
  the Gtk toolkit and a settings manager.
 
+Package: compiz
+Architecture: all
+Version: 2:0.8.18-9+spaced10.26.6
+Multi-Arch: foreign
+Priority: optional
+Section: x11
+Maintainer: Hypra Team <bugs@hypra.fr>
+Installed-Size: 312
+Depends: compiz-core (>= 2:0.8.18-9+spaced10.26.6), compiz-plugins (>= 2:0.8.18-9+spaced10.26.6), compiz-gnome (>= 2:0.8.18-9+spaced10.26.6), compiz-plugins-main, compizconfig-settings-manager, libcompizconfig0
+Recommends: compiz-mate, compiz-plugins-extra
+Suggests: compiz-plugins-experimental, emerald, fusion-icon
+Filename: dists/spaced/main/binary-amd64/compiz_0.8.18-9+spaced10.26.6_all.deb
+Size: 307496
+MD5sum: adf0417ba91a1e0da335a1795f2cd66c
+SHA1: e270d4c0a585a2d7ee3e558a804021551645e28b
+SHA256: 950952e417d0c87768cb30ce81829a098ecbff7d160b453f6f51ad67ceadff4a
+SHA512: 2a4e2865ba33c8549f2ad23e0cdb2cf8d5d7f00c2c912d622eeebf59c3b6c9290dd8acda798a431ea75dc148c26a3891d4c60789a596e3938ae762b417fe9bef
+Homepage: https://gitlab.com/compiz/compiz-core
+Description: OpenGL window and compositing manager
+ Compiz brings to life a variety of visual effects that make the Linux desktop
+ easier to use, more powerful and intuitive, and more accessible for users
+ with special needs.
+ .
+ This metapackage provides the components necessary for running compiz. It
+ provides the compiz core, a set of standard plugins, a window decorator using
+ the Gtk toolkit and a settings manager.
+
+Package: gir1.2-caja-2.0
+Architecture: amd64
+Version: 1.26.4-3+spaced10.26.6
+Multi-Arch: same
+Priority: optional
+Section: introspection
+Source: caja
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Installed-Size: 58
+Depends: gir1.2-gio-2.0, gir1.2-glib-2.0, gir1.2-gtk-3.0, libcaja-extension1 (>= 1.24.0)
+Filename: dists/spaced/main/binary-amd64/gir1.2-caja-2.0_1.26.4-3+spaced10.26.6_amd64.deb
+Size: 21024
+MD5sum: d45492058126608d7a67904d30afd96f
+SHA1: 086ffc30ef94ecb0316e85fcf554e2705a7fe28d
+SHA256: aac1b1e62e8fbbdcd67b43a52ec0f6d6d63deb0c280f9d55fe516d3ef758c25e
+SHA512: 26d353549261c0a55e7c2f4ea9d50c8bf8632e7adf03068b6507b7bae59fe5ef7924daee5a2ce20cfbcfd36194a86548c8c71a3a546cc16fcb18f7dce9532ce2
+Homepage: https://mate-desktop.org/
+Description: GObject introspection data for Caja
+ Caja is the official file manager for the MATE desktop. It allows one
+ to browse directories, preview files and launch applications associated
+ with them. It is also responsible for handling the icons on the MATE
+ desktop. It works on local and remote filesystems.
+ .
+ This package contains introspection data for Caja.
+ .
+ It can be used by packages using the GIRepository format to generate
+ dynamic bindings.
+
+Package: libcaja-extension1
+Architecture: amd64
+Version: 1.26.4-3+spaced10.26.6
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: caja
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Installed-Size: 95
+Provides: libcaja-extension
+Depends: libc6 (>= 2.4), libglib2.0-0t64 (>= 2.80.0), libgtk-3-0t64 (>= 3.0.0)
+Filename: dists/spaced/main/binary-amd64/libcaja-extension1_1.26.4-3+spaced10.26.6_amd64.deb
+Size: 29448
+MD5sum: 2c4815b7f2096f6da89b69840e3fd2eb
+SHA1: 2ebce96989ed50c770ec484015995d8923e610ef
+SHA256: 59275fcdf238114b4a3c18a36c0ee67296e2e2604980f8990965aedbec403539
+SHA512: 7747176d59a5e6962cb484f011b1ae2bb11140a374577c9e40352f689cfc994ad546ca880ba5b5dae5e27181ecc0949bb36c40cec985c21249194d358b406e41
+Homepage: https://mate-desktop.org/
+Description: libraries for Caja components
+ Caja is the official file manager for the MATE desktop. It allows one
+ to browse directories, preview files and launch applications associated
+ with them. It is also responsible for handling the icons on the MATE
+ desktop. It works on local and remote filesystems.
+ .
+ This package contains a few runtime libraries needed by Caja's
+ extensions.
+
 Package: libdecoration0t64
 Architecture: amd64
 Version: 2:0.8.18-9+spaced10.26.2
@@ -524,6 +763,31 @@ MD5sum: 31fdbd10cd6cbc88323e124c18305198
 SHA1: b254d681ce43d203c1cb9aed3a22c06fa8e45d86
 SHA256: ee458eaba63187eac684eff2f9f1952febcd4a8e8f40fff718aa11eccc4d1259
 SHA512: deb0cc09c1f140b6f441c8fe84f513ebce575c9d66eb0f4535c77b6fc8826cf840b040aa69f7e4caa3237b5fa4540d3fb0f96f7bb12a1eb2b5598d336a415239
+Homepage: https://gitlab.com/compiz/compiz-core
+Description: Compiz window decoration library
+ The window decoration library is responsible for drawing the window borders
+ and title bar of windows managed by Compiz. It is used by window decorators
+ like gtk-window-decorator.
+
+Package: libdecoration0t64
+Architecture: amd64
+Version: 2:0.8.18-9+spaced10.26.6
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: compiz
+Maintainer: Hypra Team <bugs@hypra.fr>
+Installed-Size: 358
+Provides: libdecoration0 (= 2:0.8.18-9+spaced10.26.6)
+Depends: libc6 (>= 2.29), libx11-6, libxrender1 (>= 1:0.9.12)
+Breaks: libdecoration0 (<< 2:0.8.18-9+spaced10.26.6)
+Replaces: libdecoration0
+Filename: dists/spaced/main/binary-amd64/libdecoration0t64_0.8.18-9+spaced10.26.6_amd64.deb
+Size: 321544
+MD5sum: 6d05ff465c426e995be0b3fcbac09a34
+SHA1: c9eedc8a923d08df36810b52918c3f25e85885aa
+SHA256: 4784b957d8e5bc3b6b6fad903758de53c0ef9c0e375b1760945a0636b1f3e90c
+SHA512: d13517bba2ad92d4357cfca1fd61b47b4387bbf0e688de8abe7116ba3d2a8fd65423870c899fec8c8036fe41d7935322f2448ea4fc26433468c035c1a22a9f46
 Homepage: https://gitlab.com/compiz/compiz-core
 Description: Compiz window decoration library
  The window decoration library is responsible for drawing the window borders
@@ -603,28 +867,6 @@ Description: lightweight GTK+ window manager for MATE
 
 Package: spaced-mate-default-settings
 Architecture: all
-Version: 10.26.5-1
-Priority: optional
-Section: x11
-Maintainer: Spaced Linux Team
-Provides: debian-mate-default-settings (= 1.26.1-3), mint-mate-default-settings, ubuntu-mate-default-settings
-Depends: accountsservice, caja-admin, dconf-gsettings-backend, fonts-roboto-unhinted, gigolo, gnome-keyring, libcanberra-gtk3-module, pulseaudio-utils, timeshift, tzdata, wmctrl, x11-xserver-utils, xdg-user-dirs, xdg-desktop-portal, xdg-desktop-portal-gtk, spaced-themes (= 10.26.5-1), spaced-wallpapers (>= 2026.10-1)
-Conflicts: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
-Replaces: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
-Filename: dists/spaced/main/binary-amd64/spaced-mate-default-settings_10.26.5-1_all.deb
-Size: 1448812
-MD5sum: cdbfd93f59de0e8b019c5fc5702f7eae
-SHA1: 5b26f11dd4ce6a3c1f73b2ead79c7dd40854b673
-SHA256: 990406049079fde3bd9de644bae5fa154c992aa18c8d62951ddcad54739b9499
-SHA512: 655024d6c2ab1fe95f1dc79cbaab7ceaf23f1b6985dbbc18e2f64da89792247f4ef57b39155d2030ba35bf0c9e6a936d7a5b2fe3e5a76ab4b0def2eb5512f310
-Description: Spaced Linux desktop settings and integration
- Supplies the MATE defaults capability required by mate-session-manager and
- the maintained Spaced desktop themes, icons, utilities, panel layouts, and
- integration defaults. Upgrading this package delivers Spaced desktop fixes
- to an installed system without requiring a new ISO.
-
-Package: spaced-mate-default-settings
-Architecture: all
 Version: 10.26.5-2
 Priority: optional
 Section: x11
@@ -667,27 +909,27 @@ Description: Spaced Linux desktop settings and integration
  integration defaults. Upgrading this package delivers Spaced desktop fixes
  to an installed system without requiring a new ISO.
 
-Package: spaced-meta
+Package: spaced-mate-default-settings
 Architecture: all
-Version: 10.26.5-1
+Version: 10.26.6-1
 Priority: optional
-Section: metapackages
+Section: x11
 Maintainer: Spaced Linux Team
-Provides: spaced-release
-Depends: base-files, flatpak, libpam-gnome-keyring, libfuse2t64, libmarco-private2 (>= 1.26.2-6+spaced9.26.1), spaced-mate-default-settings (= 10.26.5-1), spaced-nm-focus (= 10.26.5-1), spaced-themes (= 10.26.5-1), spaced-wallpapers (>= 2026.10-1), spaced-welcome (>= 0.1.19), accountsservice, alacarte, amdgpu-top, atril, avahi-daemon, bluez, bluez-firmware, bluez-tools, btop, ca-certificates, cairo-dock-core, caja, caja-admin, caja-open-terminal, caja-share, chrony, compiz, compiz-mate, compiz-plugins-extra, compiz-plugins-main, compizconfig-settings-manager, console-setup, cups, cups-client, cups-filters, cups-ipp-utils, curl, dbus-x11, dconf-gsettings-backend, devuan-keyring, dkms, dosfstools, efibootmgr, elogind, engrampa, eom, fastfetch, firmware-amd-graphics, firmware-atheros, firmware-brcm80211, firmware-intel-graphics, firmware-intel-misc, firmware-intel-sound, firmware-iwlwifi, firmware-mediatek, firmware-misc-nonfree, firmware-nvidia-graphics, firmware-realtek, firmware-sof-signed, fonts-dejavu-core, fonts-roboto-unhinted, gdebi-core, gigolo, gir1.2-gtk-3.0, git, gnome-keyring, gparted, grub-efi-amd64-bin, grub-pc-bin, gvfs-backends, htop, iw, libcanberra-gtk3-module, libelogind-compat, libgl1-mesa-dri, libglib2.0-bin, libnss-mdns, libpam-elogind, lightdm, lightdm-gtk-greeter, linux-headers-amd64, linux-image-amd64, locales, mate-applet-brisk-menu, mate-calc, mate-control-center, mate-desktop, mate-media, mate-menus, mate-notification-daemon, mate-panel, mate-polkit, mate-power-manager, mate-screensaver, mate-session-manager, mate-settings-daemon, mate-terminal, mate-user-guide, mate-utils, mesa-utils, mesa-vulkan-drivers, mintstick, network-manager, network-manager-applet, nm-connection-editor, nvtop, openssh-client, os-prober, papirus-icon-theme, pciutils, pkexec, pluma, polkitd, pulseaudio, pulseaudio-utils, python3, python3-gi, python3-packaging, python3-psutil, python3-xdg, rfkill, rsync, samba, smbclient, sudo, system-config-printer, sysvinit-core, timeshift, tzdata, usbmuxd, usbutils, util-linux, util-linux-extra, wget, wireless-regdb, wmctrl, wpasupplicant, wsdd, x11-utils, x11-xkb-utils, x11-xserver-utils, xbase-clients, xdg-desktop-portal, xdg-desktop-portal-gtk, xdg-user-dirs, xdg-utils, xdotool, xserver-xorg-input-libinput, xserver-xorg-video-all, xserver-xorg-video-amdgpu, xserver-xorg-video-ati, xserver-xorg-video-fbdev, xserver-xorg-video-intel, xserver-xorg-video-nouveau, xserver-xorg-video-radeon, xserver-xorg-video-vesa, xvfb, yelp, zenity, zstd
-Breaks: base-files (<< 13)
-Replaces: base-files (<< 13)
-Filename: dists/spaced/main/binary-amd64/spaced-meta_10.26.5-1_all.deb
-Size: 3608
-MD5sum: e62dfc48c49b537cfe62e913cc70e5a3
-SHA1: 64d8c61a884b9bf904cb81b084257f599a41f4e4
-SHA256: 843201930c7d61babde336083d51dac305aa9760ccc894ee8689893d529f2dc5
-SHA512: 0ebab2ffccee7e7d43b6627c7a4285a6601e8dff97669478c878a39f56c8e7a85dec9ff127e77a4a4b594d4a0633d7dd99d99512ccc4f8a86860e8f4abdd3cfb
-Description: Spaced Linux release version tracking
- Tracks the Spaced Linux release version and independently maintained Welcome
- package so that in-place OS updates deliver the complete desktop. The
- installed version is written to /etc/os-release, and upgrading this package
- upgrades the reported Spaced Linux version to match the release.
+Provides: debian-mate-default-settings (= 1.26.1-3), mint-mate-default-settings, ubuntu-mate-default-settings
+Depends: accountsservice, caja-admin, dconf-gsettings-backend, fonts-roboto-unhinted, gigolo, gnome-keyring, libcanberra-gtk3-module, pulseaudio-utils, timeshift, tzdata, wmctrl, x11-xserver-utils, xdg-user-dirs, xdg-desktop-portal, xdg-desktop-portal-gtk, spaced-themes (= 10.26.6-1), spaced-wallpapers (>= 2026.10-2)
+Conflicts: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
+Replaces: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
+Filename: dists/spaced/main/binary-amd64/spaced-mate-default-settings_10.26.6-1_all.deb
+Size: 1452832
+MD5sum: 616d50f9a63154de3ba1cc2895fa5349
+SHA1: e3a8990dbf4f90db4c8fc3de32fb2ce742630726
+SHA256: 3aae5c48dc3fb0dec5df9932879bccfa46dd464e49cfcfcde89e14d585232855
+SHA512: 36f11d2c2ed17875f9048cba055519bb26a8d745cd85bc0e39d198e72cd7a163ad3266d4bd621d8ed82bcf0575f9d272ec5abe66e5eef3ac25881bc7701f13a3
+Description: Spaced Linux desktop settings and integration
+ Supplies the MATE defaults capability required by mate-session-manager and
+ the maintained Spaced desktop themes, icons, utilities, panel layouts, and
+ integration defaults. Upgrading this package delivers Spaced desktop fixes
+ to an installed system without requiring a new ISO.
 
 Package: spaced-meta
 Architecture: all
@@ -733,23 +975,27 @@ Description: Spaced Linux release version tracking
  installed version is written to /etc/os-release, and upgrading this package
  upgrades the reported Spaced Linux version to match the release.
 
-Package: spaced-nm-focus
-Architecture: amd64
-Version: 10.26.5-1
+Package: spaced-meta
+Architecture: all
+Version: 10.26.6-1
 Priority: optional
-Section: x11
+Section: metapackages
 Maintainer: Spaced Linux Team
-Depends: libc6, libgtk-3-0t64, network-manager-applet
-Filename: dists/spaced/main/binary-amd64/spaced-nm-focus_10.26.5-1_amd64.deb
-Size: 2948
-MD5sum: f514bb27b90a2c2b5b44c97d1f103967
-SHA1: 6a63229456285444ac4b699e18e94fd9c2576c39
-SHA256: b83d42fa6f8f9cdf679a2c3a7b290d58645b824e247e77f5af63feacea01a4b4
-SHA512: 65f33592fc8d4f19abb91151d9d1bc1110f5123d9f995ffd7eaea74eb82d8a8e6fed8ba7f1134a007d3a787ff2e529d3230bbaefd6ba016d1d7588d6c7f45d8b
-Description: Focus the password field in nm-applet's Wi-Fi dialogs
- A GTK 3 module, loaded only into nm-applet, that puts the cursor in the
- password field when a Wi-Fi network asks for one. libnma 1.10 no longer
- focuses that field itself.
+Provides: spaced-release
+Depends: base-files, flatpak, libpam-gnome-keyring, libfuse2t64, libmarco-private2 (>= 1.26.2-6+spaced9.26.1), spaced-mate-default-settings (= 10.26.6-1), spaced-nm-focus (= 10.26.6-1), spaced-themes (= 10.26.6-1), spaced-wallpapers (>= 2026.10-2), spaced-welcome (>= 0.1.19), accountsservice, alacarte, amdgpu-top, atril, avahi-daemon, bluez, bluez-firmware, bluez-tools, btop, ca-certificates, cairo-dock-core, caja, caja-admin, caja-open-terminal, caja-share, chrony, compiz, compiz-mate, compiz-plugins-extra, compiz-plugins-main, compizconfig-settings-manager, console-setup, cups, cups-client, cups-filters, cups-ipp-utils, curl, dbus-x11, dconf-gsettings-backend, devuan-keyring, dkms, dosfstools, efibootmgr, elogind, engrampa, eom, fastfetch, firmware-amd-graphics, firmware-atheros, firmware-brcm80211, firmware-intel-graphics, firmware-intel-misc, firmware-intel-sound, firmware-iwlwifi, firmware-mediatek, firmware-misc-nonfree, firmware-nvidia-graphics, firmware-realtek, firmware-sof-signed, fonts-dejavu-core, fonts-roboto-unhinted, gdebi, gdebi-core, gigolo, gir1.2-gtk-3.0, git, gnome-keyring, gparted, grub-efi-amd64-bin, grub-pc-bin, gvfs-backends, htop, iw, libcanberra-gtk3-module, libelogind-compat, libgl1-mesa-dri, libglib2.0-bin, libnss-mdns, libpam-elogind, lightdm, lightdm-gtk-greeter, linux-headers-amd64, linux-image-amd64, locales, mate-applet-brisk-menu, mate-calc, mate-control-center, mate-desktop, mate-media, mate-menus, mate-notification-daemon, mate-panel, mate-polkit, mate-power-manager, mate-screensaver, mate-session-manager, mate-settings-daemon, mate-terminal, mate-user-guide, mate-utils, mesa-utils, mesa-vulkan-drivers, mintstick, network-manager, network-manager-applet, nm-connection-editor, nvtop, openssh-client, os-prober, papirus-icon-theme, pciutils, pkexec, pluma, polkitd, pulseaudio, pulseaudio-utils, python3, python3-caja, python3-gi, python3-packaging, python3-psutil, python3-xdg, rfkill, rsync, samba, smbclient, sudo, system-config-printer, sysvinit-core, timeshift, tzdata, usbmuxd, usbutils, util-linux, util-linux-extra, wget, wireless-regdb, wmctrl, wpasupplicant, wsdd, x11-utils, x11-xkb-utils, x11-xserver-utils, xbase-clients, xdg-desktop-portal, xdg-desktop-portal-gtk, xdg-user-dirs, xdg-utils, xdotool, xserver-xorg-input-libinput, xserver-xorg-video-all, xserver-xorg-video-amdgpu, xserver-xorg-video-ati, xserver-xorg-video-fbdev, xserver-xorg-video-intel, xserver-xorg-video-nouveau, xserver-xorg-video-radeon, xserver-xorg-video-vesa, xvfb, yelp, zenity, zstd
+Breaks: base-files (<< 13)
+Replaces: base-files (<< 13)
+Filename: dists/spaced/main/binary-amd64/spaced-meta_10.26.6-1_all.deb
+Size: 3816
+MD5sum: 120f95cd28c329575962207909544fa8
+SHA1: f99fd7e25e3e05a484619d2d4ff4afac01dc7f67
+SHA256: 95c1ec82d8d3ec8814ca8bc2e7bd44c9f4cc1bb0bf7d55f4f2114df7e3e02551
+SHA512: 647aeee7818492837d08fb81fc02218195a5e42dbff22567ec717f0b0344164689220ba4b10b5136013206fa938c92adb5e111a16dc30da148cb73685739282f
+Description: Spaced Linux release version tracking
+ Tracks the Spaced Linux release version and independently maintained Welcome
+ package so that in-place OS updates deliver the complete desktop. The
+ installed version is written to /etc/os-release, and upgrading this package
+ upgrades the reported Spaced Linux version to match the release.
 
 Package: spaced-nm-focus
 Architecture: amd64
@@ -787,24 +1033,23 @@ Description: Focus the password field in nm-applet's Wi-Fi dialogs
  password field when a Wi-Fi network asks for one. libnma 1.10 no longer
  focuses that field itself.
 
-Package: spaced-themes
-Architecture: all
-Version: 10.26.5-1
+Package: spaced-nm-focus
+Architecture: amd64
+Version: 10.26.6-1
 Priority: optional
 Section: x11
 Maintainer: Spaced Linux Team
-Breaks: spaced-mate-default-settings (<< 9.26.3-1)
-Replaces: spaced-mate-default-settings (<< 9.26.3-1)
-Filename: dists/spaced/main/binary-amd64/spaced-themes_10.26.5-1_all.deb
-Size: 3509100
-MD5sum: fdf265fa81c9e16a7913c22a9cf9706b
-SHA1: 143039fdd17b378c0b6f9a825a10d7bf7aca9335
-SHA256: 0f118e57a4b7503e4c0bd4369b5a2545f2437a3fefe22671ed50dfc5887db0e0
-SHA512: 4aab93ff3cd2768b6c2eb8ae5b530027e6f1904b0c9cd91b0da2838fbec06b24518fd32262b16949f30c035cc75dd2af3b09d426c1bf1348eeff16d4fb9f5990
-Description: Spaced Linux MATE themes, icons, and boot artwork
- Supplies the selectable Spaced GTK/Metacity themes, icon themes including
- the Brisk start-here mark, the theme registry, and the GRUB theme.
- Upgrading this package refreshes the compiled icon caches.
+Depends: libc6, libgtk-3-0t64, network-manager-applet
+Filename: dists/spaced/main/binary-amd64/spaced-nm-focus_10.26.6-1_amd64.deb
+Size: 2944
+MD5sum: 56d1c64d7a2915eca04879344d7268dd
+SHA1: 3dccd76bf059b8d035c70735b042fe725386d19a
+SHA256: 5d5551900b993ae45b9c7ff15053da26c580f1ebd85f20ffcd9220592382644a
+SHA512: 94ed247641eac9ab6505deeec5641dad8f83792466c57f332b59eea9c145c9bb4dda2cb27581cd564edd41c545840401c54e3dbcff9cf20289063b15a8a05213
+Description: Focus the password field in nm-applet's Wi-Fi dialogs
+ A GTK 3 module, loaded only into nm-applet, that puts the cursor in the
+ password field when a Wi-Fi network asks for one. libnma 1.10 no longer
+ focuses that field itself.
 
 Package: spaced-themes
 Architecture: all
@@ -844,6 +1089,25 @@ Description: Spaced Linux MATE themes, icons, and boot artwork
  the Brisk start-here mark, the theme registry, and the GRUB theme.
  Upgrading this package refreshes the compiled icon caches.
 
+Package: spaced-themes
+Architecture: all
+Version: 10.26.6-1
+Priority: optional
+Section: x11
+Maintainer: Spaced Linux Team
+Breaks: spaced-mate-default-settings (<< 9.26.3-1)
+Replaces: spaced-mate-default-settings (<< 9.26.3-1)
+Filename: dists/spaced/main/binary-amd64/spaced-themes_10.26.6-1_all.deb
+Size: 3510584
+MD5sum: 29b774ec858a64d15471dfc05bfb8ca0
+SHA1: 0daa59d1c1ac239d34b411f0e43cf67529490ed8
+SHA256: 434092e5949e3e1f1e6ef4d8c3491a6fcd1d98ae650937626a2357ca85a85d9b
+SHA512: 08071c8b931b39dbfa616b726ddaf59c4b758cb0610c3cc116286c71c84848caaa90b88e96c356067a2166727a7476f414a8b7783b29d0ba578935f3cad2c5c3
+Description: Spaced Linux MATE themes, icons, and boot artwork
+ Supplies the selectable Spaced GTK/Metacity themes, icon themes including
+ the Brisk start-here mark, the theme registry, and the GRUB theme.
+ Upgrading this package refreshes the compiled icon caches.
+
 Package: spaced-wallpapers
 Architecture: all
 Version: 2026.09-3
@@ -877,6 +1141,25 @@ MD5sum: d8c351452fdcb90493537cebd6e79f51
 SHA1: af4ee99e485314d4ad1a34850e9f6ec18ebbd4b8
 SHA256: b6b6131933b2947418767c435b2cfa41a80d68f3e86361dc6aa754f85355ad12
 SHA512: 2c266ce497081f505ac4ee12fc4a16726b685b68207ee82cac36b8c1b173203e966f5ce5d7da7a65cd79ce9cadf1439dd68b6f1f2a174e5fc594443a8de34e34
+Description: Spaced Linux wallpapers and background catalog
+ Supplies the Spaced wallpaper collection and the MATE background catalog
+ that registers it. Versioned independently of the OS because the artwork
+ rarely changes.
+
+Package: spaced-wallpapers
+Architecture: all
+Version: 2026.10-2
+Priority: optional
+Section: x11
+Maintainer: Spaced Linux Team
+Breaks: spaced-mate-default-settings (<< 9.26.3-1)
+Replaces: spaced-mate-default-settings (<< 9.26.3-1)
+Filename: dists/spaced/main/binary-amd64/spaced-wallpapers_2026.10-2_all.deb
+Size: 13351100
+MD5sum: 1d68451fbefb6e97a3a071671a1e0c63
+SHA1: 074e140206c1c802d69add6b96b0a7027db5243c
+SHA256: 22566f450a80b0b49e6c0abf8a677b03cc9954ac5ee1ec8c3ee3b8a843034f00
+SHA512: 0ce2ce09dd72b72681c2e1e9922c568c71eef8ae9991cb11148cd0ecba083ad84d47eb75d306fde083e2df7f49fab5ce091873a3b80a3fadfb43b851cbfd7a92
 Description: Spaced Linux wallpapers and background catalog
  Supplies the Spaced wallpaper collection and the MATE background catalog
  that registers it. Versioned independently of the OS because the artwork
