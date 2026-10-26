@@ -1,3 +1,34 @@
+Package: brisk-menu
+Format: 3.0 (quilt)
+Binary: mate-applet-brisk-menu
+Architecture: any
+Version: 0.6.2-2+spaced10.26.7
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Uploaders: Martin Wimpress <code@flexion.org>, Mike Gabriel <sunweaver@debian.org>, Vangelis Mouhtsis <vangelis@gnugr.org>
+Standards-Version: 4.6.1
+Build-Depends: debhelper-compat (= 13), dpkg-dev (>= 1.16.1.1), intltool, libglib2.0-dev, libgtk-3-dev (>= 3.14), libmate-menu-dev (>= 1.22.0), libmate-panel-applet-dev (>= 1.22.0), libnotify-dev, libxml2-utils, meson (>= 0.40.0), ninja-build, pkg-config
+Homepage: http://www.mate-desktop.org/
+Vcs-Browser: https://salsa.debian.org/debian-mate-team/brisk-menu
+Vcs-Git: https://salsa.debian.org/debian-mate-team/brisk-menu.git
+Package-List:
+ mate-applet-brisk-menu deb x11 optional arch=any
+Files:
+ 5df5bdb7a9e3b426b1b16410a0ce188c 1423 brisk-menu_0.6.2-2+spaced10.26.7.dsc
+ 2a40c5c75aba4460d54a406c7efc3f72 76692 brisk-menu_0.6.2.orig.tar.xz
+ 930d9467055c94ada81d88b179d42fdb 16504 brisk-menu_0.6.2-2+spaced10.26.7.debian.tar.xz
+Checksums-Sha1:
+ 27d19d3d6a52975dee0731836e1f28187717be84 1423 brisk-menu_0.6.2-2+spaced10.26.7.dsc
+ ace600e2a618b7dacba6fd97ed3205d52766e445 76692 brisk-menu_0.6.2.orig.tar.xz
+ 1b417712a137ce802099d5c007632e1786df9975 16504 brisk-menu_0.6.2-2+spaced10.26.7.debian.tar.xz
+Checksums-Sha256:
+ 0d3ac5aeba797e30fa168ec5cd302609929a73a9e1d4f001c3bf42c7192285ea 1423 brisk-menu_0.6.2-2+spaced10.26.7.dsc
+ 5a87f4dcf7365e81a571128bf0b8199eb06a6fcd7e15ec7739be0ccff1326488 76692 brisk-menu_0.6.2.orig.tar.xz
+ ca58348b1b4231d39895aaa342f44fdd132658b9d83d692f797d35260177d374 16504 brisk-menu_0.6.2-2+spaced10.26.7.debian.tar.xz
+Checksums-Sha512:
+ 5ad6d793208cd299a31a392f38c5a07bc317455a8a57e121be7a1669e567139df0d2f3919f583f2b99e8a334399c0b758661dd8b2f10e7b92c316eda9ffa7739 1423 brisk-menu_0.6.2-2+spaced10.26.7.dsc
+ 9a696b677036691e9dadf97f72076ea18d755928b577b79025e6b2fa88cc66f00d6dda5448613845075a15fa389069f70df945c0a6c3915b0e6ded4e7bcca5a5 76692 brisk-menu_0.6.2.orig.tar.xz
+ 2f0746f26088c8480e71b6523c669da3c1ce48d8b5106332359446a81c3476d45acd5a18d095353c789dda97fbd5aaff874a091406abc339de99cd1812f3301f 16504 brisk-menu_0.6.2-2+spaced10.26.7.debian.tar.xz
+
 Package: caja
 Format: 3.0 (quilt)
 Binary: caja, caja-common, libcaja-extension1, libcaja-extension-dev, libcaja-extension-doc, gir1.2-caja-2.0
@@ -110,6 +141,44 @@ Checksums-Sha512:
  6b827e5ecaae5dd7ecccbe7e12f1efbbbbb448a8ed276a03a537e2b2883435e92baf10e598d758212f7bfc8c50e29c5c96723bc1fdbbae9d8584a0ae13f2bb09 1238908 compiz_0.8.18.orig.tar.xz
  31c394f339d72a8f348acbf846e7265b5412a665338eb51a5b67585d9a38059d3c9cc176b0ec19c7aa3c1f90fcdd46716ae9222cebb3c700a478aa3455e3596b 21524 compiz_0.8.18-9+spaced10.26.6.debian.tar.xz
 
+Package: compiz
+Format: 3.0 (quilt)
+Binary: compiz, compiz-core, compiz-dev, compiz-gnome, compiz-mate, compiz-plugins, libdecoration0t64, libdecoration0-dev
+Architecture: any all
+Version: 2:0.8.18-9+spaced10.26.7
+Maintainer: Hypra Team <bugs@hypra.fr>
+Uploaders: Samuel Thibault <sthibault@debian.org>
+Standards-Version: 4.6.2
+Build-Depends: dpkg-dev (>= 1.22.5), debhelper-compat (= 13), intltool, libcairo2-dev, libglib2.0-dev, libdbus-1-dev, libdbus-glib-1-dev, libfuse3-dev [linux-any kfreebsd-any], libgl-dev, libglu1-mesa-dev, libgtk-3-dev, libice-dev, libmarco-dev, libmate-desktop-dev, libpango1.0-dev, libpng-dev, libjpeg-dev, librsvg2-dev, libsm-dev, libstartup-notification0-dev, libwnck-3-dev, libxcomposite-dev, libxcursor-dev, libxdamage-dev, libxfixes-dev, libxinerama-dev, libxi-dev, libxml2-dev, libxrandr-dev, libxrender-dev, libxslt1-dev, x11proto-gl-dev, xsltproc
+Homepage: https://gitlab.com/compiz/compiz-core
+Vcs-Browser: https://salsa.debian.org/compiz-team/compiz-reloaded
+Vcs-Git: https://salsa.debian.org/compiz-team/compiz-reloaded.git
+Package-List:
+ compiz deb x11 optional arch=all
+ compiz-core deb x11 optional arch=any
+ compiz-dev deb x11 optional arch=any
+ compiz-gnome deb x11 optional arch=any
+ compiz-mate deb x11 optional arch=any
+ compiz-plugins deb x11 optional arch=any
+ libdecoration0-dev deb libdevel optional arch=any
+ libdecoration0t64 deb libs optional arch=any
+Files:
+ 5e52ee9a99e8345f832ba3255a571d44 1984 compiz_0.8.18-9+spaced10.26.7.dsc
+ 3b2ca47b08cefe2e5acc3242e350a8b8 1238908 compiz_0.8.18.orig.tar.xz
+ efa95b230623992a955c424f46fed6f4 22892 compiz_0.8.18-9+spaced10.26.7.debian.tar.xz
+Checksums-Sha1:
+ e2813d659ec95a7c6a5b8f4b1f0758c47a822fe3 1984 compiz_0.8.18-9+spaced10.26.7.dsc
+ 402bcea9cf525a1aef0c0e7c73798071d9080870 1238908 compiz_0.8.18.orig.tar.xz
+ 1f37e2e366cd8dfca69c868d2a8dc49a757f6dab 22892 compiz_0.8.18-9+spaced10.26.7.debian.tar.xz
+Checksums-Sha256:
+ df67a12793419cdda6ca694af388d0051c02be1b67c423383510afa143de20b8 1984 compiz_0.8.18-9+spaced10.26.7.dsc
+ b72744cc1ecef8bfa55d5994c7409e5178e34250b0f9f48fe0218184529a147f 1238908 compiz_0.8.18.orig.tar.xz
+ 6f9cf8a5eca0b9cb4928c7c27f66d3cc0a99f1afa5568281e14d6961d174717d 22892 compiz_0.8.18-9+spaced10.26.7.debian.tar.xz
+Checksums-Sha512:
+ 39596e47a188e2615ab485bbd5059644e27d264b7e20f7b610aaa92675b39aa39be8b8bdd1e9e6ad9c550327e8e934c629f2eff28bd7b211ba0ee56f405b3ab6 1984 compiz_0.8.18-9+spaced10.26.7.dsc
+ 6b827e5ecaae5dd7ecccbe7e12f1efbbbbb448a8ed276a03a537e2b2883435e92baf10e598d758212f7bfc8c50e29c5c96723bc1fdbbae9d8584a0ae13f2bb09 1238908 compiz_0.8.18.orig.tar.xz
+ ae28356517d75c894357461e0d70e2fe79a53a606aba9e05e95dde0acc8ed8eb9b5f461474dbc181b6afb3e807a27a91e4bf0064274d771b40498ad71ca99d21 22892 compiz_0.8.18-9+spaced10.26.7.debian.tar.xz
+
 Package: marco
 Format: 3.0 (quilt)
 Binary: marco, marco-common, libmarco-private2, libmarco-dev
@@ -143,6 +212,38 @@ Checksums-Sha512:
  bf69803d776cd860245fc43791840a0678770a1ad72000a9a7bd525fbb20d49b572399789dd60540523e40ca1494ac6728696f413de21eb5cc53ae8e62c438a3 1818 marco_1.26.2-6+spaced9.26.1.dsc
  81c7419bf76450bbc44e09d179e1a8f839d463f199d74ff4ee65f84feee41a09090603c122345ec1901a9b5a2752281346ad2501fbe608fd1f56d19263ec94d5 1193520 marco_1.26.2.orig.tar.xz
  df023272e9237f64cb4bd3b80216b08cb2f80420b55a14d354da9b4a2ab01516d6884be0753c656fd3548cdac98bba4707886b5fee99bc2030fbcb2467d96f45 20852 marco_1.26.2-6+spaced9.26.1.debian.tar.xz
+
+Package: mate-control-center
+Format: 3.0 (quilt)
+Binary: mate-control-center, mate-control-center-common
+Architecture: any all
+Version: 1.28.1-1+spaced10.26.7
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Uploaders: Mike Gabriel <sunweaver@debian.org>, John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>, Stefano Karapetsas <stefano@karapetsas.com>, Vangelis Mouhtsis <vangelis@gnugr.org>
+Standards-Version: 4.7.4
+Build-Depends: debhelper-compat (= 14), desktop-file-utils, dpkg-dev (>= 1.16.1.1), gettext, libaccountsservice-dev (>= 0.6.21), libcanberra-gtk3-dev, libdconf-dev, libglib2.0-dev, libgtk-3-dev, libgtop2-dev, libmarco-dev (>= 1.18), libmate-desktop-dev (>= 1.25), libmate-menu-dev (>= 1.22), libmatekbd-dev (>= 1.18), libpango1.0-dev, librsvg2-dev, libstartup-notification0-dev, libx11-dev, libxcursor-dev, libxi-dev, libxklavier-dev, libxml2-dev, libxml2-utils, libxrandr-dev, libxss-dev, libxt-dev, mate-common (>= 1.24.0-1~), mate-settings-daemon-dev (>= 1.24), shared-mime-info, xsltproc, yelp-tools, libudisks2-dev, libayatana-appindicator3-dev
+Homepage: http://www.mate-desktop.org/
+Vcs-Browser: https://salsa.debian.org/debian-mate-team/mate-control-center
+Vcs-Git: https://salsa.debian.org/debian-mate-team/mate-control-center.git
+Package-List:
+ mate-control-center deb x11 optional arch=any
+ mate-control-center-common deb x11 optional arch=all
+Files:
+ c902855cb43fe3ceb9c529ca282b4d04 2059 mate-control-center_1.28.1-1+spaced10.26.7.dsc
+ c16c3a8ff8bf942e9f0a5ba746c9f4bf 3735888 mate-control-center_1.28.1.orig.tar.xz
+ 14d914d2e8ae10c230749ed50edea849 17068 mate-control-center_1.28.1-1+spaced10.26.7.debian.tar.xz
+Checksums-Sha1:
+ 0011830d024ddd139584443e64ae7031488a45b8 2059 mate-control-center_1.28.1-1+spaced10.26.7.dsc
+ a77a395233fedef2c773d5cc0286bf120c209f8b 3735888 mate-control-center_1.28.1.orig.tar.xz
+ 3da13ce5ca36362baea71d64675b9c1c718f6037 17068 mate-control-center_1.28.1-1+spaced10.26.7.debian.tar.xz
+Checksums-Sha256:
+ ee50d77aa3999799f450520eac693172cd96b3c9514b436d63812b777c38a5d9 2059 mate-control-center_1.28.1-1+spaced10.26.7.dsc
+ e12d34c1c1f11e3d0a2ba2dd41bc1c997bf0d1d56486896756f6edaac5f9a9b2 3735888 mate-control-center_1.28.1.orig.tar.xz
+ f1e82b8f0f21878b6e3ac9e35845f7c8f7839f58541bad48d71be81cd4bdbfae 17068 mate-control-center_1.28.1-1+spaced10.26.7.debian.tar.xz
+Checksums-Sha512:
+ bcdc09d0327cd668a8ca95507db29b57873e648e3dfd90ff109dcd2a82f13b475ccff48a992276d483de65fcc42c82ea734f95b4bae0ba9da1426fd24b46b358 2059 mate-control-center_1.28.1-1+spaced10.26.7.dsc
+ d6a3e24a3f9500b5b3d226b548c8ee0fa521c3b36ff27b8d66efa766b0b23b4132fc1528e0ddaeab607e9fdf41f548f7f86b4a235a0895f77436cbb821f7cfc4 3735888 mate-control-center_1.28.1.orig.tar.xz
+ 1051f44636bfd8316ea26705d9bb65fdde9daec6531bda7f1f3880a86bf0fdefeea13e23839c5cb688ec075492c853add5453122b2377f919b19b8a981c1e6cb 17068 mate-control-center_1.28.1-1+spaced10.26.7.debian.tar.xz
 
 Package: xorg-server
 Format: 1.0
