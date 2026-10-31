@@ -395,6 +395,31 @@ Description: file manager for the MATE desktop (common files)
  .
  This package contains the architecture independent files.
 
+Package: caja-common
+Architecture: all
+Version: 1.26.4-3+spaced10.26.8
+Multi-Arch: foreign
+Priority: optional
+Section: utils
+Source: caja
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Installed-Size: 14243
+Depends: dconf-gsettings-backend | gsettings-backend
+Filename: dists/spaced/main/binary-amd64/caja-common_1.26.4-3+spaced10.26.8_all.deb
+Size: 2345540
+MD5sum: adfc055a47e86d8f8555934839cd6b63
+SHA1: 0d81b0075e7e9749c86c6bea9ec7721f85009a33
+SHA256: e10358b38d353d93be1dff3dc893cc52110ebda6bcbb16cb143d9da15dd00704
+SHA512: 09abe43e34c4e7e569dc21e86deecafcb35d6be0cbe026d8c7c0e6efc1ee479d7b917cd2f7aa747b6743d50ff6a7724b3628cc65346ecf22dfcb5ef3f3fddab5
+Homepage: https://mate-desktop.org/
+Description: file manager for the MATE desktop (common files)
+ Caja is the official file manager for the MATE desktop. It allows one
+ to browse directories, preview files and launch applications associated
+ with them. It is also responsible for handling the icons on the MATE
+ desktop. It works on local and remote filesystems.
+ .
+ This package contains the architecture independent files.
+
 Package: caja
 Architecture: amd64
 Version: 1.26.4-3+spaced10.26.6
@@ -412,6 +437,30 @@ MD5sum: 911269e53427f9e0073f497c6591b34e
 SHA1: 3c4d52c2463b9abd8cb5b9e91da99f96f490585a
 SHA256: d029eea2c01e007f567be0266c0a765bb278cdd401088233aa1532f9d75f704e
 SHA512: 2dd7023a65be02201c0a72f084e12f02ddc0d6bfeba0e7459d72f0acce495d4108e2ab4880d56f6e53cd10131cdda9d6ddcc1c8881927c22ffad158d7f5c2ce6
+Homepage: https://mate-desktop.org/
+Description: file manager for the MATE desktop
+ Caja is the official file manager for the MATE desktop. It allows one
+ to browse directories, preview files and launch applications associated
+ with them. It is also responsible for handling the icons on the MATE
+ desktop. It works on local and remote filesystems.
+
+Package: caja
+Architecture: amd64
+Version: 1.26.4-3+spaced10.26.8
+Multi-Arch: foreign
+Priority: optional
+Section: utils
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Installed-Size: 3373
+Depends: caja-common (= 1.26.4-3+spaced10.26.8), desktop-file-utils, gvfs, libcaja-extension1 (= 1.26.4-3+spaced10.26.8), libglib2.0-bin, libglib2.0-data, mate-desktop, shared-mime-info, libatk1.0-0t64 (>= 1.12.4), libc6 (>= 2.38), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.10.0), libexempi8 (>= 2.5.0), libexif12 (>= 0.6.21), libgail-3-0t64 (>= 3.0.0), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.83.0), libgtk-3-0t64 (>= 3.21.5), libice6 (>= 1:1.0.0), libmate-desktop-2-17t64 (>= 1.24), libnotify4 (>= 0.7.0), libpango-1.0-0 (>= 1.44.6), libpangocairo-1.0-0 (>= 1.14.0), libselinux1 (>= 3.1~), libsm6 (>= 2:1.2.6), libx11-6, libxml2-16 (>= 2.14.1)
+Recommends: gvfs-backends, gvfs-fuse
+Suggests: engrampa, gstreamer1.0-tools, meld
+Filename: dists/spaced/main/binary-amd64/caja_1.26.4-3+spaced10.26.8_amd64.deb
+Size: 874712
+MD5sum: 59d08c02cfb2862f9fbe9ce11efb4e9d
+SHA1: 41a8c0c963f4c37057c9e0d4d4339199cba84f30
+SHA256: f326c28a93b719ec1769ed58b99835894fe0b79d910a788f50d3bd43ba36a2e9
+SHA512: d9f52fd37779a10d738cd01ed1f1c53bb6526499dc34e7c5dfde36079b0c437f5387728cbd1604a117d9c757670246e79cb9a8d44015b4568b474086815a2e7f
 Homepage: https://mate-desktop.org/
 Description: file manager for the MATE desktop
  Caja is the official file manager for the MATE desktop. It allows one
@@ -587,6 +636,31 @@ Description: OpenGL window and compositing manager - MATE window decorator
  This package contains files needed to integrate compiz with the MATE desktop
  environment.
 
+Package: compiz-plugins-main
+Architecture: amd64
+Version: 2:0.8.18-8+spaced10.26.8
+Priority: optional
+Section: x11
+Maintainer: Hypra Team <bugs@hypra.fr>
+Installed-Size: 5730
+Depends: libatspi2.0-0t64 (>= 2.9.90), libc6 (>= 2.38), libcairo2 (>= 1.2.4), libdbus-1-3 (>= 1.10), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.22.0), libglu1-mesa | libglu1, libjpeg62-turbo (>= 1.3.1), libnotify4 (>= 0.7.0), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libstdc++6 (>= 13.1), libx11-6, libxfixes3 (>= 1:4.0.1), libxml2-16 (>= 2.14.1), libxrender1 (>= 1:0.9.12), compiz-core-abiversion-20180927
+Filename: dists/spaced/main/binary-amd64/compiz-plugins-main_0.8.18-8+spaced10.26.8_amd64.deb
+Size: 910724
+MD5sum: e6dfa62978302527e2f421799b4ba4d4
+SHA1: 75386874704d96e0dbf42e38ed9fe7d3cf5c244e
+SHA256: 3a17dd6544fe98d8b5c6df3ad2f45b853a4be895f3bf7ce9f77bdbfab3fd8404
+SHA512: bb1a060d3ea3de3aabc649f8b050820cea16254c84030ccd3056c47024a94129e153d3668800472920313e85bdacb5d96062036afccaee978ace53fe91d13685
+Homepage: https://gitlab.com/compiz/compiz-plugins-main
+Description: Compiz Reloaded plugins - main collection
+ Compiz Reloaded is the result of the re-unification of the Beryl-project
+ and the community around the Compiz Window Manager. It seeks to provide
+ an easy and fun-to-use windowing environment, allowing use of the
+ graphics hardware to provide impressive effects, amazing speed and
+ unrivalled usefulness.
+ .
+ This package provides the primary and most well tested set of plugins
+ from the compiz project.
+
 Package: compiz-plugins
 Architecture: amd64
 Version: 2:0.8.18-9+spaced10.26.6
@@ -717,6 +791,34 @@ Description: GObject introspection data for Caja
  It can be used by packages using the GIRepository format to generate
  dynamic bindings.
 
+Package: gir1.2-caja-2.0
+Architecture: amd64
+Version: 1.26.4-3+spaced10.26.8
+Multi-Arch: same
+Priority: optional
+Section: introspection
+Source: caja
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Installed-Size: 58
+Depends: gir1.2-gio-2.0, gir1.2-glib-2.0, gir1.2-gtk-3.0, libcaja-extension1 (>= 1.24.0)
+Filename: dists/spaced/main/binary-amd64/gir1.2-caja-2.0_1.26.4-3+spaced10.26.8_amd64.deb
+Size: 21068
+MD5sum: 566dc6543c52613f7a29909c8544ab19
+SHA1: 877bf85e52671704801e182e371dac999d1df5f2
+SHA256: d6a3bd15ae5d6375364abf573ca3b079d8634cc870ebb82b803a8f3abbb52a04
+SHA512: 2162a72d93e54422ae932324fadca384134375702de1e8a2d557799d1dc7e598aa39b018b05e577e09f4d8cffcc7c1362c19b3fd377d6eca54d6587f0f49c640
+Homepage: https://mate-desktop.org/
+Description: GObject introspection data for Caja
+ Caja is the official file manager for the MATE desktop. It allows one
+ to browse directories, preview files and launch applications associated
+ with them. It is also responsible for handling the icons on the MATE
+ desktop. It works on local and remote filesystems.
+ .
+ This package contains introspection data for Caja.
+ .
+ It can be used by packages using the GIRepository format to generate
+ dynamic bindings.
+
 Package: libcaja-extension1
 Architecture: amd64
 Version: 1.26.4-3+spaced10.26.6
@@ -734,6 +836,33 @@ MD5sum: 2c4815b7f2096f6da89b69840e3fd2eb
 SHA1: 2ebce96989ed50c770ec484015995d8923e610ef
 SHA256: 59275fcdf238114b4a3c18a36c0ee67296e2e2604980f8990965aedbec403539
 SHA512: 7747176d59a5e6962cb484f011b1ae2bb11140a374577c9e40352f689cfc994ad546ca880ba5b5dae5e27181ecc0949bb36c40cec985c21249194d358b406e41
+Homepage: https://mate-desktop.org/
+Description: libraries for Caja components
+ Caja is the official file manager for the MATE desktop. It allows one
+ to browse directories, preview files and launch applications associated
+ with them. It is also responsible for handling the icons on the MATE
+ desktop. It works on local and remote filesystems.
+ .
+ This package contains a few runtime libraries needed by Caja's
+ extensions.
+
+Package: libcaja-extension1
+Architecture: amd64
+Version: 1.26.4-3+spaced10.26.8
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: caja
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Installed-Size: 95
+Provides: libcaja-extension
+Depends: libc6 (>= 2.4), libglib2.0-0t64 (>= 2.80.0), libgtk-3-0t64 (>= 3.0.0)
+Filename: dists/spaced/main/binary-amd64/libcaja-extension1_1.26.4-3+spaced10.26.8_amd64.deb
+Size: 29492
+MD5sum: e5093b198241f4791a0481826f45465b
+SHA1: b437ffef11d0c50c40c828fcc1935f0062ac040e
+SHA256: a97e66934eb7c818a895bda9e5c0e12f9d62ed3201b69ba4e9be8d29625bad15
+SHA512: b4df2fab1359ccb896f9eb73b7d3dfbc285ccdcb5cf7a900607adbf966b43d17db26a21577f582e07960099bf8d6c6c32d195e0e0a43b52c666aa29464e93878
 Homepage: https://mate-desktop.org/
 Description: libraries for Caja components
  Caja is the official file manager for the MATE desktop. It allows one
@@ -890,6 +1019,31 @@ Description: Solus Project's Brisk Menu MATE Panel Applet
  providing the MATE Desktop with a first-class application and system
  menu applet.
 
+Package: mate-applet-brisk-menu
+Architecture: amd64
+Version: 0.6.2-2+spaced10.26.8
+Priority: optional
+Section: x11
+Source: brisk-menu
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Installed-Size: 417
+Depends: mate-panel (>= 1.22.0), libc6 (>= 2.34), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.40.0), libgtk-3-0t64 (>= 3.19.12), libmate-menu2 (>= 1.22.0), libmate-panel-applet-4-1 (>= 1.22.0), libnotify4 (>= 0.7.0), libx11-6, dconf-gsettings-backend | gsettings-backend
+Filename: dists/spaced/main/binary-amd64/mate-applet-brisk-menu_0.6.2-2+spaced10.26.8_amd64.deb
+Size: 68108
+MD5sum: 6431e3cc459220a882c0f476761d688b
+SHA1: 0c4be23930b549ec9eaeb5d6818de14c39d02e33
+SHA256: f91588fbc2ecacf547fa7ce2618a3a8c7d5d43105243cab256de22fcba18b787
+SHA512: 065fb4f464991b08fcfc878f89dd92414bdf85d7fac06b591bc6bd6377e9b1d5776956d9c5d108069517ae33f3da77542386f0548df4f8002933b4637173a881
+Homepage: http://www.mate-desktop.org/
+Description: Solus Project's Brisk Menu MATE Panel Applet
+ The MATE Desktop Environment is the continuation of GNOME 2. It provides an
+ intuitive and attractive desktop environment using traditional metaphors for
+ Linux and other Unix-like operating systems.
+ .
+ Brisk Menu is a modern desktop menu for the MATE Desktop Environment
+ providing the MATE Desktop with a first-class application and system
+ menu applet.
+
 Package: mate-control-center-common
 Architecture: all
 Version: 1.28.1-1+spaced10.26.7
@@ -987,6 +1141,28 @@ Description: Spaced Linux desktop settings and integration
  integration defaults. Upgrading this package delivers Spaced desktop fixes
  to an installed system without requiring a new ISO.
 
+Package: spaced-mate-default-settings
+Architecture: all
+Version: 10.26.8-1
+Priority: optional
+Section: x11
+Maintainer: Spaced Linux Team
+Provides: debian-mate-default-settings (= 1.26.1-3), mint-mate-default-settings, ubuntu-mate-default-settings
+Depends: accountsservice, alacarte, caja-admin, dconf-gsettings-backend, fonts-roboto-unhinted, gigolo, gnome-keyring, libcanberra-gtk3-module, pulseaudio-utils, timeshift, tzdata, wmctrl, x11-xserver-utils, xdg-user-dirs, xdg-desktop-portal, xdg-desktop-portal-gtk, zenity, spaced-themes (= 10.26.8-1), spaced-wallpapers (>= 2026.10-2)
+Conflicts: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
+Replaces: debian-mate-default-settings, mint-mate-default-settings, ubuntu-mate-default-settings
+Filename: dists/spaced/main/binary-amd64/spaced-mate-default-settings_10.26.8-1_all.deb
+Size: 1455700
+MD5sum: f3dca7c5f9a373e5ec7ef2ac568abfd8
+SHA1: bf797b165ec020794ecade0771118f9b30ef241e
+SHA256: c608772047d68d7bf4d4e8bc7ccbb5fea2cc9ab2b55f82e62849979acf2129e6
+SHA512: 7ebda7ac72d132aa863edf353c7164d3456cf93f5ffe34590d9153a18dac2ab69c0fda3e120f6de34a13999accc5a28f87af1a050fdb917a484f5e7a1ea3c68d
+Description: Spaced Linux desktop settings and integration
+ Supplies the MATE defaults capability required by mate-session-manager and
+ the maintained Spaced desktop themes, icons, utilities, panel layouts, and
+ integration defaults. Upgrading this package delivers Spaced desktop fixes
+ to an installed system without requiring a new ISO.
+
 Package: spaced-meta
 Architecture: all
 Version: 10.26.6-1
@@ -1031,6 +1207,28 @@ Description: Spaced Linux release version tracking
  installed version is written to /etc/os-release, and upgrading this package
  upgrades the reported Spaced Linux version to match the release.
 
+Package: spaced-meta
+Architecture: all
+Version: 10.26.8-1
+Priority: optional
+Section: metapackages
+Maintainer: Spaced Linux Team
+Provides: spaced-release
+Depends: base-files, flatpak, libpam-gnome-keyring, libfuse2t64, libmarco-private2 (>= 1.26.2-6+spaced9.26.1), spaced-mate-default-settings (= 10.26.8-1), spaced-nm-focus (= 10.26.8-1), spaced-themes (= 10.26.8-1), spaced-wallpapers (>= 2026.10-2), spaced-welcome (>= 0.1.21), accountsservice, alacarte, amdgpu-top, atril, avahi-daemon, bluez, bluez-firmware, bluez-tools, btop, ca-certificates, cairo-dock-core, caja, caja-admin, caja-open-terminal, caja-share, chrony, compiz, compiz-mate, compiz-plugins-extra, compiz-plugins-main, compizconfig-settings-manager, console-setup, cups, cups-client, cups-filters, cups-ipp-utils, curl, dbus-x11, dconf-gsettings-backend, devuan-keyring, dkms, dosfstools, efibootmgr, elogind, engrampa, eom, fastfetch, firmware-amd-graphics, firmware-atheros, firmware-brcm80211, firmware-intel-graphics, firmware-intel-misc, firmware-intel-sound, firmware-iwlwifi, firmware-mediatek, firmware-misc-nonfree, firmware-nvidia-graphics, firmware-realtek, firmware-sof-signed, fonts-dejavu-core, fonts-roboto-unhinted, gdebi, gdebi-core, gigolo, gir1.2-gtk-3.0, git, gnome-keyring, gparted, grub-efi-amd64-bin, grub-pc-bin, gvfs-backends, htop, iw, libcanberra-gtk3-module, libelogind-compat, libgl1-mesa-dri, libglib2.0-bin, libnss-mdns, libpam-elogind, lightdm, lightdm-gtk-greeter, linux-headers-amd64, linux-image-amd64, locales, mate-applet-brisk-menu, mate-calc, mate-control-center, mate-desktop, mate-media, mate-menus, mate-notification-daemon, mate-panel, mate-polkit, mate-power-manager, mate-screensaver, mate-session-manager, mate-settings-daemon, mate-terminal, mate-user-guide, mate-utils, mesa-utils, mesa-vulkan-drivers, mintstick, network-manager, network-manager-applet, nm-connection-editor, nvtop, openssh-client, os-prober, papirus-icon-theme, pciutils, pkexec, pluma, polkitd, pulseaudio, pulseaudio-utils, python3, python3-caja, python3-gi, python3-packaging, python3-psutil, python3-xdg, rfkill, rsync, samba, smbclient, sudo, system-config-printer, sysvinit-core, timeshift, tzdata, usbmuxd, usbutils, util-linux, util-linux-extra, wget, wireless-regdb, wmctrl, wpasupplicant, wsdd, x11-utils, x11-xkb-utils, x11-xserver-utils, xbase-clients, xdg-desktop-portal, xdg-desktop-portal-gtk, xdg-user-dirs, xdg-utils, xdotool, xserver-xorg-input-libinput, xserver-xorg-video-all, xserver-xorg-video-amdgpu, xserver-xorg-video-ati, xserver-xorg-video-fbdev, xserver-xorg-video-intel, xserver-xorg-video-nouveau, xserver-xorg-video-radeon, xserver-xorg-video-vesa, xvfb, yelp, zenity, zstd
+Breaks: base-files (<< 13)
+Replaces: base-files (<< 13)
+Filename: dists/spaced/main/binary-amd64/spaced-meta_10.26.8-1_all.deb
+Size: 3816
+MD5sum: b530a3cea924aaa77f249a3b7aba48ca
+SHA1: f51d10857f5fb2a4632e79b46e2e23d85e35a317
+SHA256: 1cdabad2aef7f613778fb57d092bc53d889fecbd0a708561272369bc1134105b
+SHA512: c31591c74423e3ce1bf95b3a6ef490a8d3db93ff3b294c7d8fc2559fb408792f6256304a0b9755527a552ac65dc8c437cc8cc3073da5f0d2ccfc1b13f54f37dd
+Description: Spaced Linux release version tracking
+ Tracks the Spaced Linux release version and independently maintained Welcome
+ package so that in-place OS updates deliver the complete desktop. The
+ installed version is written to /etc/os-release, and upgrading this package
+ upgrades the reported Spaced Linux version to match the release.
+
 Package: spaced-nm-focus
 Architecture: amd64
 Version: 10.26.6-1
@@ -1062,6 +1260,24 @@ MD5sum: 3cfa5254dcc463e3edca0abc351d454a
 SHA1: dcd01e6cdc1444bd406ca7288524c203ee92b830
 SHA256: 8a9107ca4254f4f2f5ab3b5e81a909693512ca1eef4d900b1c30e36cda540aea
 SHA512: 31ffe0c832b6ae694ef4787bfc7a2222150a9ccce3122fe22d00ecea71e8d4a1906cc13486eff34865b5416f3d026b473737baf13ad496806d05486fab15a919
+Description: Focus the password field in nm-applet's Wi-Fi dialogs
+ A GTK 3 module, loaded only into nm-applet, that puts the cursor in the
+ password field when a Wi-Fi network asks for one. libnma 1.10 no longer
+ focuses that field itself.
+
+Package: spaced-nm-focus
+Architecture: amd64
+Version: 10.26.8-1
+Priority: optional
+Section: x11
+Maintainer: Spaced Linux Team
+Depends: libc6, libgtk-3-0t64, network-manager-applet
+Filename: dists/spaced/main/binary-amd64/spaced-nm-focus_10.26.8-1_amd64.deb
+Size: 2944
+MD5sum: def8033efbeb54ae164769f0249aae03
+SHA1: 9ddf889ecb140b6d5ab7410365aa25df9b7bccb1
+SHA256: cdb95f000f9296ddfc9191ba3a0d220c0f2cbbeb1d305eef2f261698cd57e61c
+SHA512: a8ee51cfa7fb091c0a19dbcbe3c062007ae2f764f8942fe0e607fcbc14bfb121c7b582dca77fbdb3496c96e68492569bb78eb5afed459de460146564b11a5c80
 Description: Focus the password field in nm-applet's Wi-Fi dialogs
  A GTK 3 module, loaded only into nm-applet, that puts the cursor in the
  password field when a Wi-Fi network asks for one. libnma 1.10 no longer
@@ -1100,6 +1316,25 @@ MD5sum: 24a28134dcb0b42a535c2c17ca4a9c2c
 SHA1: e38472fcb8791a5d4f7d88319789790fef3b0a1c
 SHA256: 57ac5e6b49d12c8b9d18e56320baf1268891b51b76364e6cf6d30624280a11bb
 SHA512: cc02d95830ddbd82b22a0257b9f2bac38fdab5bf304e8c2d4fc945acb7a408c3223be245dc91ea87cb0f88d64c49872bf629bff57a422f3d39f26c7ae7d09cd7
+Description: Spaced Linux MATE themes, icons, and boot artwork
+ Supplies the selectable Spaced GTK/Metacity themes, icon themes including
+ the Brisk start-here mark, the theme registry, and the GRUB theme.
+ Upgrading this package refreshes the compiled icon caches.
+
+Package: spaced-themes
+Architecture: all
+Version: 10.26.8-1
+Priority: optional
+Section: x11
+Maintainer: Spaced Linux Team
+Breaks: spaced-mate-default-settings (<< 9.26.3-1)
+Replaces: spaced-mate-default-settings (<< 9.26.3-1)
+Filename: dists/spaced/main/binary-amd64/spaced-themes_10.26.8-1_all.deb
+Size: 3510488
+MD5sum: a5d1ddfef28a303c815a0bc8477ad993
+SHA1: f916345eea5255f7f6a3a2d59f2bbeb6383f3200
+SHA256: f992d5ae6895bf453e87cdb7b49e6d27e9331b5b36bb8ddbdd2ef95adf8afdfc
+SHA512: bb7ed9e6e7220a4018d7deb38824237b84c3d53e46e6a68ee1a742741f625ac3e5c36fe5b6b4a1cd8096b8507c8c2f0636260157402f7df87b383d1c92666fc5
 Description: Spaced Linux MATE themes, icons, and boot artwork
  Supplies the selectable Spaced GTK/Metacity themes, icon themes including
  the Brisk start-here mark, the theme registry, and the GRUB theme.
@@ -1145,26 +1380,6 @@ Description: Spaced Linux wallpapers and background catalog
 
 Package: spaced-welcome
 Architecture: all
-Version: 0.1.18
-Priority: optional
-Section: x11
-Maintainer: Spaced Linux Team <noreply@spacedlinux.com>
-Depends: ca-certificates, flatpak, gir1.2-gtk-3.0, python3 (>= 3.11), python3-gi, xdg-utils
-Recommends: spaced-meta
-Filename: dists/spaced/main/binary-amd64/spaced-welcome_0.1.18_all.deb
-Size: 481304
-MD5sum: 0d06cc0b6cad2c0ac4916e4647e24c00
-SHA1: d876f7ce3b63ee02a4415f7a1c93a1785e0f7700
-SHA256: 2b15d3d8f8ad2d8e04349370915bacc7842b372114566928b4ec2fc6738f6e99
-SHA512: ee16bc2f9a7eab17231c6c57ae52ca7e02b7f941d4391fcd4496328121bea188c4d8658766836a89039a4a44c0c56721a6b0ef2a87d631772297e6fcd76130cf
-Homepage: https://github.com/crhy/spacedwelcome
-Description: first-run application installer for Spaced Linux
- Shows a source-aware application list on first login, installs SpacedBazaar,
- and installs curated Flatpaks from Flathub and the signed
- Spaced GitHub Flatpak repository.
-
-Package: spaced-welcome
-Architecture: all
 Version: 0.1.19
 Priority: optional
 Section: x11
@@ -1197,6 +1412,26 @@ MD5sum: b46d133e87748e5cd7dcd44ab422a581
 SHA1: 50b4b22582a368f8ee7539cac63657b34c257932
 SHA256: 06478ce8fb5a5cb19da7db9f82fdb96a661eb1bd0279fe0d543b77c65acd932d
 SHA512: 5e4a845140d0ccb7a3a9715330238d54e0552f2f043faa6f8182b2448ff3bbd8dd3eda19da87912bef349841d89d71271daea8b5c909524a53c7110b5111a53b
+Homepage: https://github.com/crhy/spacedwelcome
+Description: first-run application installer for Spaced Linux
+ Shows a source-aware application list on first login, installs SpacedBazaar,
+ and installs curated Flatpaks from Flathub and the signed
+ Spaced GitHub Flatpak repository.
+
+Package: spaced-welcome
+Architecture: all
+Version: 0.1.21
+Priority: optional
+Section: x11
+Maintainer: Spaced Linux Team <noreply@spacedlinux.com>
+Depends: ca-certificates, flatpak, gir1.2-gtk-3.0, python3 (>= 3.11), python3-gi, xdg-utils
+Recommends: spaced-meta
+Filename: dists/spaced/main/binary-amd64/spaced-welcome_0.1.21_all.deb
+Size: 482668
+MD5sum: 26045c795004e0380ce585682bcf2535
+SHA1: 91bca88d81cf8b3db3f6452a7d47a58e514c4b40
+SHA256: 5e833b9f7c55adc2f5fe041e42c3ba3ca543c6dd1adfc597ac3e781e6c79ae3e
+SHA512: 13c709dcb06b542d1fe67b928bc56d7ec9ffd9f0c1295541f1f43b48c9de3a959379a5b236473fff508d329247d758d5b25f831d6dfed14f86161ce2e744bf47
 Homepage: https://github.com/crhy/spacedwelcome
 Description: first-run application installer for Spaced Linux
  Shows a source-aware application list on first login, installs SpacedBazaar,

@@ -29,6 +29,37 @@ Checksums-Sha512:
  9a696b677036691e9dadf97f72076ea18d755928b577b79025e6b2fa88cc66f00d6dda5448613845075a15fa389069f70df945c0a6c3915b0e6ded4e7bcca5a5 76692 brisk-menu_0.6.2.orig.tar.xz
  2f0746f26088c8480e71b6523c669da3c1ce48d8b5106332359446a81c3476d45acd5a18d095353c789dda97fbd5aaff874a091406abc339de99cd1812f3301f 16504 brisk-menu_0.6.2-2+spaced10.26.7.debian.tar.xz
 
+Package: brisk-menu
+Format: 3.0 (quilt)
+Binary: mate-applet-brisk-menu
+Architecture: any
+Version: 0.6.2-2+spaced10.26.8
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Uploaders: Martin Wimpress <code@flexion.org>, Mike Gabriel <sunweaver@debian.org>, Vangelis Mouhtsis <vangelis@gnugr.org>
+Standards-Version: 4.6.1
+Build-Depends: debhelper-compat (= 13), dpkg-dev (>= 1.16.1.1), intltool, libglib2.0-dev, libgtk-3-dev (>= 3.14), libmate-menu-dev (>= 1.22.0), libmate-panel-applet-dev (>= 1.22.0), libnotify-dev, libxml2-utils, meson (>= 0.40.0), ninja-build, pkg-config
+Homepage: http://www.mate-desktop.org/
+Vcs-Browser: https://salsa.debian.org/debian-mate-team/brisk-menu
+Vcs-Git: https://salsa.debian.org/debian-mate-team/brisk-menu.git
+Package-List:
+ mate-applet-brisk-menu deb x11 optional arch=any
+Files:
+ 51eee33336333b9179e89364b22db2c7 1423 brisk-menu_0.6.2-2+spaced10.26.8.dsc
+ 2a40c5c75aba4460d54a406c7efc3f72 76692 brisk-menu_0.6.2.orig.tar.xz
+ de736ec5daaed69f77f07d520ec9222d 18268 brisk-menu_0.6.2-2+spaced10.26.8.debian.tar.xz
+Checksums-Sha1:
+ af1ad7fe88fe72c4471024d5726ef73ce6d5290d 1423 brisk-menu_0.6.2-2+spaced10.26.8.dsc
+ ace600e2a618b7dacba6fd97ed3205d52766e445 76692 brisk-menu_0.6.2.orig.tar.xz
+ e5ebd250b33c16559834b060b8ef9b6011558d51 18268 brisk-menu_0.6.2-2+spaced10.26.8.debian.tar.xz
+Checksums-Sha256:
+ edd3ba8380bb09cb638f1cfe60a918346c6ba4c086091f43c0b223a58e7dc5a6 1423 brisk-menu_0.6.2-2+spaced10.26.8.dsc
+ 5a87f4dcf7365e81a571128bf0b8199eb06a6fcd7e15ec7739be0ccff1326488 76692 brisk-menu_0.6.2.orig.tar.xz
+ 471ed84e15137212edc28e55e38b6771c0ae2a61c42bbb8a89061675ee71f7f6 18268 brisk-menu_0.6.2-2+spaced10.26.8.debian.tar.xz
+Checksums-Sha512:
+ 9c8a02309c8b28a7ee4c1a469b89defb8518e5b0caf7c61fdd4c20bebe2d17f4191d2004ac2e3f55853365be720abca757948e9156a1f0ade6ec434494e03f2a 1423 brisk-menu_0.6.2-2+spaced10.26.8.dsc
+ 9a696b677036691e9dadf97f72076ea18d755928b577b79025e6b2fa88cc66f00d6dda5448613845075a15fa389069f70df945c0a6c3915b0e6ded4e7bcca5a5 76692 brisk-menu_0.6.2.orig.tar.xz
+ 7e27ba5ae9cece3414af72f03447f8be92d7a25fa5c389d4256f89cfa58375f2e1dbf85921240a1137009ce31b3653a323cd8785275bee88946342ec5bb13008 18268 brisk-menu_0.6.2-2+spaced10.26.8.debian.tar.xz
+
 Package: caja
 Format: 3.0 (quilt)
 Binary: caja, caja-common, libcaja-extension1, libcaja-extension-dev, libcaja-extension-doc, gir1.2-caja-2.0
@@ -64,6 +95,73 @@ Checksums-Sha512:
  88f057f263b96d5daf05628e03887f5a4854172d693e4691b5b28434e8876d66ec7c937f75243b583910df817c7067bd800d375487a8522814846e39367d6571 1980 caja_1.26.4-3+spaced10.26.6.dsc
  2c1b99c37b8804cebe1d8154ad32a9246d982f558af59601384fae2c7bd738063c37efa83c5c1a4242a6ca326ffbb92c1e2f412a27e92879a84d048327565a18 3430436 caja_1.26.4.orig.tar.xz
  a253f10c9681f13dfa54ba919af1e75e1d1ec76dda0ef13e27c6e83222d61d5c07837c5f3147d970e57baa0cb6ca197be554e5f4192f4bb72c8effedf99253cf 13760 caja_1.26.4-3+spaced10.26.6.debian.tar.xz
+
+Package: caja
+Format: 3.0 (quilt)
+Binary: caja, caja-common, libcaja-extension1, libcaja-extension-dev, libcaja-extension-doc, gir1.2-caja-2.0
+Architecture: any all
+Version: 1.26.4-3+spaced10.26.8
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Uploaders: John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>, Stefano Karapetsas <stefano@karapetsas.com>, Mike Gabriel <sunweaver@debian.org>, Vangelis Mouhtsis <vangelis@gnugr.org>
+Standards-Version: 4.7.3
+Build-Depends: debhelper-compat (= 13), dpkg-dev (>= 1.16.1.1), gir1.2-gio-2.0-dev, gir1.2-gtk-3.0-dev, gobject-introspection, gtk-doc-tools, intltool, libdconf-dev, libexempi-dev, libexif-dev, libgail-3-dev, libglib2.0-dev, libgtk-3-dev, libmate-desktop-dev (>= 1.24), libnotify-dev, libpango1.0-dev, libselinux1-dev [linux-any], libstartup-notification0-dev, libx11-dev, libxml2-dev, mate-common (>= 1.18), mate-submodules-source (>= 0.0~git20210623.f3091f9), shared-mime-info
+Homepage: https://mate-desktop.org/
+Vcs-Browser: https://salsa.debian.org/debian-mate-team/caja
+Vcs-Git: https://salsa.debian.org/debian-mate-team/caja.git
+Package-List:
+ caja deb utils optional arch=any
+ caja-common deb utils optional arch=all
+ gir1.2-caja-2.0 deb introspection optional arch=any
+ libcaja-extension-dev deb libdevel optional arch=any
+ libcaja-extension-doc deb doc optional arch=all
+ libcaja-extension1 deb libs optional arch=any
+Files:
+ e167f99fe5d0f777501aa274568e0926 1980 caja_1.26.4-3+spaced10.26.8.dsc
+ 7ddfcb6fdddf5bc852b8cb8d1cc92c55 3430436 caja_1.26.4.orig.tar.xz
+ 0541cca6e623b6f66ef7147fbdbd0826 14232 caja_1.26.4-3+spaced10.26.8.debian.tar.xz
+Checksums-Sha1:
+ 3550a7a31dfd53ff450c6c46848135600fb0f175 1980 caja_1.26.4-3+spaced10.26.8.dsc
+ 8ea325af375a781535977eb2062c356f8ce66879 3430436 caja_1.26.4.orig.tar.xz
+ df8c4c5c160cfe844509717fc9a9c81c2fc96024 14232 caja_1.26.4-3+spaced10.26.8.debian.tar.xz
+Checksums-Sha256:
+ 2d9c53a9a412d274aa874cd93ae108f4e82aac7dcc782602320ff8cdb3f8310b 1980 caja_1.26.4-3+spaced10.26.8.dsc
+ 6cbc1a416151871b4816f3fbe92e702d28ab97a4680bd4735919cb7f0d8faf21 3430436 caja_1.26.4.orig.tar.xz
+ 2b31541b75d5369a8117796ee8ede9248a3f25c609d540b75bab65062b74fcb3 14232 caja_1.26.4-3+spaced10.26.8.debian.tar.xz
+Checksums-Sha512:
+ 0c02001d53e1cebc6b39bf4871185ae77fc7840431b468f352bc2f0b91da65cd3d64c4759881c56160badd30abb0eab23c8ce81ad9a691f5822565e9effad50d 1980 caja_1.26.4-3+spaced10.26.8.dsc
+ 2c1b99c37b8804cebe1d8154ad32a9246d982f558af59601384fae2c7bd738063c37efa83c5c1a4242a6ca326ffbb92c1e2f412a27e92879a84d048327565a18 3430436 caja_1.26.4.orig.tar.xz
+ 5a545f27a58aebd2a707e2c81cc3204619d0be859f3a5c49eb6115141ef5b74a43b34a14b6c3e72d28715bd140b66b6a415c9781cbd763462f67cfc2839070b6 14232 caja_1.26.4-3+spaced10.26.8.debian.tar.xz
+
+Package: compiz-plugins-main
+Format: 3.0 (quilt)
+Binary: compiz-plugins-main
+Architecture: any
+Version: 2:0.8.18-8+spaced10.26.8
+Maintainer: Hypra Team <bugs@hypra.fr>
+Uploaders: Samuel Thibault <sthibault@debian.org>
+Standards-Version: 4.6.0
+Build-Depends: compiz-dev (>= 2:0.8.18~), compiz-bcop, debhelper-compat (= 13), intltool, libcairo2-dev, libglib2.0-dev, libdecoration0-dev, libglu1-mesa-dev, libjpeg-dev, libnotify-dev, libpango1.0-dev, librsvg2-dev, libsm-dev, libxml2-dev, libxslt1-dev, libatspi2.0-dev, pkgconf, xsltproc
+Homepage: https://gitlab.com/compiz/compiz-plugins-main
+Vcs-Browser: https://salsa.debian.org/compiz-team/compiz-plugins-main
+Vcs-Git: https://salsa.debian.org/compiz-team/compiz-plugins-main.git
+Package-List:
+ compiz-plugins-main deb x11 optional arch=any
+Files:
+ 0166036684477c6e90fb9f18be10094a 1445 compiz-plugins-main_0.8.18-8+spaced10.26.8.dsc
+ d981f1c2606e07f8f0e5e52372f7d7bd 1174804 compiz-plugins-main_0.8.18.orig.tar.xz
+ d43b663415a5202d670e97d7b7c052cd 12656 compiz-plugins-main_0.8.18-8+spaced10.26.8.debian.tar.xz
+Checksums-Sha1:
+ f98000e9205770ccc7b6828311bcd165a6233453 1445 compiz-plugins-main_0.8.18-8+spaced10.26.8.dsc
+ f5348158ff5ec01a3265521dc67a35f045de3ed1 1174804 compiz-plugins-main_0.8.18.orig.tar.xz
+ ccc5a3caaea3b83a7f039f3caacd5fa5208ae86c 12656 compiz-plugins-main_0.8.18-8+spaced10.26.8.debian.tar.xz
+Checksums-Sha256:
+ 3d479a8316b13f3632accb4aab84eb69afc2ecf43d0a29dcc90eb5dd88f210df 1445 compiz-plugins-main_0.8.18-8+spaced10.26.8.dsc
+ c7a427b8733e75f8f1319aca5c81f2726e2d1c4f37f368b4bf20b053bd52e5b3 1174804 compiz-plugins-main_0.8.18.orig.tar.xz
+ 5348d231f2da1f55b6899d531a0417c42137eba205021befd46dc33d7544b81e 12656 compiz-plugins-main_0.8.18-8+spaced10.26.8.debian.tar.xz
+Checksums-Sha512:
+ f2b4535dff579203d03c52a0c6ae89cf9b577fcb09615e15ad0104bb1c3dd01bf3a08cef90f452883308c7807a423041eeed3739d4b5bf82480589e812c9c46b 1445 compiz-plugins-main_0.8.18-8+spaced10.26.8.dsc
+ 465f91a86d62fa42c5dca17f02d075d07dc3a70b707a3d985cdf97b617cd92d0c77cdd64f507219149c631890a0397db8da41fcb9518653fbcb0886d5738b741 1174804 compiz-plugins-main_0.8.18.orig.tar.xz
+ fb0e684cba29ecac90bbf2fce216d4a227075363d60e625c0f664d8c8ee958d61887c67cc2de6b36e7bb270cfefc252917c6e2e9fab49b220801c3e7acb041a1 12656 compiz-plugins-main_0.8.18-8+spaced10.26.8.debian.tar.xz
 
 Package: compiz
 Format: 3.0 (quilt)
