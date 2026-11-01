@@ -1229,6 +1229,26 @@ Description: Spaced Linux release version tracking
  installed version is written to /etc/os-release, and upgrading this package
  upgrades the reported Spaced Linux version to match the release.
 
+Package: spaced-monitor
+Architecture: all
+Version: 0.1.2
+Priority: optional
+Section: utils
+Maintainer: Spaced Linux Team
+Depends: python3, python3-gi, gir1.2-gtk-3.0, python3-cairo, python3-psutil
+Recommends: iproute2
+Filename: dists/spaced/main/binary-amd64/spaced-monitor_0.1.2_all.deb
+Size: 42660
+MD5sum: 254a7d290cad49c1bb614c18644eb509
+SHA1: a75d1d4922f6be785977ca87feaf582e4a7c655e
+SHA256: 77fc2679a041f9e51671ff8faad279ed322011f4408b75b56137a8e368caf147
+SHA512: 4c6ba0380e7ae09d5e343dc83111c515fefb9a1e3dfce44032313f901d126b8e893c23ac99f8b5c0dce61b8e86edee4bac89e3b4e1eaa5306c7ed604696a17d8
+Homepage: https://github.com/crhy/spacedmonitor
+Description: See what your computer is doing
+ A system monitor for Spaced Linux: CPU, GPU, memory and GPU-memory
+ gauges, temperature graphs, disk and network activity, and the programs
+ using them, in one easy-to-read GTK 3 window. No systemd.
+
 Package: spaced-nm-focus
 Architecture: amd64
 Version: 10.26.6-1
