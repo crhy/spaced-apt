@@ -1249,6 +1249,26 @@ Description: See what your computer is doing
  gauges, temperature graphs, disk and network activity, and the programs
  using them, in one easy-to-read GTK 3 window. No systemd.
 
+Package: spaced-monitor
+Architecture: all
+Version: 0.1.7
+Priority: optional
+Section: utils
+Maintainer: Spaced Linux Team
+Depends: python3, python3-gi, python3-gi-cairo, gir1.2-gtk-3.0, python3-cairo, python3-psutil
+Recommends: iproute2
+Filename: dists/spaced/main/binary-amd64/spaced-monitor_0.1.7_all.deb
+Size: 56404
+MD5sum: 43f71168a506bedb1a1b100b6d0beb2b
+SHA1: 284d1ed04321bf285c0556a4905171c8e7c81346
+SHA256: 83e79b19aba63e4ae6be0a2d66a0cb611edc37e71fa9f8b76d555eb259b44822
+SHA512: 10750d18f84e0f4f4934c7e70247c571c26f6c8c1cc33b9c1ff1b16df3c19b89143952f0732f089c09f48e539c257130efbc54290a340788b36a79b9b5a8937d
+Homepage: https://github.com/crhy/spacedmonitor
+Description: See what your computer is doing
+ A system monitor for Spaced Linux: CPU, GPU, memory and GPU-memory
+ gauges, temperature graphs, disk and network activity, and the programs
+ using them, in one easy-to-read GTK 3 window. No systemd.
+
 Package: spaced-nm-focus
 Architecture: amd64
 Version: 10.26.6-1
