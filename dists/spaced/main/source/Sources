@@ -344,6 +344,43 @@ Checksums-Sha512:
  6b827e5ecaae5dd7ecccbe7e12f1efbbbbb448a8ed276a03a537e2b2883435e92baf10e598d758212f7bfc8c50e29c5c96723bc1fdbbae9d8584a0ae13f2bb09 1238908 compiz_0.8.18.orig.tar.xz
  ae28356517d75c894357461e0d70e2fe79a53a606aba9e05e95dde0acc8ed8eb9b5f461474dbc181b6afb3e807a27a91e4bf0064274d771b40498ad71ca99d21 22892 compiz_0.8.18-9+spaced10.26.7.debian.tar.xz
 
+Package: elogind
+Format: 3.0 (quilt)
+Binary: elogind, libelogind-compat, libelogind0, libelogind-dev, libelogind-dev-doc, libpam-elogind, dummy-logind
+Architecture: linux-any all
+Version: 257.13-1+spaced11.26.1
+Origin: Devuan
+Maintainer: Mark Hindley <mark@hindley.org.uk>
+Standards-Version: 4.7.3
+Build-Depends: debhelper-compat (= 13), dh-exec (>= 0.3), pkgconf, docbook-xsl, meson, gperf (>= 3.1), gtk-doc-tools, python3-jinja2, python3-lxml, libcap-dev, libudev-dev, libpam0g-dev (>= 1.1.2), libacl1-dev, libselinux-dev, libmount-dev, libglib2.0-dev <!nocheck>
+Homepage: https://github.com/elogind/elogind
+Vcs-Browser: https://git.devuan.org/devuan/elogind/tree/devuan
+Vcs-Git: https://git.devuan.org/devuan/elogind.git -b devuan
+Package-List:
+ dummy-logind deb admin optional arch=all
+ elogind deb admin optional arch=linux-any
+ libelogind-compat deb libs optional arch=linux-any
+ libelogind-dev deb libdevel optional arch=linux-any
+ libelogind-dev-doc deb doc optional arch=all
+ libelogind0 deb libs optional arch=linux-any
+ libpam-elogind deb admin optional arch=linux-any
+Files:
+ 2912b0a180278f4ee46287e1181d2f33 1662 elogind_257.13-1+spaced11.26.1.dsc
+ d9a0f3abb5a844c718de132204412a23 2636358 elogind_257.13.orig.tar.gz
+ 7bbb20374e38e16be452e7f091ba8539 11664 elogind_257.13-1+spaced11.26.1.debian.tar.xz
+Checksums-Sha1:
+ 288ffce6f2f3440459daeb77da8ecc2b218c389c 1662 elogind_257.13-1+spaced11.26.1.dsc
+ 5e5817d62eb821a230ca3d276525ffab2dcfa5d3 2636358 elogind_257.13.orig.tar.gz
+ 02da7cdd2f349f1188a18716c7b3cfc0429db18b 11664 elogind_257.13-1+spaced11.26.1.debian.tar.xz
+Checksums-Sha256:
+ d35796c4eafb987dbfbe398f57a4c5f23dd74cdb1c3bd2495355f1f1adb4beb9 1662 elogind_257.13-1+spaced11.26.1.dsc
+ 075db32e8997bc88cd74f9e06590edb860b94c734434f2699fa258f6ab72d097 2636358 elogind_257.13.orig.tar.gz
+ 18350a4f98318134fdb62e2f63bd511d2caa19b901387ce7a198ff7f11d84217 11664 elogind_257.13-1+spaced11.26.1.debian.tar.xz
+Checksums-Sha512:
+ f0ff6052aec9dc0cc44aa7c10e9ec05b3b446fa2905ea5b22d3158a921f956ff83da93b74a0b347c71e2556d1f634c0d0e624284ccc4db6ca545015ff20c7a92 1662 elogind_257.13-1+spaced11.26.1.dsc
+ 65ebf067b85c88fd9ae66f9ccda212b1094ff54efba50cf901898b7ddb1b63514bb42631b53b35434e05e0d9033adc3678bcec3aeeb77684e21a98589d3840e9 2636358 elogind_257.13.orig.tar.gz
+ eb10fe89bcfbbef88085ab1882832622985594ddfafd5d838d6fe10de649fd46c842347592fe67c575ef0499152f91a38e6fe7bc0d1ba430b49c308923e7e89f 11664 elogind_257.13-1+spaced11.26.1.debian.tar.xz
+
 Package: marco
 Format: 3.0 (quilt)
 Binary: marco, marco-common, libmarco-private2, libmarco-dev
